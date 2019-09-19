@@ -26,10 +26,6 @@
     width: 400px;
 }
 
-.no-bullet{
-    list-style-type: none;
-}
-
 .list-padding > li{
     margin: 10px 0px;
 }
