@@ -1,0 +1,67 @@
+#banner {
+    background-image: url("resource/psp-hero-watch.image.large_2x.jpg");
+    padding: 190px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.banner-text {
+    width: 355px;
+}
+
+.icon-size {
+    width: 40px;
+}
+
+.font-size-1 {
+    font-size: 1.2em;
+    font-weight: 330;
+}
+
+.watch-img {
+    width: 200px;
+}
+
+.search {
+    font-family: Arial, FontAwesome;
+}
+
+.none-deco,
+.none-deco:hover {
+    color: initial;
+}
+
+@media only screen and (max-width: 768px) {
+    .support-row>div:first-child {
+        border-top: thin solid lightgray;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .support-container {
+        margin: 0px;
+        display: contents;
+    }
+    .support-row>div {
+        padding: 20px;
+        border-bottom: thin solid lightgray;
+    }
+    .support-row>div:nth-child(odd) {
+        border-right: thin solid lightgray;
+    }
+    .resource-row>div:not(:last-child) {
+        border-bottom: thin solid lightgray;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .support-row>div:not(:last-child) {
+        border-right: thin solid lightgray;
+    }
+    .resource-row>div:not(:last-child) {
+        border-right: thin solid lightgray;
+    }
+}
