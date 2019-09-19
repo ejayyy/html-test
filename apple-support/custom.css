@@ -1,0 +1,39 @@
+#first-banner{
+    background-image: url("resource/banner.jpg");
+    padding: 50px 200px 300px;
+}
+
+#third-banner{
+    background-image: url("resource/banner-hero-giveback-support.image.large_2x.jpg");
+    padding: 100px;
+}
+
+#fourth-banner{
+    background-image: url("resource/today-at-apple-workshop-banner.image.large_2x.jpg");
+    padding: 100px;
+}
+
+.icon-size{
+    width: 68px;
+    height: 68px;
+}
+
+.second-info{
+    width: 700px;
+}
+
+.banner-info{
+    width: 400px;
+}
+
+.no-bullet{
+    list-style-type: none;
+}
+
+.list-padding > li{
+    margin: 10px 0px;
+}
+
+#footer{
+    background-color: lightgray;
+}
