@@ -1,0 +1,155 @@
+#first-banner {
+    background-image: url("resource/hero_large.jpg");
+    height: 1100px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#apple-tv {
+    background-image: url("resource/premium_experience_large.png");
+    padding-bottom: 200px;
+}
+
+#control-tap {
+    background-image: url("resource/control_touch_large.jpg");
+    padding-bottom: 260px;
+}
+
+#mirror-screen {
+    background-image: url("resource/mirror_it_large.jpg");
+    padding-bottom: 350px;
+    background-position: 0% 80%;
+}
+
+#siri-suggestion {
+    background-image: url("resource/siri_suggestions_large.jpg");
+    padding-bottom: 300px;
+}
+
+#airplay {
+    background-image: url("resource/homepod_whole_home_large.jpg");
+    padding-bottom: 300px;
+    background-position: 0% 90%;
+}
+
+#multiroom-audio {
+    background-image: url("resource/every_room_large.jpg");
+    padding-bottom: 330px;
+}
+
+#add-song {
+    background-image: url("resource/anyone_can_add_songs_large.jpg");
+    padding-bottom: 330px;
+}
+
+#cinematic-tv {
+    background-image: url("resource/apple_tv_4k_large.png");
+}
+
+#homepod {
+    background-image: url("resource/homepod_large.png");
+}
+
+#homeapp {
+    background: url("resource/homekit_large.png"), linear-gradient(to right, SkyBlue, CornflowerBlue);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+#apple-music {
+    background: url("resource/music_large.png"), linear-gradient(to bottom, LightCoral, Orchid);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+.last-banner {
+    padding: 70px;
+    padding-bottom: 500px;
+    -webkit-background-size: initial;
+    -moz-background-size: initial;
+    -o-background-size: initial;
+    background-size: initial;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.siri-text {
+    background: linear-gradient(to right, MediumVioletRed, BlueViolet, MediumOrchid, Plum);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1em;
+}
+
+.card-img {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.second-main-color {
+    color: MediumVioletRed;
+}
+
+.third-main-color {
+    color: DodgerBlue;
+}
+
+.card-head {
+    border-width: 0;
+    border-top: 3px solid;
+}
+
+.border-redblue {
+    border-image: linear-gradient(to right, MediumVioletRed 50%, blue) 1;
+    -moz-border-image: -moz-linear-gradient(to right, MediumVioletRed 50%, blue);
+    -webkit-border-image: -webkit-linear-gradient(to right, MediumVioletRed 50%, blue);
+}
+
+.border-blueblue {
+    border-image: linear-gradient(to right, DodgerBlue, RoyalBlue) 1;
+    -moz-border-image: -moz-linear-gradient(to right, DodgerBlue, RoyalBlue);
+    -webkit-border-image: -webkit-linear-gradient(to right, DodgerBlue, RoyalBlue);
+}
+
+.btn-orange {
+    border: 1px solid #ef5602;
+    color: #ef5602;
+    padding: 4px 15px;
+}
+
+.table-border-0 td {
+    border: none;
+}
+
+.table-p-5 td:not(:last-child) {
+    padding-bottom: 25px;
+}
+
+.card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
