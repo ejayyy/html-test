@@ -11,39 +11,39 @@
 
 #apple-tv {
     background-image: url("resource/premium_experience_large.png");
-    padding-bottom: 200px;
+    padding-bottom: 45%;
 }
 
 #control-tap {
     background-image: url("resource/control_touch_large.jpg");
-    padding-bottom: 260px;
+    padding-bottom: 85%;
 }
 
 #mirror-screen {
     background-image: url("resource/mirror_it_large.jpg");
-    padding-bottom: 350px;
-    background-position: 0% 80%;
+    padding-bottom: 83%;
+    background-position: 0% 90%;
 }
 
 #siri-suggestion {
     background-image: url("resource/siri_suggestions_large.jpg");
-    padding-bottom: 300px;
+    padding-bottom: 80%;
 }
 
 #airplay {
     background-image: url("resource/homepod_whole_home_large.jpg");
-    padding-bottom: 300px;
+    padding-bottom: 80%;
     background-position: 0% 90%;
 }
 
 #multiroom-audio {
     background-image: url("resource/every_room_large.jpg");
-    padding-bottom: 330px;
+    padding-bottom: 90%;
 }
 
 #add-song {
     background-image: url("resource/anyone_can_add_songs_large.jpg");
-    padding-bottom: 330px;
+    padding-bottom: 90%;
 }
 
 #cinematic-tv {

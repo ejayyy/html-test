@@ -270,7 +270,7 @@
         </div>
 
         <div class="row pt-4">
-                <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 p-0 pb-1 pr-xl-2 pr-lg-2 pr-md-2">
+            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 p-0 pb-1 pr-xl-2 pr-lg-2 pr-md-2">
                 <div id="homeapp" class="text-center text-white bg-white last-banner">
                     <h4>Home app</h4>
                     <h2>Control all your HomeKit accessories in one place.</h2>
@@ -302,5 +302,19 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="axnonymous"></script>
 <script src="https://kit.fontawesome.com/f916b14b9b.js" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+<script>
+    var controller = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({
+        triggerElement: ".card",
+        triggerHook: 0.9, // show, when scrolled 10% into view
+        duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+        offset: 50 // move trigger to center of element
+    })
+        .setClassToggle(".card", "visible") // add class to reveal
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+</script>
 
 </html>
