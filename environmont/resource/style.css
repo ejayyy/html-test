@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "SF Pro Text";
+    src: url("./font/sanfranciscodisplay-regular-webfont.woff") format("woff");
+}
+
 body {
     font-size: 17px;
     line-height: 1.47059;
     font-weight: 400;
     letter-spacing: -.022em;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     background-color: #fff;
     color: #333;
     font-style: normal;
@@ -26,7 +31,6 @@ body {
 
 #fourth-banner {
     background-image: url("./img/environmental_mission__c0d51thf5uy6_large.jpg");
-    height: 900px;
 }
 
 #card-aluminum {
@@ -69,7 +73,7 @@ body {
     background-image: url("./img/trade_next__fbumlqnk83ma_large.jpg");
 }
 
-#product-list{
+#product-list {
     overflow: hidden;
 }
 
@@ -86,9 +90,17 @@ body {
     background-repeat: no-repeat;
 }
 
+.fourth-container {
+    height: 900px;
+}
+
 .card-img {
     background-position: center bottom;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .bg-f2 {
@@ -99,9 +111,10 @@ body {
     padding-top: 222px;
     padding-bottom: 90px;
     max-width: 890px;
+    text-align: center;
 }
 
-.fourth-container {
+.fourth-section {
     padding-top: 140px;
     max-width: 780px;
 }
@@ -179,7 +192,7 @@ body {
     margin-top: 25px;
 }
 
-.mb-35{
+.mb-35 {
     margin-bottom: 35px;
 }
 
@@ -215,8 +228,8 @@ body {
     max-width: 720px;
 }
 
-.w-980 {
-    width: 980px;
+.mw-980 {
+    max-width: 980px;
 }
 
 .overlap-container {
@@ -275,10 +288,119 @@ body {
     height: 1px;
     font-size: 0px;
     line-height: 0px;
-    margin: 0px 10px;
+}
+
+@media only screen and (max-width: 1068px) {
+    .main-txt {
+        font-size: 56px;
+        line-height: 1.07143;
+        font-weight: 600;
+        letter-spacing: -.005em;
+    }
+    .main-sub {
+        font-size: 21px;
+        line-height: 1.38105;
+        font-weight: 400;
+        letter-spacing: .011em;
+    }
+    .section-container {
+        padding-top: 174px;
+        padding-bottom: 60px;
+        max-width: 670px;
+    }
+    #first-banner {
+        background-image: url("./img/hero__bh5xrysol6xe_medium_2x.jpg");
+        height: 837px;
+    }
+    .main-txt-64 {
+        font-size: 48px;
+        line-height: 1.08365;
+        font-weight: 600;
+        letter-spacing: -.003em;
+    }
+    .mw-720 {
+        max-width: 530px;
+    }
+    .card-container {
+        grid-gap: 16px;
+        padding-top: 108px;
+    }
+    .card-section {
+        padding-bottom: 294px;
+    }
+    .card-txt-container {
+        padding-top: 56px;
+        max-width: 278px;
+    }
+    .card-txt {
+        font-size: 32px;
+        line-height: 1.125;
+        font-weight: 600;
+        letter-spacing: .004em;
+    }
+    #card-aluminum {
+        background-image: url("./img/low_impact_aluminum__fhfq4ofpx9aq_medium_2x.jpg");
+    }
+    #card-material {
+        background-image: url("./img/low_impact_materials__c8a6xua36g4m_medium_2x.jpg");
+    }
+    #card-power {
+        background-image: url("./img/low_impact_energy__c5otuh544fau_medium_2x.jpg");
+    }
+    #card-test {
+        background-image: url("./img/low_impact_device__bh93u1igvisy_medium_2x.jpg");
+    }
+    #card-reliability {
+        background-image: url("./img/longevity_reliability__bh99qqb46q4i_medium_2x.jpg");
+    }
+    #card-water {
+        background-image: url("./img/longevity_durability__fx1g1q49yh26_medium_2x.jpg");
+    }
+    #card-care {
+        background-image: url("./img/longevity_repair__biyart7mxiwi_medium_2x.jpg");
+    }
+    #card-update {
+        background-image: url("./img/longevity_update__esdkfroyssom_medium_2x.jpg");
+    }
+    #card-recycle {
+        background-image: url("./img/trade_reuse__d8uktx13f0uq_medium_2x.jpg");
+    }
+    #card-old {
+        background-image: url("./img/trade_next__fbumlqnk83ma_medium_2x.jpg");
+    }
+    #second-banner {
+        background-image: url("./img/built_to_last__51g5lc82mv6y_medium_2x.jpg");
+        height: 672px;
+    }
+    #third-banner {
+        background-image: url("./img/trading_in__fpho75lxb9aq_medium_2x.jpg");
+        height: 672px;
+    }
+    #fourth-banner {
+        background-image: url("./img/environmental_mission__c0d51thf5uy6_medium_2x.jpg");
+    }
+    .fourth-container {
+        height: 665px;
+    }
+    .fourth-section {
+        padding-top: 88px;
+        max-width: 590px;
+    }
 }
 
 @media only screen and (max-width: 735px) {
+    .main-txt {
+        font-size: 44px;
+        line-height: 1.09091;
+        font-weight: 600;
+        letter-spacing: -.005em;
+    }
+    .section-container {
+        padding-top: 176px;
+        padding-bottom: 0;
+        max-width: 330px;
+        text-align: left;
+    }
     .card-container {
         grid-template-columns: 100%;
         grid-gap: 20px;
