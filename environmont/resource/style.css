@@ -24,7 +24,7 @@ body {
     height: 900px;
 }
 
-#thrid-banner {
+#third-banner {
     background-image: url("./img/trading_in__fpho75lxb9aq_large.jpg");
     height: 900px;
 }
@@ -77,8 +77,12 @@ body {
     overflow: hidden;
 }
 
+#product-list li {
+    cursor: pointer;
+}
+
 #product-list li:not(:first-child) {
-    padding-left: 57px;
+    margin-left: 57px;
 }
 
 .banner {
@@ -103,8 +107,9 @@ body {
     background-size: cover;
 }
 
-.bg-f2 {
+.background-container {
     background-color: #f2f2f2;
+    padding-bottom: 112px;
 }
 
 .section-container {
@@ -124,6 +129,7 @@ body {
     max-width: 410px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 }
 
 .main-txt {
@@ -172,6 +178,15 @@ body {
     display: inline-block;
 }
 
+.report-container {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 112px;
+    padding-bottom: 125px;
+    text-align: center;
+}
+
 .mt-14 {
     margin-top: 1.4em;
 }
@@ -200,18 +215,6 @@ body {
     padding-top: 111px;
 }
 
-.pt-112 {
-    padding-top: 112px;
-}
-
-.pb-112 {
-    padding-bottom: 112px;
-}
-
-.pb-125 {
-    padding-bottom: 125px;
-}
-
 .px-18-20 {
     padding: 18px 0 20px;
 }
@@ -226,10 +229,6 @@ body {
 
 .mw-720 {
     max-width: 720px;
-}
-
-.mw-980 {
-    max-width: 980px;
 }
 
 .overlap-container {
@@ -279,6 +278,43 @@ body {
     flex-basis: 100%;
     align-items: center;
     color: #d6d6d6;
+    margin-top: 15px;
+}
+
+.list-content p {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.list-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 34px;
+}
+
+.list-li {
+    width: 25%;
+}
+
+.list-li:nth-of-type(n+5) {
+    margin-top: 33px;
+}
+
+.list-extend-title {
+    font-size: 17px;
+    line-height: 1.47059;
+    letter-spacing: -.022em;
+    font-weight: 600;
+    color: #666;
+    margin-top: 0;
+    padding-top: 33px;
+}
+
+.rotate {
+    transform: rotate(45deg);
 }
 
 .list-bottom::before, .list-bottom::after {
@@ -288,6 +324,11 @@ body {
     height: 1px;
     font-size: 0px;
     line-height: 0px;
+}
+
+.text-container {
+    padding-top: 111px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1068px) {
@@ -317,6 +358,9 @@ body {
         line-height: 1.08365;
         font-weight: 600;
         letter-spacing: -.003em;
+    }
+    .mw-980 {
+        width: 692px;
     }
     .mw-720 {
         max-width: 530px;
@@ -386,6 +430,28 @@ body {
         padding-top: 88px;
         max-width: 590px;
     }
+    .background-container {
+        padding-bottom: 100px;
+    }
+    .report-container {
+        width: 692px;
+        padding-top: 109px;
+        padding-bottom: 125px;
+    }
+    .report-txt {
+        font-size: 48px;
+        line-height: 1.08365;
+        letter-spacing: -.003em;
+    }
+    .list-ul {
+        padding-top: 47px;
+    }
+    .list-li:nth-of-type(n+4) {
+        margin-top: 27px;
+    }
+    .list-li {
+        width: calc(100% / 3);
+    }
 }
 
 @media only screen and (max-width: 735px) {
@@ -401,9 +467,61 @@ body {
         max-width: 330px;
         text-align: left;
     }
+    #first-banner {
+        background-image: url("./img/hero__bh5xrysol6xe_small.jpg");
+        height: 819px;
+    }
+    .background-container {
+        background-color: #fff;
+    }
+    .overlap-container {
+        top: 0;
+        margin-bottom: 0;
+    }
+    .text-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 87.5%;
+        max-width: 330px;
+        padding-top: 72px;
+        text-align: left;
+    }
+    .main-txt-64 {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0em;
+    }
     .card-container {
         grid-template-columns: 100%;
         grid-gap: 20px;
         padding-top: 74px;
     }
-}
+    .report-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 87.5%;
+        text-align: left;
+    }
+    .report-txt {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0em;
+        max-width: 360px;
+    }
+    .fourth-container{
+        height: 545px;
+    }
+    .fourth-section {
+        padding-top: 80px;
+        max-width: 100%;
+        text-align: left;
+        width: 87.5%;
+    }
+    #fourth-banner {
+        background-image: url("./img/environmental_mission__c0d51thf5uy6_small.jpg");
+    }
+    .list-li {
+        width: 50%;
+    }
