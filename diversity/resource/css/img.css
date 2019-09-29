@@ -1,0 +1,13 @@
+#first-banner {
+  background-image: url("./img/hero_large_2x.jpg");
+  height: 916px;
+}
+
+.banner {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

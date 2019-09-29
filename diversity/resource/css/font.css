@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./font/sanfranciscodisplay-regular-webfont.woff") format("woff");
+}
+
+body {
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.head-txt {
+  font-size: 96px;
+  line-height: 1.04167;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.head-sub-txt {
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 600;
+  letter-spacing: 0.004em;
+}
