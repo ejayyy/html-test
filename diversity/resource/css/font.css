@@ -4,7 +4,14 @@
 }
 
 body {
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-color: #fff;
+  color: #333;
+  font-style: normal;
 }
 
 .head-txt {
@@ -19,4 +26,32 @@ body {
   line-height: 1.125;
   font-weight: 600;
   letter-spacing: 0.004em;
+}
+
+.quote-container {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.quote {
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 600;
+  letter-spacing: 0.004em;
+}
+
+.card-main-txt {
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 600;
+  letter-spacing: 0.004em;
+}
+
+.card-sub-txt {
+  font-size: 17px;
+  line-height: 1.23543;
+  letter-spacing: -0.022em;
 }
