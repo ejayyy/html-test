@@ -38,6 +38,7 @@
 
 .card-picture-container {
   padding: 44px 44px 100px 44px;
+  background-color: #f1f1f1;
 }
 
 .card-picture {
@@ -49,7 +50,6 @@
   float: left;
   padding-bottom: 20px;
   padding-right: 10px;
-  background-color: #f1f1f1;
 }
 
 .picture-txt {
@@ -78,4 +78,17 @@
   margin-right: auto;
   max-width: 375px;
   margin-top: 19px;
+}
+
+.paragraph-container {
+  margin-left: 0;
+  width: 340px;
+  padding: 50px 28px 0 28px;
+}
+
+.paragraph-sub-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 375px;
+  width: 375px;
 }
