@@ -43,4 +43,9 @@
 
 .btn {
   border: 1px solid #000;
+  border-radius: 0;
+}
+
+.btn--full{
+  width: 100%;
 }
