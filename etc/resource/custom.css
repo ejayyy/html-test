@@ -17,6 +17,9 @@
 .pb-35 {
   padding-bottom: 35px;
 }
+.pb-50 {
+  padding-bottom: 50px;
+}
 .pb-70 {
   padding-bottom: 70px;
 }
@@ -46,6 +49,6 @@
   border-radius: 0;
 }
 
-.btn--full{
+.btn--full {
   width: 100%;
 }

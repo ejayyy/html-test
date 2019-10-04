@@ -14,6 +14,10 @@
 
 <body>
     <style>
+        section {
+            padding-bottom: 100px;
+        }
+
         p {
             color: #000;
             font-size: 16px;
@@ -77,10 +81,21 @@
             line-height: 170%;
         }
 
+        .fabric-container {
+            padding-bottom: 70px;
+        }
+
         .insta-like {
+            padding-left: 30px;
+            padding-right: 30px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+        }
+
+        .insta-like li {
+            width: calc(100% / 4);
+            padding: 15px;
         }
 
         .p-description p:first-of-type {
@@ -93,20 +108,56 @@
             text-align: center;
         }
 
-        .insta-like li {
-            width: calc(100% / 4);
-            padding: 15px;
-        }
-
         .hover-black:hover {
             color: #000 !important;
         }
 
-        @media only screen and (max-width: 768px) {}
+        @media only screen and (max-width: 768px) {
+            section {
+                padding-bottom: 60px;
+            }
+
+            p {
+                font-size: inherit;
+            }
+
+            .container {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .fabric-container {
+                padding-bottom: 50px;
+            }
+
+            .fabric-txt {
+                padding-top: 30px;
+                padding-left: 30px;
+            }
+
+            .insta-like {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .insta-like li {
+                width: 50%;
+                padding: 0;
+            }
+
+            .cubic-div>div {
+                padding-top: 10px;
+                padding-bottom: 30px;
+            }
+
+            .p-description p:first-of-type {
+                padding-bottom: 0;
+            }
+        }
     </style>
 
     <section>
-        <div class="position-relative pb-100">
+        <div class="position-relative">
             <div id="first-banner"></div>
             <div class="text-overlay-left">
                 <h1 class="pb-15">PARTNER WITH US</h1>
@@ -119,7 +170,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="pb-0">
         <div class="text-center pb-90">
             <h2 class="pb-30">CRAFTSMANSHIP</h2>
             <div class="p-description">
@@ -128,7 +179,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="row pb-70">
+            <div class="row fabric-container">
                 <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                     <figure>
                         <img class="img-fluid"
@@ -137,7 +188,7 @@
                     </figure>
                 </div>
                 <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto">
-                    <div class="mw-350 ml-60 p-description">
+                    <div class="mw-350 ml-60 p-description fabric-txt">
                         <p class="fabric-title">LEATHER</p>
                         <p class="fabric-sub">Premium quality leather giving luxury and elegance with added
                             microfiber
@@ -145,10 +196,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row pb-70">
+            <div class="row fabric-container">
                 <div
-                    class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
-                    <div class="mw-250 p-description">
+                    class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1 my-auto">
+                    <div class="mw-250 p-description fabric-txt">
                         <p class="fabric-title">FABRIC</p>
                         <p class="fabric-sub">One of a kind stylish phone case made out of unique fabrics with
                             unique designs.</p>
@@ -166,7 +217,7 @@
         </div>
     </section>
     <section class="colored-section">
-        <div class="container-fluid pb-100">
+        <div class="container">
             <div class="text-center pt-90 pb-90">
                 <h2 class="pb-30">BRAND CUSTOMIZATION</h2>
                 <div class="p-description">
@@ -174,40 +225,37 @@
                     <p>Bring out your brand to life with custom design, special package, and engravings.</p>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_15.jpg?21151"
-                            alt="custom design" />
-                        <div>CUSTOM DESIGN</div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_18.jpg?21151"
-                            alt="special package" />
-                        <div>SPECIAL PACKAGE</div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_21.jpg?21151"
-                            alt="logo" />
-                        <div>LOGO</div>
-                    </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                    <img class="img-fluid"
+                        src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_15.jpg?21151"
+                        alt="custom design" />
+                    <div>CUSTOM DESIGN</div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                    <img class="img-fluid"
+                        src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_18.jpg?21151"
+                        alt="special package" />
+                    <div>SPECIAL PACKAGE</div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                    <img class="img-fluid"
+                        src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_21.jpg?21151"
+                        alt="logo" />
+                    <div>LOGO</div>
                 </div>
             </div>
         </div>
     </section>
+
     <section>
-        <div class="container-fluid pb-100">
+        <div class="container">
             <div class="text-center pt-100 pb-50">
                 <h2 class="pb-30">EXPAND YOUR AUDIENCE</h2>
                 <div class="mw-650 mx-auto p-description">
                     <p>Attract female customers believing in the core in creative design, refined fashion,
                         and stylish tech accessories.</p>
                 </div>
-            </div>
-            <div class="container px-30">
                 <ul class="list-unstyled insta-like">
                     <li>
                         <img class="img-fluid"
@@ -253,8 +301,9 @@
             </div>
         </div>
     </section>
+
     <section class="colored-section">
-        <div class="container pb-100">
+        <div class="container">
             <div class="text-center pt-90">
                 <h2 class="pb-30">CONNECT WITH US</h2>
                 <div class="p-description">
