@@ -36,3 +36,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.btn {
+  border: 1px solid #000;
+}
