@@ -1,322 +1,456 @@
-<html lang="en">
+<style>
+    body {
+        font-size: 16px;
+        color: #000 !important;
+    }
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    section {
+        padding-top: 100px;
+    }
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="resource/custom.css" rel="stylesheet">
-    <title>Hello, f!</title>
-</head>
+    p {
+        color: #000;
+        margin-bottom: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 
-<body>
-    <style>
-        section {
-            padding-bottom: 100px;
+    #first-banner {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_03.jpg?21151");
+        background-repeat: no-repeat;
+        height: 600px;
+        background-size: cover;
+        background-position: top;
+    }
+
+
+    #leather {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_07.jpg?21151");
+    }
+
+    #fabric {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151");
+    }
+
+    #love {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_27.jpg?21157");
+    }
+
+    #glam-check {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_29.jpg?21205");
+    }
+
+    #sunset {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_31.jpg?21157");
+    }
+
+    #fall-in-leaves {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_33.jpg?21157");
+    }
+
+    #new-york-new-york {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_39.jpg?21157");
+    }
+
+    #hello {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_40.jpg?21157");
+    }
+
+    #checkmate {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_41.jpg?21157");
+    }
+
+    #santa-monica {
+        background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_42.jpg?21157");
+    }
+
+    .fabric-img {
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 490px;
+    }
+
+    .thumb-img {
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 220px;
+    }
+
+    .colored-section {
+        background-color: #EDE8E1;
+    }
+
+    .mw-600 {
+        max-width: 600px;
+    }
+
+    .mw-400 {
+        max-width: 400px;
+    }
+
+    .mw-350 {
+        max-width: 350px;
+    }
+
+    .mw-250 {
+        max-width: 250px;
+    }
+
+    .first-banner {
+        position: relative;
+    }
+
+    .text-overlay-left {
+        position: absolute;
+        top: 27%;
+        left: 7%;
+    }
+
+    .fabric-title {
+        text-decoration: underline;
+        -webkit-text-decoration-color: #878787;
+        text-decoration-color: #878787;
+        text-underline-position: under;
+        letter-spacing: .05em;
+    }
+
+    .fabric-sub {
+        color: #6c757d;
+        line-height: 170%;
+    }
+
+    .main-description {
+        text-align: center;
+        padding-bottom: 90px;
+    }
+
+    .fabric-container {
+        padding-bottom: 70px;
+    }
+
+    .insta-like {
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .insta-like li {
+        width: calc(100% / 4);
+        text-align: center;
+    }
+
+    .insta-like li:nth-of-type(-n+4) {
+        padding-bottom: 30px;
+    }
+
+    .p-description p:first-of-type {
+        padding-bottom: 10px;
+    }
+
+    .cubic-div figcaption {
+        padding-top: 30px;
+    }
+
+    .btn-join {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .btn-join:hover {
+        color: #000 !important;
+    }
+
+    .mx-w-h {
+        width: 100%;
+        height: 200vh;
+    }
+
+    #fsLocal, .fsForm{
+        background-color: #fff;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        #first-banner {
+            background-position: 67%;
         }
 
-        p {
-            color: #000;
-            font-size: 16px;
-            margin-bottom: 0;
-            margin-block-start: 0;
-            margin-block-end: 0;
+        .fabric-img {
+            height: 300px;
+        }
+
+        .thumb-img {
+            height: 150px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        body {
+            font-size: inherit;
+        }
+
+        section {
+            padding: 50px 20px 0 20px;
+        }
+
+        h1 {
+            font-size: 27px;
+        }
+
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
         }
 
         #first-banner {
-            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_03.jpg?21151");
-            background-repeat: no-repeat;
-            height: 400px;
-            background-size: cover;
-            background-position: bottom;
+            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_1_02.jpg?21205");
+            height: 480px;
+            background-position: 95%;
         }
 
-        .colored-section {
-            background-color: #EDE8E1;
+        #leather {
+            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_07.jpg?21151");
         }
 
-        .mw-650 {
-            max-width: 650px;
-        }
-
-        .mw-600 {
-            max-width: 600px;
+        #fabric {
+            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151");
         }
 
         .mw-400 {
-            max-width: 400px;
+            max-width: 200px;
         }
 
-        .mw-350 {
-            max-width: 350px;
+        .pb-35 {
+            padding-bottom: 20px;
         }
 
-        .mw-250 {
-            max-width: 250px;
-        }
-
-        .first-banner {
-            position: relative;
+        .pb-100 {
+            padding-bottom: 50px;
         }
 
         .text-overlay-left {
-            position: absolute;
-            top: 27%;
-            left: 7%;
+            top: 15%;
+            left: 3%;
         }
 
-        .fabric-title {
-            text-decoration: underline;
-            -webkit-text-decoration-color: #878787;
-            text-decoration-color: #878787;
-            text-underline-position: under;
-            letter-spacing: .05em;
-        }
-
-        .fabric-sub {
-            color: #6c757d;
-            line-height: 170%;
+        .main-description {
+            padding-bottom: 50px;
         }
 
         .fabric-container {
-            padding-bottom: 70px;
+            padding-bottom: 50px;
+        }
+
+        .fabric-txt {
+            padding-top: 30px;
+            margin-left: 0 !important;
         }
 
         .insta-like {
-            padding-left: 30px;
-            padding-right: 30px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .insta-like li {
-            width: calc(100% / 4);
-            padding: 15px;
+            width: 50%;
+            padding-bottom: 15px !important;
         }
 
-        .p-description p:first-of-type {
-            padding-bottom: 10px;
+        .fabric-img {
+            margin-left: -50px;
+            margin-right: -50px;
+        }
+
+        .thumb-img {
+            height: 120px;
+        }
+
+        .btn-join {
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         .cubic-div>div {
-            color: #000;
-            padding-top: 30px;
-            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 30px;
         }
 
-        .hover-black:hover {
-            color: #000 !important;
+        .p-description p:first-of-type {
+            padding-bottom: 0;
         }
+    }
+</style>
 
-        @media only screen and (max-width: 768px) {
-            section {
-                padding-bottom: 60px;
-            }
+<section class="pt-0 px-0">
+    <div class="position-relative">
+        <div id="first-banner"></div>
+        <div class="text-overlay-left">
+            <h1 class="pb-15">PARTNER WITH US</h1>
+            <div class="mw-400">
+                <p class="pb-35">Bring out your brand with custom made mobile accessories for you and your customers
+                </p>
+                <button id="join-btn" class="btn btn--secondary px-30">Join now</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-            p {
-                font-size: inherit;
-            }
-
-            .container {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-
-            .fabric-container {
-                padding-bottom: 50px;
-            }
-
-            .fabric-txt {
-                padding-top: 30px;
-                padding-left: 30px;
-            }
-
-            .insta-like {
-                padding-left: 0;
-                padding-right: 0;
-            }
-
-            .insta-like li {
-                width: 50%;
-                padding: 0;
-            }
-
-            .cubic-div>div {
-                padding-top: 10px;
-                padding-bottom: 30px;
-            }
-
-            .p-description p:first-of-type {
-                padding-bottom: 0;
-            }
-        }
-    </style>
-
-    <section>
-        <div class="position-relative">
-            <div id="first-banner"></div>
-            <div class="text-overlay-left">
-                <h1 class="pb-15">PARTNER WITH US</h1>
-                <div class="mw-400">
-                    <p class="pb-35">Bring out your brand with custom made mobile accessories for you and your customers
-                    </p>
-                    <button class="btn btn--secondary px-30">Join now</button>
+<section>
+    <div class="main-description">
+        <h2 class="pb-30">CRAFTSMANSHIP</h2>
+        <div class="p-description">
+            <p>Specialized in crafting fine leather and fabric material.</p>
+            <p>Luxury and stylish products to provide your customers with a memorable experience.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row fabric-container">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                <div id="leather" class="fabric-img" alt="leather"></div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto">
+                <div class="mw-350 ml-60 p-description fabric-txt">
+                    <p class="fabric-title">LEATHER</p>
+                    <p class="fabric-sub">Premium quality leather giving luxury and elegance with added
+                        microfiber
+                        lining providing complete protection.</p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="pb-0">
-        <div class="text-center pb-90">
-            <h2 class="pb-30">CRAFTSMANSHIP</h2>
-            <div class="p-description">
-                <p>Specialized in crafting fine leather and fabric material.</p>
-                <p>Luxury and stylish products to provide your customers with a memorable experience.</p>
+        <div class="row fabric-container">
+            <div
+                class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1 my-auto">
+                <div class="mw-250 p-description fabric-txt">
+                    <p class="fabric-title">FABRIC</p>
+                    <p class="fabric-sub">One of a kind stylish phone case made out of unique fabrics with
+                        unique designs.</p>
+                </div>
+            </div>
+            <div
+                class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 order-1 order-sm-1 order-md-2 order-lg-2 order-xl-2">
+                <div id="fabric" class="fabric-img" alt="fabric"></div>
             </div>
         </div>
-        <div class="container">
-            <div class="row fabric-container">
-                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-                    <figure>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_07.jpg?21151"
-                            alt="leather">
-                    </figure>
-                </div>
-                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto">
-                    <div class="mw-350 ml-60 p-description fabric-txt">
-                        <p class="fabric-title">LEATHER</p>
-                        <p class="fabric-sub">Premium quality leather giving luxury and elegance with added
-                            microfiber
-                            lining providing complete protection.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row fabric-container">
-                <div
-                    class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1 my-auto">
-                    <div class="mw-250 p-description fabric-txt">
-                        <p class="fabric-title">FABRIC</p>
-                        <p class="fabric-sub">One of a kind stylish phone case made out of unique fabrics with
-                            unique designs.</p>
-                    </div>
-                </div>
-                <div
-                    class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 order-1 order-sm-1 order-md-2 order-lg-2 order-xl-2">
-                    <figure>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151"
-                            alt="fabric">
-                    </figure>
-                </div>
-            </div>
+    </div>
+</section>
+<section class="colored-section pb-100">
+    <div class="main-description">
+        <h2 class="pb-30">BRAND CUSTOMIZATION</h2>
+        <div class="p-description">
+            <p>Products tailored to your brand identity and your customers' need.</p>
+            <p>Bring out your brand to life with custom design, special package, and engravings.</p>
         </div>
-    </section>
-    <section class="colored-section">
-        <div class="container">
-            <div class="text-center pt-90 pb-90">
-                <h2 class="pb-30">BRAND CUSTOMIZATION</h2>
-                <div class="p-description">
-                    <p>Products tailored to your brand identity and your customers' need.</p>
-                    <p>Bring out your brand to life with custom design, special package, and engravings.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                <figure>
                     <img class="img-fluid"
                         src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_15.jpg?21151"
                         alt="custom design" />
-                    <div>CUSTOM DESIGN</div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                    <figcaption>CUSTOM DESIGN</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                <figure>
                     <img class="img-fluid"
                         src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_18.jpg?21151"
                         alt="special package" />
-                    <div>SPECIAL PACKAGE</div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                    <figcaption>SPECIAL PACKAGE</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cubic-div">
+                <figure>
                     <img class="img-fluid"
                         src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_21.jpg?21151"
                         alt="logo" />
-                    <div>LOGO</div>
-                </div>
+                    <figcaption>LOGO</figcaption>
+                </figure>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section>
-        <div class="container">
-            <div class="text-center pt-100 pb-50">
-                <h2 class="pb-30">EXPAND YOUR AUDIENCE</h2>
-                <div class="mw-650 mx-auto p-description">
-                    <p>Attract female customers believing in the core in creative design, refined fashion,
-                        and stylish tech accessories.</p>
-                </div>
-                <ul class="list-unstyled insta-like">
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_27.jpg?21157"
-                            alt="love">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_29.jpg?21157"
-                            alt="glam check">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_31.jpg?21157"
-                            alt="sunset">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_33.jpg?21157"
-                            alt="fall in leaves">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_39.jpg?21157"
-                            alt="new york new york">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_40.jpg?21157"
-                            alt="hello">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_41.jpg?21157"
-                            alt="checkmate">
-                    </li>
-                    <li>
-                        <img class="img-fluid"
-                            src="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_42.jpg?21157"
-                            alt="basic">
-                    </li>
-                </ul>
+<section>
+    <div class="main-description">
+        <h2 class="pb-30">EXPAND YOUR AUDIENCE</h2>
+        <div class="mx-auto p-description">
+            <p>Attract female customers believing in the core in creative design, refined fashion,</p>
+            <p>and stylish tech accessories.</p>
+        </div>
+    </div>
+    <div class="container pb-100">
+        <ul class="list-unstyled insta-like">
+            <li>
+                <div id="love" class="thumb-img" alt="love"></div>
+            </li>
+            <li>
+                <div id="glam-check" class="thumb-img" alt="glam check"></div>
+            </li>
+            <li>
+                <div id="sunset" class="thumb-img" alt="sunset"></div>
+            </li>
+            <li>
+                <div id="fall-in-leaves" class="thumb-img" alt="fall in leaves"></div>
+            </li>
+            <li>
+                <div id="new-york-new-york" class="thumb-img" alt="new york new york"></div>
+            </li>
+            <li>
+                <div id="hello" class="thumb-img" alt="hello"></div>
+            </li>
+            <li>
+                <div id="checkmate" class="thumb-img" alt="checkmate"></div>
+            </li>
+            <li>
+                <div id="santa-monica" class="thumb-img" alt="santa monica"></div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="form-container main-description">
+        <h2 class="pb-30">CONNECT WITH US</h2>
+        <div class="p-description">
+            <p>It's not a big step, simply tell us your name and your brand.</p>
+            <p>We're ready to start a conversation.</p>
+            <div class="mw-600 mt-60 mx-auto">
+                <button id="load-form" class="btn bg-transparent btn--full btn-join">JOIN
+                    NOW</button>
+            </div>
+            <div id="form-section" style="display: none;">
+                <object class="mx-w-h" type="text/html"
+                    data="https://spigen.formstack.com/forms/cyrill_business_opportunity"></object>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="colored-section">
-        <div class="container">
-            <div class="text-center pt-90">
-                <h2 class="pb-30">CONNECT WITH US</h2>
-                <div class="p-description">
-                    <p>It's not a big step, simply tell us your name and your brand.</p>
-                    <p>We're ready to start a conversation.</p>
-                    <div class="mw-600 mt-60 mx-auto">
-                        <button class="btn bg-transparent py-20 btn--full hover-black">JOIN NOW</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+    var $section = $("#form-section");
+    var headerHeight = $("[data-js-desktop-sticky]").height();
 
-</body>
+    function loadForm() {
+        if ($section.is(":hidden")) {
+            $section.show();
+            $(".form-container").css("padding-bottom", "0");
+        }
+        else {
+            $(".form-container").css("padding-bottom", "90px");
+            $section.hide();
+        }
+    }
 
-</html>
+    $('#load-form').on('click', loadForm);
+    $("#join-btn").on("click", function () {
+        $section.show();
+        $(".form-container").css("padding-bottom", "0");
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $section.offset().top - headerHeight
+        }, 2000);
+    })
+</script>
