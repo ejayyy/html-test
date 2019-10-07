@@ -23,7 +23,6 @@
         background-position: top;
     }
 
-
     #leather {
         background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_07.jpg?21151");
     }
@@ -72,10 +71,10 @@
     }
 
     .thumb-img {
-        background-size: auto 100%;
+        padding-bottom: 100%;
+        background-position: center;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: center top;
-        height: 220px;
     }
 
     .colored-section {
@@ -133,18 +132,9 @@
     .insta-like {
         padding-left: 30px;
         padding-right: 30px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .insta-like li {
-        width: calc(100% / 4);
-        text-align: center;
-    }
-
-    .insta-like li:nth-of-type(-n+4) {
-        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 20px;
     }
 
     .p-description p:first-of-type {
@@ -158,19 +148,16 @@
     .btn-join {
         padding-top: 20px;
         padding-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .btn-join:hover {
         color: #000 !important;
     }
 
-    .mx-w-h {
-        width: 100%;
-        height: 200vh;
-    }
-
-    #fsLocal, .fsForm{
-        background-color: #fff;
+    .form-width {
+        width: 80%;
+        height: 155vh;
     }
 
     @media only screen and (max-width: 1024px) {
@@ -182,14 +169,53 @@
             height: 300px;
         }
 
-        .thumb-img {
-            height: 150px;
+        .form-width {
+            height: 110vh;
         }
     }
 
     @media only screen and (max-width: 768px) {
         body {
             font-size: inherit;
+        }
+
+        section {
+            padding: 50px 20px 0 20px;
+        }
+
+        h1 {
+            font-size: 27px;
+        }
+
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        #first-banner {
+            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_1_02.jpg?21205");
+            height: 480px;
+            background-position: 95%;
+        }
+
+        #leather {
+            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_07.jpg?21151");
+        }
+
+        #fabric {
+            background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151");
+        }
+
+        .mw-400 {
+            max-width: 200px;
+        }
+
+        .pb-35 {
+            padding-bottom: 20px;
+        }
+
+        .pb-100 {
+            padding-bottom: 50px;
         }
 
         section {
@@ -252,11 +278,8 @@
         .insta-like {
             padding-left: 0;
             padding-right: 0;
-        }
-
-        .insta-like li {
-            width: 50%;
-            padding-bottom: 15px !important;
+            grid-template-columns: auto auto;
+            grid-gap: 20px;
         }
 
         .fabric-img {
@@ -264,18 +287,19 @@
             margin-right: -50px;
         }
 
-        .thumb-img {
-            height: 120px;
-        }
-
         .btn-join {
             padding-top: 0;
             padding-bottom: 0;
         }
 
-        .cubic-div>div {
+        .cubic-div figcaption {
             padding-top: 10px;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        .form-width {
+            width: 100%;
+            height: 146vh;
         }
 
         .p-description p:first-of-type {
@@ -383,32 +407,16 @@
         </div>
     </div>
     <div class="container pb-100">
-        <ul class="list-unstyled insta-like">
-            <li>
-                <div id="love" class="thumb-img" alt="love"></div>
-            </li>
-            <li>
-                <div id="glam-check" class="thumb-img" alt="glam check"></div>
-            </li>
-            <li>
-                <div id="sunset" class="thumb-img" alt="sunset"></div>
-            </li>
-            <li>
-                <div id="fall-in-leaves" class="thumb-img" alt="fall in leaves"></div>
-            </li>
-            <li>
-                <div id="new-york-new-york" class="thumb-img" alt="new york new york"></div>
-            </li>
-            <li>
-                <div id="hello" class="thumb-img" alt="hello"></div>
-            </li>
-            <li>
-                <div id="checkmate" class="thumb-img" alt="checkmate"></div>
-            </li>
-            <li>
-                <div id="santa-monica" class="thumb-img" alt="santa monica"></div>
-            </li>
-        </ul>
+        <div class="insta-like">
+            <div id="love" class="thumb-img" alt="love"></div>
+            <div id="glam-check" class="thumb-img" alt="glam check"></div>
+            <div id="sunset" class="thumb-img" alt="sunset"></div>
+            <div id="fall-in-leaves" class="thumb-img" alt="fall in leaves"></div>
+            <div id="new-york-new-york" class="thumb-img" alt="new york new york"></div>
+            <div id="hello" class="thumb-img" alt="hello"></div>
+            <div id="checkmate" class="thumb-img" alt="checkmate"></div>
+            <div id="santa-monica" class="thumb-img" alt="santa monica"></div>
+        </div>
     </div>
 </section>
 
@@ -423,7 +431,7 @@
                     NOW</button>
             </div>
             <div id="form-section" style="display: none;">
-                <object class="mx-w-h" type="text/html"
+                <object class="form-width" type="text/html"
                     data="https://spigen.formstack.com/forms/cyrill_business_opportunity"></object>
             </div>
         </div>
@@ -437,10 +445,8 @@
     function loadForm() {
         if ($section.is(":hidden")) {
             $section.show();
-            $(".form-container").css("padding-bottom", "0");
         }
         else {
-            $(".form-container").css("padding-bottom", "90px");
             $section.hide();
         }
     }
@@ -448,7 +454,6 @@
     $('#load-form').on('click', loadForm);
     $("#join-btn").on("click", function () {
         $section.show();
-        $(".form-container").css("padding-bottom", "0");
         $([document.documentElement, document.body]).animate({
             scrollTop: $section.offset().top - headerHeight
         }, 2000);
