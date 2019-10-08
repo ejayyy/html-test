@@ -69,17 +69,8 @@
         padding-bottom: 20px;
     }
 
-    #fsForm3311594 {
-        background-color: #fff;
-    }
-
-    .fsRowBody input[type="checkbox"] {
-        height: auto !important;
-        top: 3px !important;
-    }
-
-    .fsBody p {
-        text-align: center;
+    #business-form {
+        height: 1500px;
     }
 
     .mw-200 {
@@ -181,6 +172,10 @@
             background-position: 67%;
         }
 
+        #business-form {
+            height: 1724px;
+        }
+
         .fabric-img {
             height: 300px;
         }
@@ -203,6 +198,10 @@
             background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_1_02.jpg?21205");
             height: 480px;
             background-position: 38%;
+        }
+
+        #business-form {
+            height: 1831px;
         }
 
         #MainContent .container {
@@ -422,9 +421,8 @@
                 </button>
             </div>
             <div id="form-section" class="form-width mx-auto text-left" style="display: none;">
-                <script type="text/javascript"
-                    src="https://spigen.formstack.com/forms/js.php/cyrill_business_opportunity">
-                    </script>
+                <iframe id="business-form" src="https://spigen.formstack.com/forms/cyrill_business_opportunity"
+                    width="100%" frameBorder="0"></iframe>
             </div>
         </div>
     </div>
@@ -442,6 +440,7 @@
             $chevron.removeClass(chevronDown).addClass(chevronUp);
             $section.slideDown(2000);
             $formContainer.removeClass(toggleClass);
+            console.log($("#business-form").prop('scrollHeight'));
         }
         else {
             $chevron.removeClass(chevronUp).addClass(chevronDown);
@@ -463,5 +462,5 @@
         $([document.documentElement, document.body]).animate({
             scrollTop: $section.offset().top - headerHeight
         }, 2000);
-    })
+    });
 </script>
