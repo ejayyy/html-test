@@ -9,7 +9,7 @@
     }
 
     p {
-        color: #000;
+        color: #666;
         margin-bottom: 0;
         margin-block-start: 0;
         margin-block-end: 0;
@@ -63,6 +63,19 @@
         background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_42.jpg?21157");
     }
 
+    #fsForm3311594 {
+        background-color: #fff;
+    }
+
+    .fsRowBody input[type="checkbox"] {
+        height: auto !important;
+        top: 1px;
+    }
+
+    .fsBody p {
+        text-align: center;
+    }
+
     .fabric-img {
         background-size: auto 100%;
         background-repeat: no-repeat;
@@ -81,8 +94,12 @@
         background-color: #EDE8E1;
     }
 
-    .mw-600 {
-        max-width: 600px;
+    .color-black {
+        color: #000;
+    }
+
+    .mw-200 {
+        max-width: 200px;
     }
 
     .mw-400 {
@@ -137,18 +154,8 @@
         grid-gap: 20px;
     }
 
-    .p-description p:first-of-type {
-        padding-bottom: 10px;
-    }
-
     .cubic-div figcaption {
         padding-top: 30px;
-    }
-
-    .btn-join {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 40px;
     }
 
     .btn-join:hover {
@@ -156,8 +163,21 @@
     }
 
     .form-width {
-        width: 80%;
-        height: 155vh;
+        width: 50%;
+    }
+
+    .join-btn-container {
+        max-width: 250px;
+    }
+
+    #join-btn {
+        font-size: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .p-description {
+        line-height: 150%;
     }
 
     @media only screen and (max-width: 1024px) {
@@ -167,10 +187,6 @@
 
         .fabric-img {
             height: 300px;
-        }
-
-        .form-width {
-            height: 110vh;
         }
     }
 
@@ -187,15 +203,10 @@
             font-size: 27px;
         }
 
-        .container {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-
         #first-banner {
             background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_1_02.jpg?21205");
             height: 480px;
-            background-position: 95%;
+            background-position: 38%;
         }
 
         #leather {
@@ -211,11 +222,11 @@
         }
 
         .pb-35 {
-            padding-bottom: 20px;
+            padding-bottom: 20px !important;
         }
 
         .pb-100 {
-            padding-bottom: 50px;
+            padding-bottom: 50px !important;
         }
 
         section {
@@ -223,10 +234,10 @@
         }
 
         h1 {
-            font-size: 27px;
+            font-size: 31px;
         }
 
-        .container {
+        #MainContent .container {
             padding-left: 30px;
             padding-right: 30px;
         }
@@ -234,7 +245,7 @@
         #first-banner {
             background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_1_02.jpg?21205");
             height: 480px;
-            background-position: 95%;
+            background-position: 38%;
         }
 
         #leather {
@@ -245,21 +256,10 @@
             background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151");
         }
 
-        .mw-400 {
-            max-width: 200px;
-        }
-
-        .pb-35 {
-            padding-bottom: 20px;
-        }
-
-        .pb-100 {
-            padding-bottom: 50px;
-        }
-
         .text-overlay-left {
             top: 15%;
-            left: 3%;
+            left: 0%;
+            margin-left: 30px;
         }
 
         .main-description {
@@ -272,7 +272,8 @@
 
         .fabric-txt {
             padding-top: 30px;
-            margin-left: 0 !important;
+            margin-left: -20px !important;
+            line-height: 140%;
         }
 
         .insta-like {
@@ -287,11 +288,6 @@
             margin-right: -50px;
         }
 
-        .btn-join {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
         .cubic-div figcaption {
             padding-top: 10px;
             padding-bottom: 20px;
@@ -299,11 +295,18 @@
 
         .form-width {
             width: 100%;
-            height: 146vh;
         }
 
-        .p-description p:first-of-type {
-            padding-bottom: 0;
+        .p-description {
+            line-height: 23px;
+        }
+
+        .fabric-title {
+            padding-bottom: 20px !important;
+        }
+
+        .join-btn-container {
+            max-width: 150px;
         }
     }
 </style>
@@ -314,9 +317,17 @@
         <div class="text-overlay-left">
             <h1 class="pb-15">PARTNER WITH US</h1>
             <div class="mw-400">
-                <p class="pb-35">Bring out your brand with custom made mobile accessories for you and your customers
+                <p id="desktop-txt"
+                    class="pb-35 color-black d-md-inline-block d-lg-inline-block d-xl-inline-block d-sm-none d-none">
+                    Bring out your brand with custom made mobile accessories for you and your customers
                 </p>
-                <button id="join-btn" class="btn btn--secondary px-30">Join now</button>
+                <p id="mobile-txt"
+                    class="pb-35 color-black d-md-none d-lg-none d-xl-none d-sm-inline-block d-inline-block">
+                    Custom made mobile accessories for your customers
+                </p>
+                <div class="join-btn-container">
+                    <button id="join-btn" class="btn btn--secondary btn--full">Join Now</button>
+                </div>
             </div>
         </div>
     </div>
@@ -326,8 +337,9 @@
     <div class="main-description">
         <h2 class="pb-30">CRAFTSMANSHIP</h2>
         <div class="p-description">
-            <p>Specialized in crafting fine leather and fabric material.</p>
-            <p>Luxury and stylish products to provide your customers with a memorable experience.</p>
+            <p>Specialized in crafting fine leather and fabric material.
+                <br class="d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none">
+                Luxury and stylish products to provide your customers with a memorable experience.</p>
         </div>
     </div>
     <div class="container">
@@ -338,8 +350,7 @@
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto">
                 <div class="mw-350 ml-60 p-description fabric-txt">
                     <p class="fabric-title">LEATHER</p>
-                    <p class="fabric-sub">Premium quality leather giving luxury and elegance with added
-                        microfiber
+                    <p class="fabric-sub">Premium quality leather giving luxury and elegance with added microfiber
                         lining providing complete protection.</p>
                 </div>
             </div>
@@ -364,8 +375,9 @@
     <div class="main-description">
         <h2 class="pb-30">BRAND CUSTOMIZATION</h2>
         <div class="p-description">
-            <p>Products tailored to your brand identity and your customers' need.</p>
-            <p>Bring out your brand to life with custom design, special package, and engravings.</p>
+            <p>Products tailored to your brand identity and your customers' need.
+                <br class="d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none">
+                Bring out your brand to life with custom design, special package, and engravings.</p>
         </div>
     </div>
     <div class="container">
@@ -398,15 +410,16 @@
     </div>
 </section>
 
-<section>
+<section class="pb-100">
     <div class="main-description">
         <h2 class="pb-30">EXPAND YOUR AUDIENCE</h2>
         <div class="mx-auto p-description">
-            <p>Attract female customers believing in the core in creative design, refined fashion,</p>
-            <p>and stylish tech accessories.</p>
+            <p>Attract female customers believing in the core in creative design, refined fashion,
+                <br class="d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none">
+                and stylish tech accessories.</p>
         </div>
     </div>
-    <div class="container pb-100">
+    <div class="container">
         <div class="insta-like">
             <div id="love" class="thumb-img" alt="love"></div>
             <div id="glam-check" class="thumb-img" alt="glam check"></div>
@@ -414,46 +427,76 @@
             <div id="fall-in-leaves" class="thumb-img" alt="fall in leaves"></div>
             <div id="new-york-new-york" class="thumb-img" alt="new york new york"></div>
             <div id="hello" class="thumb-img" alt="hello"></div>
-            <div id="checkmate" class="thumb-img" alt="checkmate"></div>
-            <div id="santa-monica" class="thumb-img" alt="santa monica"></div>
+            <div id="checkmate" class="thumb-img d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none"
+                alt="checkmate"></div>
+            <div id="santa-monica"
+                class="thumb-img d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none"
+                alt="santa monica"></div>
+        </div>
+    </div>
+</section>
+
+<section class="colored-section">
+    <div class="main-description">
+        <h2 class="pb-30">CYRILL CATALOG</h2>
+        <div class="mx-auto p-description">
+            <p>Come Look at the Limitless Possibilities of Inspiration and Beauty</p>
+            <div class="mw-200 mt-60 mx-auto">
+                <button class="btn btn--secondary btn--full">Download</button>
+            </div>
         </div>
     </div>
 </section>
 
 <section>
-    <div class="form-container main-description">
+    <div id="form-container" class="form-container text-center main-description">
         <h2 class="pb-30">CONNECT WITH US</h2>
         <div class="p-description">
-            <p>It's not a big step, simply tell us your name and your brand.</p>
-            <p>We're ready to start a conversation.</p>
-            <div class="mw-600 mt-60 mx-auto">
-                <button id="load-form" class="btn bg-transparent btn--full btn-join">JOIN
-                    NOW</button>
+            <p>It's not a big step, simply tell us your name and your brand.
+                <br class="d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none pb-10">
+                We're ready to start a conversation.</p>
+            <div class="mw-200 mt-60 mx-auto">
+                <button id="load-form" class="btn bg-transparent btn-join btn--full">
+                    JOIN NOW<i class="pl-5 fal fa-chevron-down"></i>
+                </button>
             </div>
-            <div id="form-section" style="display: none;">
-                <object class="form-width" type="text/html"
-                    data="https://spigen.formstack.com/forms/cyrill_business_opportunity"></object>
+            <div id="form-section" class="form-width mx-auto text-left" style="display: none;">
+                <script type="text/javascript"
+                    src="https://spigen.formstack.com/forms/js.php/cyrill_business_opportunity">
+                    </script>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-    var $section = $("#form-section");
+    var $section = $("#form-section"), $formContainer = $("#form-container");
     var headerHeight = $("[data-js-desktop-sticky]").height();
+    var isShow = true, toggleClass = "main-description";
+
+    $("#fsCell72852624").remove();
 
     function loadForm() {
-        if ($section.is(":hidden")) {
-            $section.show();
+        if (isShow) {
+            $section.slideDown(2000);
+            $formContainer.removeClass(toggleClass);
         }
         else {
-            $section.hide();
+            $section.slideUp(2000);
+            if (!$formContainer.hasClass(toggleClass)) {
+                $formContainer.addClass(toggleClass);
+            }
         }
     }
 
-    $('#load-form').on('click', loadForm);
+    $('#load-form').on('click', function () {
+        isShow = $section.is(":hidden") ? true : false;
+        loadForm();
+    });
     $("#join-btn").on("click", function () {
-        $section.show();
+        isShow = true;
+        loadForm();
+
         $([document.documentElement, document.body]).animate({
             scrollTop: $section.offset().top - headerHeight
         }, 2000);
