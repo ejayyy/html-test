@@ -180,6 +180,11 @@
         line-height: 150%;
     }
 
+    .text-overlay {
+        position: absolute;
+        top: 20%;
+    }
+
     @media only screen and (max-width: 1024px) {
         #first-banner {
             background-position: 67%;
@@ -256,12 +261,6 @@
             background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151");
         }
 
-        .text-overlay-left {
-            top: 15%;
-            left: 0%;
-            margin-left: 30px;
-        }
-
         .main-description {
             padding-bottom: 50px;
         }
@@ -308,25 +307,30 @@
         .join-btn-container {
             max-width: 150px;
         }
+
+        .text-overlay {
+            margin-left: 20px;
+        }
     }
 </style>
 
-<section class="pt-0 px-0">
-    <div class="position-relative">
-        <div id="first-banner"></div>
-        <div class="text-overlay-left">
-            <h1 class="pb-15">PARTNER WITH US</h1>
-            <div class="mw-400">
-                <p id="desktop-txt"
-                    class="pb-35 color-black d-md-inline-block d-lg-inline-block d-xl-inline-block d-sm-none d-none">
-                    Bring out your brand with custom made mobile accessories for you and your customers
-                </p>
-                <p id="mobile-txt"
-                    class="pb-35 color-black d-md-none d-lg-none d-xl-none d-sm-inline-block d-inline-block">
-                    Custom made mobile accessories for your customers
-                </p>
-                <div class="join-btn-container">
-                    <button id="join-btn" class="btn btn--secondary btn--full">Join Now</button>
+<section class="p-0">
+    <div id="first-banner" class="position-relative">
+        <div class="container">
+            <div class="text-overlay">
+                <h1 class="pb-15">PARTNER WITH US</h1>
+                <div class="mw-400">
+                    <p id="desktop-txt"
+                        class="pb-35 color-black d-md-inline-block d-lg-inline-block d-xl-inline-block d-sm-none d-none">
+                        Bring out your brand with custom made mobile accessories for you and your customers
+                    </p>
+                    <p id="mobile-txt"
+                        class="pb-35 color-black d-md-none d-lg-none d-xl-none d-sm-inline-block d-inline-block">
+                        Custom made mobile accessories for your customers
+                    </p>
+                    <div class="join-btn-container">
+                        <button id="join-btn" class="btn btn--secondary btn--full">Join Now</button>
+                    </div>
                 </div>
             </div>
         </div>
