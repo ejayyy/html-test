@@ -1,54 +1,269 @@
-.pt-90 {
-  padding-top: 90px;
+body {
+  font-size: 16px;
+  color: #000 !important;
 }
-.pt-100 {
+
+section {
   padding-top: 100px;
 }
 
-.pb-10 {
-  padding-bottom: 10px;
-}
-.pb-15 {
-  padding-bottom: 15px;
-}
-.pb-30 {
-  padding-bottom: 30px;
-}
-.pb-35 {
-  padding-bottom: 35px;
-}
-.pb-50 {
-  padding-bottom: 50px;
-}
-.pb-70 {
-  padding-bottom: 70px;
-}
-.pb-90 {
-  padding-bottom: 90px;
-}
-.pb-100 {
-  padding-bottom: 100px;
+p {
+  color: #666;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-.px-30 {
-  padding-left: 30px;
-  padding-right: 30px;
+#first-banner {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_03.jpg?21151");
+  background-repeat: no-repeat;
+  height: 600px;
+  background-size: cover;
+  background-position: top;
 }
 
-.py-20 {
+#leather {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_07.jpg?21151");
+}
+
+#fabric {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_11.jpg?21151");
+}
+
+#love {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_27.jpg?21157");
+}
+
+#glam-check {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_29.jpg?21205");
+}
+
+#sunset {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_31.jpg?21157");
+}
+
+#fall-in-leaves {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_33.jpg?21157");
+}
+
+#new-york-new-york {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_39.jpg?21157");
+}
+
+#hello {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_40.jpg?21157");
+}
+
+#checkmate {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_41.jpg?21157");
+}
+
+#santa-monica {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_42.jpg?21157");
+}
+
+#join-btn {
+  font-size: 18px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.mt-60 {
-  margin-top: 60px;
+#business-form {
+  height: 1606px;
 }
 
-.btn {
-  border: 1px solid #000;
-  border-radius: 0;
+.mw-200 {
+  max-width: 200px;
 }
 
-.btn--full {
-  width: 100%;
+.mw-250 {
+  max-width: 250px;
+}
+
+.mw-350 {
+  max-width: 350px;
+}
+
+.mw-400 {
+  max-width: 400px;
+}
+
+.colored-section {
+  background-color: #ede8e1;
+}
+
+.color-black {
+  color: #000;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 20%;
+}
+
+.main-description {
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.p-description {
+  line-height: 150%;
+}
+
+.fabric-container {
+  padding-bottom: 70px;
+}
+
+.fabric-title {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #878787;
+  text-decoration-color: #878787;
+  text-underline-position: under;
+  letter-spacing: 0.05em;
+  padding-bottom: 15px;
+}
+
+.fabric-sub {
+  color: #6c757d;
+  line-height: 170%;
+}
+
+.fabric-img {
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 490px;
+}
+
+.cubic-div figcaption {
+  padding-top: 30px;
+}
+
+.insta-like {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+.thumb-img {
+  padding-bottom: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.join-btn-container {
+  max-width: 250px;
+}
+
+.form-width {
+  width: 50%;
+}
+
+.btn-join:hover {
+  color: #000 !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  #first-banner {
+    background-position: 67%;
+  }
+
+  #business-form {
+    height: 1998px;
+  }
+
+  .fabric-img {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: inherit;
+  }
+
+  section {
+    padding: 50px 20px 0 20px;
+  }
+
+  h1 {
+    font-size: 31px;
+  }
+
+  #first-banner {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/business_collaboration_5_1_02.jpg?21205");
+    height: 480px;
+    background-position: 38%;
+  }
+
+  #business-form {
+    height: 2094px;
+  }
+
+  #MainContent .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .mw-400 {
+    max-width: 200px;
+  }
+
+  .pb-100 {
+    padding-bottom: 50px !important;
+  }
+
+  .pb-35 {
+    padding-bottom: 20px !important;
+  }
+
+  .main-description {
+    padding-bottom: 50px;
+  }
+
+  .p-description {
+    line-height: 23px;
+  }
+
+  .fabric-container {
+    padding-bottom: 50px;
+  }
+
+  .fabric-title {
+    padding-bottom: 20px !important;
+  }
+
+  .fabric-txt {
+    padding-top: 30px;
+    margin-left: -20px !important;
+    line-height: 140%;
+  }
+
+  .fabric-img {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  .cubic-div figcaption {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .insta-like {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
+  .join-btn-container {
+    max-width: 150px;
+  }
+
+  .form-width {
+    width: 100%;
+  }
 }
