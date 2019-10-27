@@ -30,18 +30,18 @@ async function getCategory() {
 }
 
 function setCategory(categories) {
-    let html = ""
+    let html = []
 
     categories.forEach((v, k) => {
-        html += "<button onClick='getCategoryDetail(this)' "
+        html.push("<button onClick='getCategoryDetail(this)' ")
 
         for (let i = 0; i < v.length; i++)
-            html += "data-" + i + "='" + v[i] + "' "
+            html.push("data-", i, "='", v[i], "' ")
 
-        html += "><img src='" + getImageResource(k) + "' /><p>" + k + "</p></button>"
+        html.push("><img src='", getImageResource(k), "' /><p>", k, "</p></button>")
     })
 
-    $("#category-box").html(html)
+    $("#category-box").html(html.join(""))
 }
 
 function getCategoryDetail(category) {
@@ -78,35 +78,37 @@ function setCategoryDetail(parentName, details) {
         else
             category = parentName
 
-        let html = "<div class='detail-title'><img src='" + getImageResource(parentName) + "'><h3>" +
-            category + "</h3></div>" + "<div class='detail-sub'>"
+        let html = ["<div class='detail-title'><img src='", getImageResource(parentName), "'><h3>",
+            category, "</h3></div>", "<div class='detail-sub'>"]
 
         details.forEach((v) => {
-            html += '<div><div id="heading' + v.id + '">' +
-                '<a class="title" data-toggle="collapse" data-target="#collapse' + v.id +
-                '" aria-expanded="true" aria-controls="collapseOne" onclick="getArticle(\'' + v.id + '\')" onchange="changeChevron(this)">' +
-                v.title +
-                '<i class="float-right fal fa-chevron-down"></i></a></div>' +
-                '<div id="collapse' + v.id + '" class="collapse" aria-labelledby="heading' + v.id + '" data-parent="#category-detail">' +
-                '<div class="detail-body">' + v.summary +
-                '</div></div></div>'
+            html.push('<div><div id="heading', v.id, '">',
+                '<a class="title" data-toggle="collapse" data-target="#collapse', v.id,
+                '" aria-expanded="true" aria-controls="collapseOne" onclick="getArticle(\'', v.id, '\')" onchange="changeChevron(this)">',
+                v.title,
+                '<i class="float-right fal fa-chevron-down"></i></a></div>',
+                '<div id="collapse', v.id, '" class="collapse" aria-labelledby="heading', v.id, '" data-parent="#category-detail">',
+                '<div class="detail-body">', v.summary,
+                '</div></div></div>')
         })
-        html += "</div>"
+        html.push("</div>")
 
-        $("#category-detail").append(html)
+        $("#category-detail").append(html.join(""))
     } catch (e) {
         console.log(e)
     }
 }
 
 function getArticle(articleId) {
-    $.get("https://desk.zoho.com/portal/api/kbArticles/" + articleId, { "portalId": portalId }, function (resp) {
+    let url = "https://desk.zoho.com/portal/api/kbArticles/".concat(articleId)
+    $.get(url, { "portalId": portalId }, function (resp) {
         setArticle(articleId, resp.answer)
     })
 }
 
 function setArticle(articleId, article) {
-    $("#collapse" + articleId + " .detail-body").html(article.replace(/<div><br \/><\/div>/g, ""))
+    let id = "#collapse".concat(articleId, " .detail-body")
+    $(id).html(article.replace(/<div><br \/><\/div>/g, ""))
 }
 
 function searchArticle() {
@@ -135,7 +137,7 @@ function addActiveCss(category) {
 }
 
 function getImageResource(rawName) {
-    let fileName = rawName.replace(/[^A-Z0-9]+/ig, "").toLowerCase() + ".png"
+    let fileName = (rawName.replace(/[^A-Z0-9]+/ig, "").toLowerCase()).concat(".png")
     let liquidPath = '{{ 'filename' | asset_url }}'
 
     return liquidPath.replace("filename", fileName)

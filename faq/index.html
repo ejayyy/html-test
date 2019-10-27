@@ -7,12 +7,19 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="resource/custom.css"stylesheet">
+    <link href="resource/custom.css" rel="stylesheet">
     <title>FAQ</title>
 </head>
 
 <body>
-    <section id="category-section">
+    <section class="container">
+        <div id="category-search">
+            <input type="text" id="search" placeholder="search" aria-label="search" aria-describedby="search-btn"
+                onkeydown="if(event.keyCode == 13)document.getElementById('search-btn').click()">
+                <button class="btn" type="button" id="search-btn" onclick="searchArticle()">search</button>
+        </div>
+        <div id="category-box"></div>
+        <div id="category-detail"></div>
     </section>
 </body>
 
@@ -21,6 +28,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="axnonymous"></script>
-<script src="resource/getList.js"></script>
+<script src="resource/zoho-connect.js.liquid"></script>
 
 </html>
