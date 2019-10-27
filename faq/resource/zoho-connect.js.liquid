@@ -1,4 +1,10 @@
 const portalId = "de2ee0f8eb5510707011341884fe3c11ec21adc8873698b141caf3a01fde26a6"
+const url = {
+    "cateogry": "https://desk.zoho.com/portal/api/kbCategories",
+    "detailList": "https://desk.zoho.com/portal/api/kbArticles",
+    "detail": "https://desk.zoho.com/portal/api/kbArticles/",
+    "search": "https://desk.zoho.com/portal/api/kbArticles/search"
+}
 const detailContainer = $("#category-detail")
 
 getCategory().then(function (categories) {
@@ -11,7 +17,7 @@ async function getCategory() {
         let list = new Map()
         let childList = null
 
-        await $.get("https://desk.zoho.com/portal/api/kbCategories", { "portalId": portalId }, function (defs) {
+        await $.get(url.cateogry, { "portalId": portalId }, function (defs) {
             defs.data[0].child.forEach(element => {
 
                 childList = []
@@ -56,7 +62,7 @@ function getCategoryDetail(category) {
     $.each(ids, function (i, v) {
         param.categoryId = v
 
-        $.get("https://desk.zoho.com/portal/api/kbArticles", param, function (resp) {
+        $.get(url.detailList, param, function (resp) {
             const list = resp.data
 
             setCategoryDetail(category.textContent, list)
@@ -70,7 +76,7 @@ function getCategoryDetail(category) {
 }
 
 function setCategoryDetail(parentName, details) {
-    let category
+    let category, html
 
     try {
         if (parentName !== "Search Result")
@@ -78,7 +84,7 @@ function setCategoryDetail(parentName, details) {
         else
             category = parentName
 
-        let html = ["<div class='detail-title'><img src='", getImageResource(parentName), "'><h3>",
+        html = ["<div class='detail-title'><img src='", getImageResource(parentName), "'><h3>",
             category, "</h3></div>", "<div class='detail-sub'>"]
 
         details.forEach((v) => {
@@ -93,14 +99,15 @@ function setCategoryDetail(parentName, details) {
         })
         html.push("</div>")
 
-        $("#category-detail").append(html.join(""))
     } catch (e) {
+        html = ["Sorry We couldn't show the questions"]
         console.log(e)
     }
+    $("#category-detail").append(html.join(""))
 }
 
 function getArticle(articleId) {
-    let url = "https://desk.zoho.com/portal/api/kbArticles/".concat(articleId)
+    let url = url.detail.concat(articleId)
     $.get(url, { "portalId": portalId }, function (resp) {
         setArticle(articleId, resp.answer)
     })
@@ -117,7 +124,7 @@ function searchArticle() {
     $("#category-box").children().removeClass("category-active")
     detailContainer.empty().hide()
 
-    $.get("https://desk.zoho.com/portal/api/kbArticles/search", param, function (resp) {
+    $.get(url.search, param, function (resp) {
         const list = resp.data
 
         if (list.length < 1)
@@ -138,7 +145,7 @@ function addActiveCss(category) {
 
 function getImageResource(rawName) {
     let fileName = (rawName.replace(/[^A-Z0-9]+/ig, "").toLowerCase()).concat(".png")
-    let liquidPath = '{{ 'filename' | asset_url }}'
+    let liquidPath = '{{ filename | asset_url }}'
 
     return liquidPath.replace("filename", fileName)
 }
