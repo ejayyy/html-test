@@ -13,26 +13,22 @@ getCategory().then(function (categories) {
 })
 
 async function getCategory() {
-    try {
-        let list = new Map()
-        let childList = null
+    let list = new Map()
+    let childList = null
 
-        await $.get(url.cateogry, { "portalId": portalId }, function (defs) {
-            defs.data[0].child.forEach(element => {
+    await $.get(url.cateogry, { "portalId": portalId }, function (defs) {
+        defs.data[0].child.forEach(element => {
 
-                childList = []
-                childList.push(element.id)
+            childList = []
+            childList.push(element.id)
 
-                if (element.child != null)
-                    element.child.forEach(child => { childList.push(child.id) })
+            if ("child" in element)
+                element.child.forEach(child => { childList.push(child.id) })
 
-                list.set(element.name, childList)
-            })
+            list.set(element.name, childList)
         })
-        return list;
-    } catch {
-        return null;
-    }
+    })
+    return list;
 }
 
 function setCategory(categories) {
@@ -51,9 +47,6 @@ function setCategory(categories) {
 }
 
 function getCategoryDetail(category) {
-
-    addActiveCss(category)
-
     let param = { "portalId": portalId, "sortBy": "createdTime" }
     let ids = $(category).data()
 
@@ -65,13 +58,16 @@ function getCategoryDetail(category) {
         $.get(url.detailList, param, function (resp) {
             const list = resp.data
 
-            setCategoryDetail(category.textContent, list)
+            if (list.length > 0)
+                setCategoryDetail(category.textContent, list)
+
         }).fail(function (e) {
-            console.log("get detail error : ")
+            detailContainer.html("<h3>Sorry, we couldn't load FAQ</h3>")
             console.log(e)
         })
     })
 
+    addActiveCss(category)
     detailContainer.fadeIn()
 }
 
@@ -90,25 +86,24 @@ function setCategoryDetail(parentName, details) {
         details.forEach((v) => {
             html.push('<div><div id="heading', v.id, '">',
                 '<a class="title" data-toggle="collapse" data-target="#collapse', v.id,
-                '" aria-expanded="true" aria-controls="collapseOne" onclick="getArticle(\'', v.id, '\')" onchange="changeChevron(this)">',
-                v.title,
-                '<i class="float-right fal fa-chevron-down"></i></a></div>',
-                '<div id="collapse', v.id, '" class="collapse" aria-labelledby="heading', v.id, '" data-parent="#category-detail">',
-                '<div class="detail-body">', v.summary,
-                '</div></div></div>')
+                '" aria-expanded="true" aria-controls="collapseOne" onclick="getArticle(\'', v.id,
+                '\')">', v.title,
+                '<i class="float-right fas fa-chevron-down"></i></a></div>',
+                '<div id="collapse', v.id, '" class="collapse" aria-labelledby="heading', v.id,
+                '" data-parent="#category-detail">',
+                '<div class="detail-body">', v.summary, '</div></div></div>')
         })
         html.push("</div>")
 
     } catch (e) {
-        html = ["Sorry We couldn't show the questions"]
+        html = ["Sorry We couldn't show the list"]
         console.log(e)
     }
     $("#category-detail").append(html.join(""))
 }
 
 function getArticle(articleId) {
-    let url = url.detail.concat(articleId)
-    $.get(url, { "portalId": portalId }, function (resp) {
+    $.get(url.detail.concat(articleId), { "portalId": portalId }, function (resp) {
         setArticle(articleId, resp.answer)
     })
 }
@@ -128,7 +123,7 @@ function searchArticle() {
         const list = resp.data
 
         if (list.length < 1)
-            list.push({ id: "", title: "No Result", summary: "Please Search Again" })
+            list.push({ title: "No Result", summary: "Please Search Again" })
 
         setCategoryDetail("Search Result", list)
     }).fail(function (e) {
@@ -148,8 +143,4 @@ function getImageResource(rawName) {
     let liquidPath = '{{ filename | asset_url }}'
 
     return liquidPath.replace("filename", fileName)
-}
-
-function changeChevron(i) {
-    console.log(i)
 }
