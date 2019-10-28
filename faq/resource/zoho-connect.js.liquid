@@ -5,6 +5,7 @@ const url = {
     "detail": "https://desk.zoho.com/portal/api/kbArticles/",
     "search": "https://desk.zoho.com/portal/api/kbArticles/search"
 }
+const errorHtml = "<h3>Sorry, We couldn't load it.<br>Please reload it.</h3>"
 const detailContainer = $("#category-detail")
 
 getCategory().then(function (categories) {
@@ -62,7 +63,7 @@ function getCategoryDetail(category) {
                 setCategoryDetail(category.textContent, list)
 
         }).fail(function (e) {
-            detailContainer.html("<h3>Sorry, we couldn't load FAQ</h3>")
+            detailContainer.html(errorHtml)
             console.log(e)
         })
     })
@@ -75,10 +76,7 @@ function setCategoryDetail(parentName, details) {
     let category, html
 
     try {
-        if (parentName !== "Search Result")
-            category = details[0].category.name
-        else
-            category = parentName
+        category = "category" in details[0] ? details[0].category.name : parentName
 
         html = ["<div class='detail-title'><img src='", getImageResource(parentName), "'><h3>",
             category, "</h3></div>", "<div class='detail-sub'>"]
@@ -96,7 +94,7 @@ function setCategoryDetail(parentName, details) {
         html.push("</div>")
 
     } catch (e) {
-        html = ["Sorry We couldn't show the list"]
+        html = errorHtml
         console.log(e)
     }
     $("#category-detail").append(html.join(""))
@@ -116,7 +114,7 @@ function setArticle(articleId, article) {
 function searchArticle() {
     let param = { "portalId": portalId, "searchStr": $("#search").val() }
 
-    $("#category-box").children().removeClass("category-active")
+    addActiveCss("#category-box button")
     detailContainer.empty().hide()
 
     $.get(url.search, param, function (resp) {
@@ -126,9 +124,10 @@ function searchArticle() {
             list.push({ title: "No Result", summary: "Please Search Again" })
 
         setCategoryDetail("Search Result", list)
+
     }).fail(function (e) {
         console.log("get detail error : ")
-        console.log(e)
+        detailContainer.html(errorHtml)
     })
     detailContainer.fadeIn()
 }
