@@ -83,8 +83,8 @@ function setCategoryDetail(parentName, details) {
         details.forEach((v) => {
             html.push('<div><div id="heading', v.id, '">',
                 '<a class="title" data-toggle="collapse" data-target="#collapse', v.id,
-                '" aria-expanded="true" aria-controls="collapseOne" onclick="getArticle(\'', v.id,
-                '\')">', v.title,
+                '" aria-expanded="true" aria-controls="collapse', v.id,
+                '" onclick="getArticle(this)" data-id="' + v.id + '">', v.title,
                 '<i class="float-right fas fa-chevron-down"></i></a></div>',
                 '<div id="collapse', v.id, '" class="collapse" aria-labelledby="heading', v.id,
                 '" data-parent="#category-detail">',
@@ -93,13 +93,14 @@ function setCategoryDetail(parentName, details) {
         html.push("</div>")
 
     } catch (e) {
-        html = errorHtml
+        html = [errorHtml]
         console.log(e)
     }
     $("#category-detail").append(html.join(""))
 }
 
-function getArticle(articleId) {
+function getArticle(article) {
+    let articleId = article.dataset.id
     $.get(url.detail.concat(articleId), { "portalId": portalId }, function (resp) {
         setArticle(articleId, resp.answer)
     })
@@ -116,7 +117,7 @@ function searchArticle() {
     preDetailContainerLoad("#category-box button")
 
     $.get(url.search, param, function (resp) {
-        const list = resp.data
+        let list = resp.data
 
         if (list.length < 1)
             list.push({ title: "No Result", summary: "Please Search Again" })
@@ -124,7 +125,7 @@ function searchArticle() {
         setCategoryDetail("Search Result", list)
 
     }).fail(function (e) {
-        console.log("get detail error : ")
+        console.log(e)
         detailContainer.html(errorHtml)
     })
     pstDetailContainerLoad()
