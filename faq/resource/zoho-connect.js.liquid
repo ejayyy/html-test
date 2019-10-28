@@ -51,7 +51,7 @@ function getCategoryDetail(category) {
     let param = { "portalId": portalId, "sortBy": "createdTime" }
     let ids = $(category).data()
 
-    detailContainer.empty().hide()
+    preDetailContainerLoad(category)
 
     $.each(ids, function (i, v) {
         param.categoryId = v
@@ -68,8 +68,7 @@ function getCategoryDetail(category) {
         })
     })
 
-    addActiveCss(category)
-    detailContainer.fadeIn()
+    pstDetailContainerLoad()
 }
 
 function setCategoryDetail(parentName, details) {
@@ -114,8 +113,7 @@ function setArticle(articleId, article) {
 function searchArticle() {
     let param = { "portalId": portalId, "searchStr": $("#search").val() }
 
-    addActiveCss("#category-box button")
-    detailContainer.empty().hide()
+    preDetailContainerLoad("#category-box button")
 
     $.get(url.search, param, function (resp) {
         const list = resp.data
@@ -129,7 +127,7 @@ function searchArticle() {
         console.log("get detail error : ")
         detailContainer.html(errorHtml)
     })
-    detailContainer.fadeIn()
+    pstDetailContainerLoad()
 }
 
 function addActiveCss(category) {
@@ -137,9 +135,18 @@ function addActiveCss(category) {
     $(category).addClass(activeClass).siblings().removeClass(activeClass)
 }
 
+function preDetailContainerLoad(activeClass) {
+    addActiveCss(activeClass)
+    detailContainer.empty().hide()
+}
+
+function pstDetailContainerLoad() {
+    detailContainer.fadeIn()
+}
+
 function getImageResource(rawName) {
     let fileName = (rawName.replace(/[^A-Z0-9]+/ig, "").toLowerCase()).concat(".png")
-    let liquidPath = '{{ filename | asset_url }}'
+    let liquidPath = '{{ 'filename' | asset_url }}'
 
     return liquidPath.replace("filename", fileName)
 }
