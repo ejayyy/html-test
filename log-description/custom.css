@@ -1,0 +1,106 @@
+.video-bg {
+  background-color: #ebe7e1;
+}
+
+#first-container {
+  position: absolute;
+  left: 19%;
+}
+
+#first-img {
+  width: 35%;
+}
+
+#first-txt {
+  padding-left: 80px;
+  padding-top: 70px;
+  vertical-align: middle;
+}
+
+#first-txt p {
+  width: 300px;
+}
+
+#vase-clip {
+  width: 100%;
+  height: 600px;
+}
+
+#third-img {
+  width: 60%;
+  z-index: -1;
+}
+
+#third-txt {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_11.jpg?24217");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 16%;
+  right: 0;
+  padding: 167px 52px;
+}
+
+#third-txt p {
+  width: 300px;
+}
+
+#fourth-txt {
+  left: 57%;
+  top: 39%;
+  position: absolute;
+  width: 300px;
+}
+
+#fifth-txt {
+  position: absolute;
+  top: 74%;
+  left: 11%;
+  width: 346px;
+  color: #fff;
+}
+
+.container-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  #first-container {
+    left: initial;
+    text-align: center;
+  }
+  #first-img {
+    width: 71%;
+  }
+  #first-txt {
+    padding: 0;
+  }
+  #vase-clip {
+    height: 180px;
+  }
+  #third-container {
+    text-align: center;
+  }
+  #third-img {
+    width: 85%;
+  }
+  #third-txt {
+    padding: 31px 0;
+    top: 80%;
+    right: initial;
+    width: 80%;
+  }
+  #fourth-txt {
+    position: initial;
+    margin: 10px auto;
+  }
+  #fifth-txt {
+    position: initial;
+    color: #000;
+    margin: 10px auto;
+  }
+
+  .container-padding {
+    padding: 20px 0;
+  }
+}
