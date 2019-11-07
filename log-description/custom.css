@@ -13,9 +13,14 @@
 #iphone11-first-bg-vase {
   background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_03.jpg?24217");
 }
-
 #iphone11-first-bg-portland {
   background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_po_2_05.jpg?24634");
+}
+#iphone11-first-bg-hello {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_hello_2_05.jpg?24674");
+}
+#iphone11-first-bg-black {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_Leather_Black_05.jpg?24689");
 }
 
 #iphone11-first-img {
@@ -63,6 +68,15 @@
 
 #iphone11-third-txt-vase {
   background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_11.jpg?24217");
+}
+#iphone11-third-txt-portland {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_po_21.jpg?24634");
+}
+#iphone11-third-txt-hello {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_hello_21.jpg?24674");
+}
+#iphone11-third-txt-black {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_Leather_Black_19.jpg?24689");
 }
 
 .iphone11-third-txt p {
@@ -154,10 +168,19 @@
     padding-top: 17px;
   }
   .iphone11-first-bg {
-    padding-bottom: 95%;
+    padding-bottom: 94.5%;
   }
   #iphone11-first-bg-vase {
     background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_02.jpg?24239");
+  }
+  #iphone11-first-bg-portland {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_po_2_02.jpg?24656");
+  }
+  #iphone11-first-bg-hello {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_hello_2_02.jpg?24674");
+  }
+  #iphone11-first-bg-black {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_Leather_Black_02.jpg?24689");
   }
   #iphone11-first-img {
     width: 58%;
@@ -183,9 +206,29 @@
   .iphone11-third-txt p {
     width: initial;
   }
+  #iphone11-third-txt-portland {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_po_17.jpg?24660");
+  }
+  #iphone11-third-txt-hello {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_hello_17.jpg?24675");
+  }
+  #iphone11-third-txt-black {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_Leather_Black_15.jpg?24689");
+  }
+
   #iphone11-fourth-img-vase {
     content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_15.jpg?24239");
   }
+  #iphone11-fourth-img-portland {
+    content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_po_28.jpg?24656");
+  }
+  #iphone11-fourth-img-hello {
+    content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_hello_30.jpg?24674");
+  }
+  #iphone11-fourth-img-black {
+    content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_Leather_Black_28.jpg?24690");
+  }
+
   #iphone11-fourth-txt {
     position: initial;
     margin: 10px auto;
