@@ -2,7 +2,7 @@
   background-color: #ebe7e1;
 }
 
-#vase-first-bg {
+#iphone11-first-bg {
   background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_03.jpg?24217");
   position: relative;
   background-size: contain;
@@ -11,40 +11,41 @@
   margin: 0 auto;
 }
 
-#vase-first-img {
+#iphone11-first-img {
   width: 28%;
   position: absolute;
   left: 18%;
 }
 
-#vase-first-txt {
+#iphone11-first-txt {
   position: absolute;
-  left: 50%;
+  left: 51.3%;
   top: 35%;
 }
 
-#vase-first-txt h1 span {
+#iphone11-first-txt h1 span {
   font-family: "metropolisthin";
 }
-#vase-first-txt h1 {
+#iphone11-first-txt h1 {
   font-family: "metropolisregular";
+  font-size: 50px;
 }
 
-#vase-first-txt p {
+#iphone11-first-txt p {
   width: 500px;
   padding-top: 26px;
 }
 
-#vase-third-img {
+#iphone11-third-img {
   width: 60%;
   z-index: -1;
 }
 
-#vase-third-container {
+#iphone11-third-container {
   text-align: left;
 }
 
-#vase-third-txt {
+#iphone11-third-txt {
   position: absolute;
   background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_11.jpg?24217");
   background-repeat: no-repeat;
@@ -54,12 +55,12 @@
   padding: 167px 52px;
 }
 
-#vase-third-txt p {
+#iphone11-third-txt p {
   width: 300px;
   padding-top: 26px;
 }
 
-#vase-fourth-txt {
+#iphone11-fourth-txt {
   left: 57%;
   top: 39%;
   position: absolute;
@@ -68,29 +69,23 @@
   color: #000;
 }
 
-#vase-fourth-txt h2 {
-  font-family: "metropolisregular";
-  font-weight: 500;
-}
-
-#vase-fourth-txt p {
+#iphone11-fourth-txt p {
   padding-top: 26px;
   color: #000;
-  width: 281px;
+  width: 346px;
 }
 
-#vase-fifth-txt {
+#iphone11-fifth-txt {
   position: absolute;
   top: 74%;
   left: 11%;
 }
 
-#vase-fifth-txt h2 {
+#iphone11-fifth-txt h2 {
   color: #fff;
-  font-family: "metropolisregular";
 }
 
-#vase-fifth-txt p {
+#iphone11-fifth-txt p {
   width: 301px;
   padding-top: 26px;
   color: #fff;
@@ -102,29 +97,31 @@
 }
 
 @media only screen and (max-width: 1068px) {
-  #iphone-11-cyrill p,
-  #vase-third-txt p {
+  #iphone11-cyrill p {
     font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
     padding-top: 0;
   }
-  #iphone-11-cyrill h1,
-  #iphone-11-cyrill h2 {
+  #iphone11-cyrill h1,
+  #iphone11-cyrill h2 {
     font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
   }
-  #vase-first-txt {
+  #iphone11-first-txt {
     left: 51%;
     top: 32%;
   }
-  #vase-first-txt p {
+  #iphone11-first-txt p {
     width: 370px;
   }
-  #vase-third-txt {
-    padding: 14% 5%;
+  #iphone11-third-txt {
+    padding: 10% 5%;
   }
-  #vase-fourth-txt {
+  #iphone11-fourth-txt {
     left: 56%;
   }
-  #vase-fifth-txt {
+  #iphone11-fourth-txt p {
+    width: 310px;
+  }
+  #iphone11-fifth-txt {
     left: 8%;
   }
   .container-padding {
@@ -132,82 +129,105 @@
     padding-bottom: 26px;
   }
 }
+
 @media only screen and (max-width: 768px) {
-  #iphone-11-cyrill p,
-  #vase-third-txt p {
+  #iphone11-first-txt {
+    top: 69%;
+    left: 24%;
+  }
+  #iphone11-first-txt h1 {
+    font-size: 44px !important;
+  }
+  #iphone11-first-txt p {
+    font-size: 18px !important;
+    width: 430px;
+    padding-top: 17px;
+  }
+  #iphone11-first-bg {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_02.jpg?24239");
+    padding-bottom: 95%;
+  }
+  #iphone11-first-img {
+    width: 58%;
+    position: initial;
+  }
+  #iphone11-third-container {
+    text-align: center;
+    margin-bottom: 9%;
+  }
+  #iphone11-third-img {
+    width: 85%;
+  }
+  #iphone11-third-txt {
+    padding: 21px 30px;
+    top: 80%;
+    right: initial;
+    width: 85%;
+    text-align: left;
+  }
+  #iphone11-third-txt h2 {
+    line-height: 120%;
+  }
+  #iphone11-third-txt p {
+    width: initial;
+  }
+  #iphone11-fourth-img {
+    content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_15.jpg?24239");
+  }
+  #iphone11-fourth-txt {
+    position: initial;
+    margin: 10px auto;
+    width: 330px;
+  }
+  #iphone11-fourth-txt p {
+    padding-top: 0;
+    width: initial;
+  }
+  #iphone11-fifth-txt {
+    position: initial;
+    margin: 10px auto;
+    width: 348px;
+  }
+  #iphone11-fifth-txt h2 {
+    color: #000;
+  }
+  #iphone11-fifth-txt p {
+    color: #000;
+    width: initial;
+  }
+  .container-padding {
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 734px) {
+  #iphone11-cyrill p {
     font-size: calc(13px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
     line-height: 145%;
     padding-top: 0;
   }
-  #iphone-11-cyrill h1,
-  #iphone-11-cyrill h2 {
-    font-size: calc(21px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+  #iphone11-cyrill h1,
+  #iphone11-cyrill h2 {
+    font-size: calc(19px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
   }
-  #vase-first-container {
+  #iphone11-first-txt h1 {
+    font-size: calc(28px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+  }
+  #iphone11-first-container {
     left: initial;
     text-align: center;
   }
-  #vase-first-img {
-    width: 58%;
-    position: initial;
+  #iphone11-first-bg {
+    padding-bottom: 98.3%;
   }
-  #vase-first-txt {
+  #iphone11-first-txt {
     position: initial;
     margin-left: 34px;
     margin-top: 28px;
   }
-  #vase-first-txt p {
+  #iphone11-first-txt p {
     width: 300px;
   }
-  #vase-first-bg {
-    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_02.jpg?24239");
-    padding-bottom: 95%;
-  }
-  #vase-third-container {
-    text-align: center;
-    margin-bottom: 24%;
-  }
-  #vase-third-img {
-    width: 85%;
-  }
-  #vase-third-txt {
-    padding: 21px 0px 21px 25px;
-    top: 80%;
-    right: initial;
-    width: 80%;
-    text-align: left;
-  }
-  #vase-third-txt h2 {
-    line-height: 120%;
-  }
-  #vase-third-txt p {
-    width: initial;
-  }
-  #vase-fourth-img {
-    content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_15.jpg?24239");
-  }
-  #vase-fourth-txt {
-    position: initial;
-    margin: 10px auto;
-  }
-  #vase-fourth-txt p {
-    padding-top: 0;
-    width: initial;
-  }
-  #vase-fifth-txt {
-    position: initial;
-    margin: 10px auto;
-    width: 306px;
-  }
-  #vase-fifth-txt h2 {
-    color: #000;
-  }
-  #vase-fifth-txt p {
-    color: #000;
-    width: initial;
-  }
-
-  .container-padding {
-    padding: 20px 0;
+  #iphone11-third-container {
+    margin-bottom: 23%;
   }
 }
