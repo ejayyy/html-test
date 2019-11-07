@@ -44,7 +44,7 @@
 }
 
 #iphone11-first-txt p {
-  width: 500px;
+  width: 480px;
   padding-top: 26px;
 }
 
@@ -118,6 +118,13 @@
 .container-padding {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.iphone11-desktop {
+  display: inherit;
+}
+.iphone11-moblie {
+  display: none;
 }
 
 @media only screen and (max-width: 1068px) {
@@ -253,10 +260,16 @@
   .container-padding {
     padding: 20px 0;
   }
+  .iphone11-desktop {
+    display: none;
+  }
+  .iphone11-moblie {
+    display: inherit;
+  }
 }
 @media only screen and (max-width: 734px) {
   #iphone11-cyrill p {
-    font-size: calc(13px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
     line-height: 145%;
     padding-top: 0;
   }
@@ -280,7 +293,7 @@
     margin-top: 28px;
   }
   #iphone11-first-txt p {
-    width: 300px;
+    width: 250px;
   }
   #iphone11-third-container {
     margin-bottom: 23%;
