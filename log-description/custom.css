@@ -2,13 +2,20 @@
   background-color: #ebe7e1;
 }
 
-#iphone11-first-bg {
-  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_03.jpg?24217");
+.iphone11-first-bg {
   position: relative;
   background-size: contain;
   height: 0;
   padding-bottom: 30%;
   margin: 0 auto;
+}
+
+#iphone11-first-bg-vase {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_03.jpg?24217");
+}
+
+#iphone11-first-bg-portland {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_po_2_05.jpg?24634");
 }
 
 #iphone11-first-img {
@@ -45,9 +52,8 @@
   text-align: left;
 }
 
-#iphone11-third-txt {
+.iphone11-third-txt {
   position: absolute;
-  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_11.jpg?24217");
   background-repeat: no-repeat;
   background-size: cover;
   top: 16%;
@@ -55,7 +61,11 @@
   padding: 167px 52px;
 }
 
-#iphone11-third-txt p {
+#iphone11-third-txt-vase {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_11.jpg?24217");
+}
+
+.iphone11-third-txt p {
   width: 300px;
   padding-top: 26px;
 }
@@ -112,7 +122,7 @@
   #iphone11-first-txt p {
     width: 370px;
   }
-  #iphone11-third-txt {
+  .iphone11-third-txt {
     padding: 10% 5%;
   }
   #iphone11-fourth-txt {
@@ -143,9 +153,11 @@
     width: 430px;
     padding-top: 17px;
   }
-  #iphone11-first-bg {
-    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_02.jpg?24239");
+  .iphone11-first-bg {
     padding-bottom: 95%;
+  }
+  #iphone11-first-bg-vase {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_02.jpg?24239");
   }
   #iphone11-first-img {
     width: 58%;
@@ -158,20 +170,20 @@
   #iphone11-third-img {
     width: 85%;
   }
-  #iphone11-third-txt {
+  .iphone11-third-txt {
     padding: 21px 30px;
     top: 80%;
     right: initial;
     width: 85%;
     text-align: left;
   }
-  #iphone11-third-txt h2 {
+  .iphone11-third-txt h2 {
     line-height: 120%;
   }
-  #iphone11-third-txt p {
+  .iphone11-third-txt p {
     width: initial;
   }
-  #iphone11-fourth-img {
+  #iphone11-fourth-img-vase {
     content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_15.jpg?24239");
   }
   #iphone11-fourth-txt {
