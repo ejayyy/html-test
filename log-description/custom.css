@@ -2,36 +2,50 @@
   background-color: #ebe7e1;
 }
 
-#first-container {
+#vase-first-bg {
+  background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_03.jpg?24217");
+  position: relative;
+  background-size: contain;
+  height: 0;
+  padding-bottom: 30%;
+  margin: 0 auto;
+}
+
+#vase-first-img {
+  width: 28%;
   position: absolute;
-  left: 19%;
+  left: 18%;
 }
 
-#first-img {
-  width: 35%;
+#vase-first-txt {
+  position: absolute;
+  left: 50%;
+  top: 35%;
 }
 
-#first-txt {
-  padding-left: 80px;
-  padding-top: 70px;
-  vertical-align: middle;
+#vase-first-txt h1 span {
+  font-family: "metropolisthin";
+}
+#vase-first-txt h1 {
+  font-family: "metropolisregular";
 }
 
-#first-txt p {
-  width: 300px;
+#vase-first-txt p {
+  width: 500px;
+  padding-top: 26px;
 }
 
-#vase-clip {
-  width: 100%;
-  height: 600px;
-}
-
-#third-img {
+#vase-third-img {
   width: 60%;
   z-index: -1;
 }
 
-#third-txt {
+#vase-third-container {
+  text-align: left;
+}
+
+#vase-third-txt {
+  position: absolute;
   background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_11.jpg?24217");
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,22 +54,45 @@
   padding: 167px 52px;
 }
 
-#third-txt p {
+#vase-third-txt p {
   width: 300px;
+  padding-top: 26px;
 }
 
-#fourth-txt {
+#vase-fourth-txt {
   left: 57%;
   top: 39%;
   position: absolute;
   width: 300px;
+  text-align: left;
+  color: #000;
 }
 
-#fifth-txt {
+#vase-fourth-txt h2 {
+  font-family: "metropolisregular";
+  font-weight: 500;
+}
+
+#vase-fourth-txt p {
+  padding-top: 26px;
+  color: #000;
+  width: 281px;
+}
+
+#vase-fifth-txt {
   position: absolute;
   top: 74%;
   left: 11%;
-  width: 346px;
+}
+
+#vase-fifth-txt h2 {
+  color: #fff;
+  font-family: "metropolisregular";
+}
+
+#vase-fifth-txt p {
+  width: 301px;
+  padding-top: 26px;
   color: #fff;
 }
 
@@ -64,40 +101,110 @@
   padding-bottom: 50px;
 }
 
+@media only screen and (max-width: 1068px) {
+  #iphone-11-cyrill p,
+  #vase-third-txt p {
+    font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+    padding-top: 0;
+  }
+  #iphone-11-cyrill h1,
+  #iphone-11-cyrill h2 {
+    font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+  }
+  #vase-first-txt {
+    left: 51%;
+    top: 32%;
+  }
+  #vase-first-txt p {
+    width: 370px;
+  }
+  #vase-third-txt {
+    padding: 14% 5%;
+  }
+  #vase-fourth-txt {
+    left: 56%;
+  }
+  #vase-fifth-txt {
+    left: 8%;
+  }
+  .container-padding {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
 @media only screen and (max-width: 768px) {
-  #first-container {
+  #iphone-11-cyrill p,
+  #vase-third-txt p {
+    font-size: calc(13px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+    line-height: 145%;
+    padding-top: 0;
+  }
+  #iphone-11-cyrill h1,
+  #iphone-11-cyrill h2 {
+    font-size: calc(21px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
+  }
+  #vase-first-container {
     left: initial;
     text-align: center;
   }
-  #first-img {
-    width: 71%;
+  #vase-first-img {
+    width: 58%;
+    position: initial;
   }
-  #first-txt {
-    padding: 0;
+  #vase-first-txt {
+    position: initial;
+    margin-left: 34px;
+    margin-top: 28px;
   }
-  #vase-clip {
-    height: 180px;
+  #vase-first-txt p {
+    width: 300px;
   }
-  #third-container {
+  #vase-first-bg {
+    background-image: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_02.jpg?24239");
+    padding-bottom: 95%;
+  }
+  #vase-third-container {
     text-align: center;
+    margin-bottom: 24%;
   }
-  #third-img {
+  #vase-third-img {
     width: 85%;
   }
-  #third-txt {
-    padding: 31px 0;
+  #vase-third-txt {
+    padding: 21px 0px 21px 25px;
     top: 80%;
     right: initial;
     width: 80%;
+    text-align: left;
   }
-  #fourth-txt {
+  #vase-third-txt h2 {
+    line-height: 120%;
+  }
+  #vase-third-txt p {
+    width: initial;
+  }
+  #vase-fourth-img {
+    content: url("https://cdn.shopify.com/s/files/1/0015/1810/8724/files/cyrill_long_d_vases_15.jpg?24239");
+  }
+  #vase-fourth-txt {
     position: initial;
     margin: 10px auto;
   }
-  #fifth-txt {
+  #vase-fourth-txt p {
+    padding-top: 0;
+    width: initial;
+  }
+  #vase-fifth-txt {
     position: initial;
+    margin: 10px auto;
+    width: 306px;
+  }
+  #vase-fifth-txt h2 {
     color: #000;
-    margin: 10px auto;
+  }
+  #vase-fifth-txt p {
+    color: #000;
+    width: initial;
   }
 
   .container-padding {
