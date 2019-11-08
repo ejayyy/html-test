@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.2/css/all.css"
+        integrity="sha384-XxNLWSzCxOe/CFcHcAiJAZ7LarLmw3f4975gOO6QkxvULbGGNDoSOTzItGUG++Q+" crossorigin="anonymous">
+
+    <style>
+        @font-face {
+            font-family: "neutrif_proregular";
+            src: url("https://cdn.shopify.com/s/files/1/0737/0479/t/95/assets/01-neutrifpro-regular-webfont.woff?10547")
+        }
+
+        @font-face {
+            font-family: "neutrif_prosemi_bold";
+            src: url("https://cdn.shopify.com/s/files/1/0737/0479/t/95/assets/01-neutrifpro-semibold-webfont.woff?10553")
+        }
+
+        .bjwQRt.bjwQRt.bjwQRt.bjwQRt.bjwQRt.bjwQRt {
+            box-sizing: border-box;
+            padding-left: 16px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            height: 38px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            border-width: 1px;
+            border-style: solid;
+            border-image: initial;
+            border-color: rgb(208, 51, 31);
+        }
+
+        .gQwSQo.gQwSQo {
+            backface-visibility: visible;
+            background-attachment: scroll;
+            background-clip: border-box;
+            background-color: transparent;
+            background-image: none;
+            background-origin: padding-box;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-size: auto;
+            border-bottom-color: inherit;
+            border-bottom-style: none;
+            border-bottom-width: medium;
+            border-collapse: separate;
+            border-left-color: inherit;
+            border-left-style: none;
+            border-left-width: medium;
+            border-right-color: inherit;
+            border-right-style: none;
+            border-right-width: medium;
+            border-top-color: inherit;
+            border-top-style: none;
+            border-top-width: medium;
+            bottom: auto;
+            box-shadow: none;
+            box-sizing: content-box;
+            caption-side: top;
+            clear: none;
+            clip: auto;
+            color: inherit;
+            column-count: auto;
+            column-fill: balance;
+            column-gap: normal;
+            column-width: auto;
+            content: normal;
+            counter-increment: none;
+            counter-reset: none;
+            cursor: auto;
+            direction: ltr;
+            display: block;
+            empty-cells: show;
+            float: none;
+            font-family: inherit;
+            font-size: medium;
+            font-style: normal;
+            font-weight: normal;
+            height: auto;
+            hyphens: none;
+            left: auto;
+            letter-spacing: normal;
+            line-height: normal;
+            list-style-image: none;
+            list-style-position: outside;
+            list-style-type: disc;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            max-height: none;
+            max-width: none;
+            min-height: 0px;
+            min-width: 0px;
+            opacity: 1;
+            overflow-x: visible;
+            overflow-y: visible;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            perspective: none;
+            perspective-origin: 50% 50%;
+            pointer-events: initial;
+            position: static;
+            right: auto;
+            tab-size: 8;
+            table-layout: auto;
+            text-align: inherit;
+            text-align-last: auto;
+            text-decoration-color: inherit;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-indent: 0px;
+            text-shadow: none;
+            text-transform: none;
+            top: auto;
+            transform: none;
+            transform-style: flat;
+            transition-delay: 0s;
+            transition-duration: 0s;
+            transition-property: none;
+            transition-timing-function: ease;
+            unicode-bidi: normal;
+            vertical-align: baseline;
+            visibility: visible;
+            white-space: normal;
+            width: auto;
+            word-spacing: normal;
+            z-index: auto;
+            -webkit-font-smoothing: antialiased;
+            animation: 0s ease 0s 1 normal none running none;
+            background-repeat: repeat;
+            border-image: none 100% / 1 / 0 stretch;
+            border-radius: 0px;
+            border-spacing: 0px;
+            column-rule: medium none currentcolor;
+            font-variant: normal;
+            outline: none medium;
+            page-break-after: auto;
+            page-break-before: auto;
+            page-break-inside: auto;
+        }
+
+        .kjNJFx.kjNJFx {
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 450px;
+            background-color: rgba(255, 255, 255, 0);
+            background-position-y: 50%;
+            padding-top: 10px;
+            padding-right: 5px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            margin: 0px auto;
+            border-radius: 2px;
+            border-style: none;
+            border-width: 0px;
+            border-color: rgb(0, 0, 0);
+            background-repeat: no-repeat;
+        }
+
+        .feizGD.feizGD {
+            backface-visibility: visible;
+            background-attachment: scroll;
+            background-clip: border-box;
+            background-color: transparent;
+            background-image: none;
+            background-origin: padding-box;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-size: auto;
+            border-bottom-color: inherit;
+            border-bottom-style: none;
+            border-bottom-width: medium;
+            border-collapse: separate;
+            border-left-color: inherit;
+            border-left-style: none;
+            border-left-width: medium;
+            border-right-color: inherit;
+            border-right-style: none;
+            border-right-width: medium;
+            border-top-color: inherit;
+            border-top-style: none;
+            border-top-width: medium;
+            bottom: auto;
+            box-shadow: none;
+            box-sizing: content-box;
+            caption-side: top;
+            clear: none;
+            clip: auto;
+            color: inherit;
+            column-count: auto;
+            column-fill: balance;
+            column-gap: normal;
+            column-width: auto;
+            content: normal;
+            counter-increment: none;
+            counter-reset: none;
+            cursor: auto;
+            direction: ltr;
+            display: block;
+            empty-cells: show;
+            float: none;
+            font-family: inherit;
+            font-size: medium;
+            font-style: normal;
+            font-weight: normal;
+            height: auto;
+            hyphens: none;
+            left: auto;
+            letter-spacing: normal;
+            line-height: normal;
+            list-style-image: none;
+            list-style-position: outside;
+            list-style-type: disc;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            max-height: none;
+            max-width: none;
+            min-height: 0px;
+            min-width: 0px;
+            opacity: 1;
+            overflow-x: visible;
+            overflow-y: visible;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            perspective: none;
+            perspective-origin: 50% 50%;
+            pointer-events: initial;
+            position: static;
+            right: auto;
+            tab-size: 8;
+            table-layout: auto;
+            text-align: inherit;
+            text-align-last: auto;
+            text-decoration-color: inherit;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-indent: 0px;
+            text-shadow: none;
+            text-transform: none;
+            top: auto;
+            transform: none;
+            transform-style: flat;
+            transition-delay: 0s;
+            transition-duration: 0s;
+            transition-property: none;
+            transition-timing-function: ease;
+            unicode-bidi: normal;
+            vertical-align: baseline;
+            visibility: visible;
+            white-space: normal;
+            width: auto;
+            word-spacing: normal;
+            z-index: auto;
+            -webkit-font-smoothing: antialiased;
+            animation: 0s ease 0s 1 normal none running none;
+            background-repeat: repeat;
+            border-image: none 100% / 1 / 0 stretch;
+            border-radius: 0px;
+            border-spacing: 0px;
+            column-rule: medium none currentcolor;
+            font-variant: normal;
+            outline: none medium;
+            page-break-after: auto;
+            page-break-before: auto;
+            page-break-inside: auto;
+        }
+
+        .feizGD.feizGD {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .fzSpET.fzSpET {
+            display: flex;
+            flex-direction: row;
+            -webkit-box-align: stretch;
+            align-items: stretch;
+            position: relative;
+        }
+
+        .kLhEFG.kLhEFG {
+            display: flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            position: relative;
+            padding: 0px 0px 0px 10px;
+            flex: 1 0 0px;
+        }
+
+        .dPmTqm.dPmTqm {
+            display: flex;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            flex-direction: column;
+            align-self: flex-end;
+        }
+
+        .bjwQRt.bjwQRt.bjwQRt.bjwQRt.bjwQRt.bjwQRt {
+            box-sizing: border-box;
+            padding-left: 16px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            height: 38px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            border-width: 1px;
+            border-style: solid;
+            border-image: initial;
+            border-color: rgb(208, 51, 31);
+        }
+
+        .fmPVsW.fmPVsW {
+            width: 100%;
+            position: relative;
+        }
+
+        .kARXLT.kARXLT {
+            background-color: white;
+            position: absolute;
+            z-index: 1;
+            top: 9px;
+            right: 0px;
+            border-radius: 4px;
+            animation: 0.4s ease 0s 1 normal none running fadein;
+        }
+
+        .kPlWQL.kPlWQL {
+            box-shadow: rgba(0, 0, 0, 0.26) 1px 1px 4px 0px;
+            background-color: rgb(248, 236, 233);
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(208, 51, 31);
+            border-image: initial;
+        }
+
+        .kPlWQL.kPlWQL::before {
+            left: 7px;
+            top: -17px;
+            border-width: 9px;
+            border-color: transparent transparent rgb(208, 51, 31);
+        }
+
+        .kPlWQL.kPlWQL::after,
+        .kPlWQL.kPlWQL::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+        }
+
+        .dHNBsR.dHNBsR {
+            font-size: 14px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: rgb(208, 51, 31);
+            padding: 8px;
+        }
+
+        .kPlWQL.kPlWQL::after {
+            top: -15px;
+            left: 8px;
+            border-color: transparent transparent rgb(248, 236, 233);
+            border-width: 8px;
+        }
+
+        .htOOVT.htOOVT.htOOVT.htOOVT.htOOVT.htOOVT {
+            display: none;
+        }
+
+        .izyMjd.izyMjd.izyMjd.izyMjd.izyMjd.izyMjd {
+            position: relative;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: rgb(255, 255, 255);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            line-height: 1;
+            white-space: normal;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            text-align: center;
+            word-break: break-word;
+            align-self: flex-end;
+            cursor: pointer;
+            background: rgb(48, 59, 67);
+            border-radius: 2px;
+            border-style: none;
+            border-color: rgb(0, 0, 0);
+            border-width: 0px;
+        }
+
+        .kiiqgw.kiiqgw.kiiqgw.kiiqgw.kiiqgw.kiiqgw {
+            box-sizing: border-box;
+            padding-left: 16px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            height: 38px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            border-width: 1px;
+            border-style: solid;
+            border-image: initial;
+            border-color: rgb(180, 187, 195);
+        }
+
+        .kiiqgw.kiiqgw.kiiqgw.kiiqgw.kiiqgw.kiiqgw:hover {
+            border-color: rgb(0, 0, 0);
+        }
+
+        .kwGIvD.kwGIvD {
+            display: flex;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            position: relative;
+            padding: 10px 6px;
+            flex: 1 0 0px;
+        }
+
+        .fxfLWS.fxfLWS.fxfLWS.fxfLWS {
+            width: 100%;
+        }
+
+        .fxfLWS.fxfLWS.fxfLWS.fxfLWS .ql-container {
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+        }
+
+        .fxfLWS.fxfLWS.fxfLWS.fxfLWS .ql-editor {
+            align-self: flex-start;
+            padding: 0px;
+        }
+
+        .vtZYh.vtZYh.vtZYh.vtZYh.vtZYh.vtZYh:focust {
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 5px;
+        }
+
+        .vtZYh.vtZYh {
+            backface-visibility: visible;
+            background-attachment: scroll;
+            background-clip: border-box;
+            background-color: transparent;
+            background-image: none;
+            background-origin: padding-box;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            background-size: auto;
+            border-bottom-color: inherit;
+            border-bottom-style: none;
+            border-bottom-width: medium;
+            border-collapse: separate;
+            border-left-color: inherit;
+            border-left-style: none;
+            border-left-width: medium;
+            border-right-color: inherit;
+            border-right-style: none;
+            border-right-width: medium;
+            border-top-color: inherit;
+            border-top-style: none;
+            border-top-width: medium;
+            bottom: auto;
+            box-shadow: none;
+            box-sizing: content-box;
+            caption-side: top;
+            clear: none;
+            clip: auto;
+            color: inherit;
+            column-count: auto;
+            column-fill: balance;
+            column-gap: normal;
+            column-width: auto;
+            content: normal;
+            counter-increment: none;
+            counter-reset: none;
+            cursor: auto;
+            direction: ltr;
+            display: block;
+            empty-cells: show;
+            float: none;
+            font-family: inherit;
+            font-size: medium;
+            font-style: normal;
+            font-weight: normal;
+            height: auto;
+            hyphens: none;
+            left: auto;
+            letter-spacing: normal;
+            line-height: normal;
+            list-style-image: none;
+            list-style-position: outside;
+            list-style-type: disc;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            max-height: none;
+            max-width: none;
+            min-height: 0px;
+            min-width: 0px;
+            opacity: 1;
+            overflow-x: visible;
+            overflow-y: visible;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            perspective: none;
+            perspective-origin: 50% 50%;
+            pointer-events: initial;
+            position: static;
+            right: auto;
+            tab-size: 8;
+            table-layout: auto;
+            text-align: inherit;
+            text-align-last: auto;
+            text-decoration-color: inherit;
+            text-decoration-line: none;
+            text-decoration-style: solid;
+            text-indent: 0px;
+            text-shadow: none;
+            text-transform: none;
+            top: auto;
+            transform: none;
+            transform-style: flat;
+            transition-delay: 0s;
+            transition-duration: 0s;
+            transition-property: none;
+            transition-timing-function: ease;
+            unicode-bidi: normal;
+            vertical-align: baseline;
+            visibility: visible;
+            white-space: normal;
+            width: auto;
+            word-spacing: normal;
+            z-index: auto;
+            -webkit-font-smoothing: antialiased;
+            animation: 0s ease 0s 1 normal none running none;
+            background-repeat: repeat;
+            border-image: none 100% / 1 / 0 stretch;
+            border-radius: 0px;
+            border-spacing: 0px;
+            column-rule: medium none currentcolor;
+            font-variant: normal;
+            outline: none medium;
+            page-break-after: auto;
+            page-break-before: auto;
+            page-break-inside: auto;
+        }
+
+        .ckqJnp.ckqJnp.ckqJnp.ckqJnp.ckqJnp.ckqJnp {
+            position: relative;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: rgb(255, 255, 255);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0px;
+            line-height: 1;
+            white-space: normal;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            text-align: center;
+            word-break: break-word;
+            align-self: flex-end;
+            cursor: pointer;
+            background: rgb(48, 59, 67);
+            border-radius: 2px;
+            border-style: none;
+            border-color: rgb(0, 0, 0);
+            border-width: 0px;
+        }
+
+        div[class^="caseology-layout-"] {
+            max-width: 1140px !important;
+            margin: auto;
+        }
+
+        div[class^="caseology-layout-"],
+        div[class^="caseology-layout-"] p,
+        div[class^="caseology-layout-"] a {
+            font-family: "neutrif_proregular";
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.45;
+            letter-spacing: -0.035em;
+            color: inherit;
+            margin-bottom: 0px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "neutrif_prosemi_bold";
+            font-weight: 600;
+            letter-spacing: -0.035em;
+            color: inherit;
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        .welcome-bar {
+            background-color: #eaeaea;
+            padding: 10px;
+            color: #1F1F1F;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -ms-flex-align: center !important;
+            align-items: center !important;
+
+        }
+
+        .welcome-bar-message {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        @media (min-width: 768px) {
+            .caseology-nav {
+                padding: 10px;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -ms-flex-align: center !important;
+                align-items: center !important;
+                -ms-flex-pack: justify !important;
+                justify-content: space-between !important;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .welcome-bar {
+                -ms-flex-pack: center !important;
+                justify-content: center !important;
+            }
+
+            .caseology-nav {
+                padding-top: 20px;
+                text-align: center;
+            }
+
+            .caseology-nav .main-menu {
+                padding: 20px;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -ms-flex-pack: justify !important;
+                justify-content: space-between !important;
+            }
+
+            .caseology-nav .main-menu a {
+                font-size: 25px;
+            }
+
+            .caseology-nav .search-bar form {
+                -ms-flex-pack: center !important;
+                justify-content: center !important;
+            }
+
+            .caseology-nav .search-bar {
+                background-color: #EFEFEF;
+                border-top: solid thin #B3B3B3;
+                border-bottom: solid thin #B3B3B3;
+            }
+
+            .caseology-nav .form-inline .form-control {
+                display: inline-block;
+                width: 70%;
+                vertical-align: middle;
+                border: none;
+                background-color: #EFEFEF;
+            }
+
+            .category-txt h1 {
+                margin-bottom: 0px !important;
+                font-size: 22px !important;
+            }
+
+            .category-btn {
+                font-size: 11px !important;
+            }
+        }
+
+        .caseology-nav .main-menu a {
+            font-family: "neutrif_prosemi_bold";
+        }
+
+        .brand-logo img {
+            width: auto;
+            height: 35px;
+        }
+
+        .main-menu .main-menu-list {
+            color: #1F1F1F;
+            font-weight: 600;
+        }
+
+        .main-menu .main-menu-list:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="caseology-layout-header">
+        <div class="welcome-bar">
+            <div class="welcome-bar-message">Welcome to the official Caseology eBay store</div>
+        </div>
+        <div class="caseology-nav">
+            <div class="brand-logo">
+                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/caseology-logo.png?10543" class="img-fluid"
+                    alt="Caseology Logo">
+            </div>
+            <div class="main-menu">
+                <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/Caseology.html">Home</a>
+                <a class="main-menu-list"
+                    href="https://stores.ebay.com/caseologyusa/_i.html?_nkw=&submit=Search&_sid=1118303154">Shop</a>
+                <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/Policy.html">Policy</a>
+                <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/About.html">About us</a>
+            </div>
+            <div class="search-bar">
+                <form class="form-inline" name="search" target="_blank" method="get"
+                    action="http://stores.ebay.com/Caseology-USA_W0QQLHQ5fSellerWithStoreZ1QQ_sasiZ1QQ_sidZ1118303154?">
+                    <input class="form-control mr-2 searchname" type="search" name="_nkw" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-dark my-3" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="caseology-layout-main">
+        <div class="container-fluid">
+            <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0737/0479/files/main_banner_edit.jpg?11226" />
+            <div class="tabs">
+                <input class="tabs__radio" id="myTab1" type="radio" name="myTabs" value="1" checked="">
+                <input class="tabs__radio" id="myTab2" type="radio" name="myTabs" value="2">
+                <input class="tabs__radio" id="myTab3" type="radio" name="myTabs" value="3">
+                <input class="tabs__radio" id="myTab4" type="radio" name="myTabs" value="4">
+                <input class="tabs__radio" id="myTab5" type="radio" name="myTabs" value="5">
+                <label class="tabs__label hide-if-disabled" for="myTab1">About us</label>
+                <label class="tabs__label hide-if-disabled" for="myTab2">Payment</label>
+                <label class="tabs__label hide-if-disabled" for="myTab3">Shipping</label>
+                <label class="tabs__label hide-if-disabled" for="myTab4">Return</label>
+                <label class="tabs__label hide-if-disabled" for="myTab5">Warranty</label>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>About us</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p>Our company is made up of ordinary people like you, brought together by the desire to
+                                create something exceptional. We know how the little things have a big impact: the right
+                                accessory finishes an outfit, a slim case protects an expensive phone, the details we
+                                choose say something about us. So we set out to discover and design the very best
+                                accessories.</p>
+                            <p>We keep hard work, brilliant design, and dedication to the customer at the heart of
+                                everything we do. In five years, we went from a startup selling simple rubber cases to
+                                one of Amazonís top sellers, providing thousands of people with the best-looking
+                                accessories around. We couldnít have done that without the loyalty of our customers. We
+                                are always ready to listen and constantly working to exceed expectations because what we
+                                thought at the start turned out to be true: a customer-oriented company is the only way
+                                the be.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Payment</h2>
+                    <div class="row pt-4">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <p>Paypal is our only accepted method of payment. Your paypal account must be a Verified
+                                Paypal account.</p>
+                            <p><strong>CANCEL / EXCHANGE</strong></p>
+                            <p>If you would like to cancel or change your order, please contact us if you HAVE NOT
+                                received a shipping confirmation.</p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>If the order has not processed yet, the order will be cancelled, and you may place a
+                                    new order.</li>
+                                <li>If the item has been processed for shipping, we cannot cancel the order. You can
+                                    return the order, and a refund will be issued once the item has been returned.</li>
+                            </ul>
+                            <p><strong>** We do not offer exchanges. All exchange requests will be handled as returns.
+                                    Once the item is received at our warehouse, we will issue a refund. You may place a
+                                    new order at your earliest convenience.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Shipping</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p><strong>Free Shipping</strong></p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>Method: USPS First-Class Mail</li>
+                                <li>Weight: Less than 13 ounces</li>
+                                <li>Handling time is usually around 1-2 business days. (May be longer)</li>
+                                <li>Most orders are delivered within the stated shipping time at the time of purchase
+                                </li>
+                                <li>Tracking is available for domestic shipments</li>
+                                <p>Some items may have an extended handling time due to pre-orders, back orders,
+                                    etc.<br>Please check the shipping/delivery date on the listing before purchase.</p>
+                            </ul>
+                            <p><strong>International Shipping</strong></p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>Method: USPS First-Class Mail International (delivery time varies depending on
+                                    country)</li>
+                                <li>Standard (NO TRACKING) - delivered in usually 2-4 weeks</li>
+                                <li>Expedited (FULL/PARTIAL TRACKING) - delivered in usually 1-2 weeks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Return</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p><strong>Only items purchased directly from Caseology are eligible for return.</strong>
+                            </p>
+                            <p>Returned or exchanged items must be in brand new condition in original packaging. This
+                                includes any materials, accessories, package inserts, booklets, and warranty cards. A
+                                minimum 20% restocking may apply based on the item∑s condition. We do not require an RMA
+                                number for returned or exchanged orders.</p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>Free Returns within 30 days from the date of purchase.</li>
+                                <li>All returned products should be in the original packaging with no missing contents.
+                                </li>
+                                <li>Returned products that are not in original packaging or are missing contents are
+                                    subject to minimum $5 restocking fee.</li>
+                                <li>The refund process may take up to 1 ~ 2 weeks after item has been received.</li>
+                                <li>Caseology Inc. is not liable for lost, stolen, or damaged shipments for returning
+                                    packages.</li>
+                                <li>All Sale and Promotional items will not be eligible for Returns, Exchanges, and/or
+                                    Warranties.</li>
+                                <li>Ship to: CASEOLOGY RMA Department 9975 Toledo Way #100 Irvine, CA 92618 <br>**Please
+                                    include eBay username. We are unable to locate your account without this
+                                    information.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Warranty</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p><strong>Our 30-day warranty provides coverage for manufacturing defects
+                                    only.</strong><br>Photo confirmation is required.</p>
+                            <p>What is not covered by Warranty?</p>
+                            <li>Normal wear and tear</li>
+                            <li>Misuse, lack of care, mishandling, accidental abuse</li>
+                            <li>Abnormal use of product</li>
+                            <li>Damage caused by improper or unauthorized repair or maintenance</li>
+                            <li>Product that has been modified or altered</li> <br>
+                            <p>Most defective orders are replaced free of charge only after photo confirmation is
+                                provided.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
