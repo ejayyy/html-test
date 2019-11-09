@@ -613,9 +613,18 @@
             border-width: 0px;
         }
 
+        .stBadge-accent td {
+            background-color: #fff;
+        }
+
+        .caseology-layout-main {
+            margin-bottom: 60px;
+        }
+
         div[class^="caseology-layout-"] {
             max-width: 1140px !important;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         div[class^="caseology-layout-"],
@@ -628,6 +637,15 @@
             letter-spacing: -0.035em;
             color: inherit;
             margin-bottom: 0px;
+        }
+
+        div[class^="caseology-layout-"] a {
+            font-size: 25px;
+        }
+
+        div[class^="caseology-layout-"] p,
+        .caseology-layout-main li {
+            font-size: 19px;
         }
 
         h1,
@@ -648,7 +666,7 @@
         }
 
         h3 {
-            font-size: 25px;
+            font-size: 24px;
         }
 
         .welcome-bar {
@@ -667,6 +685,163 @@
             font-weight: 400;
         }
 
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tabs__radio {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .tabs__label {
+            flex: 1 0 auto;
+            width: 25%;
+            flex-basis: auto;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0.5rem;
+            color: #4e4e4e;
+            background-color: #e5e5e5;
+            cursor: pointer;
+        }
+
+        .tabs__content {
+            width: 100%;
+            flex-basis: auto;
+            padding: 38px;
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(1):checked~.tabs__label:nth-of-type(1) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(1):checked~.tabs__content:nth-of-type(1) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(1):disabled~.tabs__label:nth-of-type(1):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(1):disabled~.hide-if-disabled:nth-of-type(1) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(2):checked~.tabs__label:nth-of-type(2) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(2):checked~.tabs__content:nth-of-type(2) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(2):disabled~.tabs__label:nth-of-type(2):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(2):disabled~.hide-if-disabled:nth-of-type(2) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(3):checked~.tabs__label:nth-of-type(3) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(3):checked~.tabs__content:nth-of-type(3) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(3):disabled~.tabs__label:nth-of-type(3):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(3):disabled~.hide-if-disabled:nth-of-type(3) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(4):checked~.tabs__label:nth-of-type(4) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(4):checked~.tabs__content:nth-of-type(4) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(4):disabled~.tabs__label:nth-of-type(4):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(4):disabled~.hide-if-disabled:nth-of-type(4) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(5):checked~.tabs__label:nth-of-type(5) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(5):checked~.tabs__content:nth-of-type(5) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(5):disabled~.tabs__label:nth-of-type(5):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(5):disabled~.hide-if-disabled:nth-of-type(5) {
+            display: none;
+        }
+
+        .tabs-wrapper {
+            height: calc (100vh + 100px);
+        }
+
+        .sb-link {
+            display: flex;
+            height: 50px;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #bb5555;
+            transition: background 0.3s;
+        }
+
+
+        .caseology-nav .main-menu a {
+            font-family: "neutrif_prosemi_bold";
+        }
+
+        .brand-logo img {
+            width: auto;
+            height: 35px;
+        }
+
+        .main-menu .main-menu-list {
+            color: #1F1F1F;
+            font-weight: 600;
+        }
+
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .main-menu .main-menu-list:not(:last-of-type) {
+            margin-right: 20px;
+        }
+
+        .mb {
+            margin-bottom: 40px;
+        }
+
         @media (min-width: 768px) {
             .caseology-nav {
                 padding: 10px;
@@ -677,9 +852,27 @@
                 -ms-flex-pack: justify !important;
                 justify-content: space-between !important;
             }
+
+            .tabs__label {
+                width: 9.0909090909%;
+                flex-basis: auto;
+            }
         }
 
+
         @media (max-width: 767.98px) {
+            .caseology-layout-main {
+                margin-bottom: 30px;
+            }
+
+            .tabs__content {
+                padding: 28px;
+            }
+
+            .mb {
+                margin-bottom: 20px;
+            }
+
             .welcome-bar {
                 -ms-flex-pack: center !important;
                 justify-content: center !important;
@@ -696,10 +889,6 @@
                 display: flex !important;
                 -ms-flex-pack: justify !important;
                 justify-content: space-between !important;
-            }
-
-            .caseology-nav .main-menu a {
-                font-size: 25px;
             }
 
             .caseology-nav .search-bar form {
@@ -729,24 +918,23 @@
             .category-btn {
                 font-size: 11px !important;
             }
-        }
 
-        .caseology-nav .main-menu a {
-            font-family: "neutrif_prosemi_bold";
-        }
+            .main-menu .main-menu-list {
+                font-size: 24px;
+            }
 
-        .brand-logo img {
-            width: auto;
-            height: 35px;
-        }
+            .caseology-layout-main h1 {
+                font-size: 30px;
+            }
 
-        .main-menu .main-menu-list {
-            color: #1F1F1F;
-            font-weight: 600;
-        }
+            .caseology-layout-main h3 {
+                font-size: 20px;
+            }
 
-        .main-menu .main-menu-list:not(:last-of-type) {
-            margin-right: 20px;
+            .caseology-layout-main p,
+            .caseology-layout-main li {
+                font-size: 17px !important;
+            }
         }
     </style>
 
@@ -781,38 +969,18 @@
     </div>
 
     <div class="caseology-layout-main">
-        <div class="container-fluid">
-            <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0737/0479/files/main_banner_edit.jpg?11226" />
+        <div class="container-fluid mb">
+            <img class="img-fluid mb"
+                src="https://cdn.shopify.com/s/files/1/0737/0479/files/main_banner_edit.jpg?11226" />
             <div class="tabs">
-                <input class="tabs__radio" id="myTab1" type="radio" name="myTabs" value="1" checked="">
-                <input class="tabs__radio" id="myTab2" type="radio" name="myTabs" value="2">
+                <input class="tabs__radio" id="myTab2" type="radio" name="myTabs" value="2" checked>
                 <input class="tabs__radio" id="myTab3" type="radio" name="myTabs" value="3">
                 <input class="tabs__radio" id="myTab4" type="radio" name="myTabs" value="4">
                 <input class="tabs__radio" id="myTab5" type="radio" name="myTabs" value="5">
-                <label class="tabs__label hide-if-disabled" for="myTab1">About us</label>
                 <label class="tabs__label hide-if-disabled" for="myTab2">Payment</label>
                 <label class="tabs__label hide-if-disabled" for="myTab3">Shipping</label>
                 <label class="tabs__label hide-if-disabled" for="myTab4">Return</label>
                 <label class="tabs__label hide-if-disabled" for="myTab5">Warranty</label>
-                <div class="tabs__content hide-if-disabled">
-                    <h2>About us</h2>
-                    <div class="row pt-4">
-                        <div class="col-sm-12">
-                            <p>Our company is made up of ordinary people like you, brought together by the desire to
-                                create something exceptional. We know how the little things have a big impact: the right
-                                accessory finishes an outfit, a slim case protects an expensive phone, the details we
-                                choose say something about us. So we set out to discover and design the very best
-                                accessories.</p>
-                            <p>We keep hard work, brilliant design, and dedication to the customer at the heart of
-                                everything we do. In five years, we went from a startup selling simple rubber cases to
-                                one of Amazonís top sellers, providing thousands of people with the best-looking
-                                accessories around. We couldnít have done that without the loyalty of our customers. We
-                                are always ready to listen and constantly working to exceed expectations because what we
-                                thought at the start turned out to be true: a customer-oriented company is the only way
-                                the be.</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="tabs__content hide-if-disabled">
                     <h2>Payment</h2>
                     <div class="row pt-4">

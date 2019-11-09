@@ -621,9 +621,14 @@
             border-width: 0px;
         }
 
+        .stBadge-accent td {
+            background-color: #fff;
+        }
+
         div[class^="caseology-layout-"] {
             max-width: 1140px !important;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         div[class^="caseology-layout-"],
@@ -635,7 +640,10 @@
             line-height: 1.45;
             letter-spacing: -0.035em;
             color: inherit;
-            margin-bottom: 0px;
+        }
+
+        div[class^="caseology-layout-"] a {
+            font-size: 25px;
         }
 
         h1,
@@ -670,6 +678,9 @@
             font-weight: 400;
         }
 
+        .caseology-layout-main {
+            margin-bottom: 60px;
+        }
 
         /*---- TABLET ----*/
         @media only screen and (max-width: 850px) and (min-width: 450px) {
@@ -713,6 +724,10 @@
         }
 
         @media (max-width: 767.98px) {
+            .caseology-layout-main {
+                margin-bottom: 30px;
+            }
+
             .welcome-bar {
                 -ms-flex-pack: center !important;
                 justify-content: center !important;

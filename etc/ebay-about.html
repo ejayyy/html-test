@@ -613,9 +613,18 @@
             border-width: 0px;
         }
 
+        .stBadge-accent td {
+            background-color: #fff;
+        }
+
+        .caseology-layout-main {
+            margin-bottom: 60px;
+        }
+
         div[class^="caseology-layout-"] {
             max-width: 1140px !important;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         div[class^="caseology-layout-"],
@@ -628,6 +637,14 @@
             letter-spacing: -0.035em;
             color: inherit;
             margin-bottom: 0px;
+        }
+
+        div[class^="caseology-layout-"] a {
+            font-size: 25px;
+        }
+
+        div[class^="caseology-layout-"] p {
+            font-size: 19px;
         }
 
         h1,
@@ -648,14 +665,27 @@
         }
 
         h3 {
-            font-size: 25px;
+            font-size: 24px;
         }
 
-        #company-info>p {
+        .company-info {
+            padding-left: 41px;
+        }
+
+        .company-info-right {
+            padding-left: 0;
+            padding-right: 41px;
+        }
+
+        .company-info>p {
             margin-bottom: 10px;
         }
 
-        /* HEADER | Welcome Bar ================================================== */
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         .welcome-bar {
             background-color: #eaeaea;
             padding: 10px;
@@ -672,6 +702,10 @@
             font-weight: 400;
         }
 
+        .mb {
+            margin-bottom: 40px;
+        }
+
         @media (min-width: 768px) {
             .caseology-nav {
                 padding: 10px;
@@ -685,6 +719,22 @@
         }
 
         @media (max-width: 767.98px) {
+            .caseology-layout-main {
+                margin-bottom: 30px;
+            }
+
+            .company-info {
+                padding-left: 35px;
+            }
+
+            .company-info-right {
+                padding-right: initial;
+            }
+
+            .mb {
+                margin-bottom: 20px;
+            }
+
             .welcome-bar {
                 -ms-flex-pack: center !important;
                 justify-content: center !important;
@@ -701,10 +751,6 @@
                 display: flex !important;
                 -ms-flex-pack: justify !important;
                 justify-content: space-between !important;
-            }
-
-            .caseology-nav .main-menu a {
-                font-size: 25px;
             }
 
             .caseology-nav .search-bar form {
@@ -733,6 +779,22 @@
 
             .category-btn {
                 font-size: 11px !important;
+            }
+
+            .main-menu .main-menu-list {
+                font-size: 24px;
+            }
+
+            .caseology-layout-main h1 {
+                font-size: 30px;
+            }
+
+            .caseology-layout-main h3 {
+                font-size: 20px;
+            }
+
+            .caseology-layout-main p {
+                font-size: 17px !important;
             }
         }
 
@@ -786,10 +848,11 @@
     </div>
 
     <div class="caseology-layout-main">
-        <div class="container-fluid">
-            <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0737/0479/files/main_banner_edit.jpg?11226" />
+        <div class="container-fluid mb">
+            <img class="img-fluid mb"
+                src="https://cdn.shopify.com/s/files/1/0737/0479/files/main_banner_edit.jpg?11226" />
             <div class="row">
-                <div id="company-info" class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                <div class="company-info col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <h3>HOURS</h3>
                     <p>Monday-Friday / 9am-5pm</p>
                     <h3>CONTACT</h3>
@@ -797,7 +860,7 @@
                     <h3>LOCATION</h3>
                     <p>9975 Toledo Way #100<br>Irvine, CA 92618</p>
                 </div>
-                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                <div class="company-info company-info-right col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                     <h1 class="mb-2">About us</h1>
                     <p class="mb-3">Our company is made up of ordinary people like you, brought together by the desire
                         to create something exceptional. We know how the little things have a big impact: the right
