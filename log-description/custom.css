@@ -24,7 +24,7 @@
 }
 
 .iphone11-first-img {
-  width: 28%;
+  width: 28% !important;
   position: absolute;
   left: 18%;
 }
