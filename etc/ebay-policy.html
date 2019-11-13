@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Font CSS -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.2/css/all.css"
         integrity="sha384-XxNLWSzCxOe/CFcHcAiJAZ7LarLmw3f4975gOO6QkxvULbGGNDoSOTzItGUG++Q+" crossorigin="anonymous">
 
@@ -23,11 +20,6 @@
         @font-face {
             font-family: "neutrif_prosemi_bold";
             src: url("https://cdn.shopify.com/s/files/1/0737/0479/t/95/assets/01-neutrifpro-semibold-webfont.woff?10553")
-        }
-
-        .subscribe-text-box p {
-            color: #212529 !important;
-            font-size: 16px !important;
         }
 
         .bjwQRt.bjwQRt.bjwQRt.bjwQRt.bjwQRt.bjwQRt {
@@ -625,6 +617,10 @@
             background-color: #fff;
         }
 
+        .caseology-layout-main {
+            margin-bottom: 60px;
+        }
+
         div[class^="caseology-layout-"] {
             max-width: 1140px !important;
             margin-left: auto;
@@ -640,10 +636,16 @@
             line-height: 1.45;
             letter-spacing: -0.035em;
             color: inherit;
+            margin-bottom: 0px;
         }
 
         div[class^="caseology-layout-"] a {
             font-size: 25px;
+        }
+
+        div[class^="caseology-layout-"] p,
+        .caseology-layout-main li {
+            font-size: 19px;
         }
 
         h1,
@@ -653,15 +655,20 @@
         h5,
         h6 {
             font-family: "neutrif_prosemi_bold";
-            font-size: 40px;
             font-weight: 600;
             letter-spacing: -0.035em;
             color: inherit;
             margin-bottom: 0px;
         }
 
+        h1 {
+            font-size: 40px;
+        }
 
-        /* HEADER | Welcome Bar ================================================== */
+        h3 {
+            font-size: 24px;
+        }
+
         .welcome-bar {
             background-color: #eaeaea;
             padding: 10px;
@@ -678,40 +685,164 @@
             font-weight: 400;
         }
 
-        .caseology-layout-main {
-            margin-bottom: 60px;
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        /*---- TABLET ----*/
-        @media only screen and (max-width: 850px) and (min-width: 450px) {
-            .slider-wrapper {
-                border-radius: 0;
-            }
+        .tabs__radio {
+            position: absolute;
+            left: -9999px;
         }
 
-        /*---- MOBILE----*/
-        @media only screen and (max-width: 450px) {
-            .slider-wrapper {
-                border-radius: 0;
-            }
-
-            .slider-wrapper .info {
-                opacity: 0;
-            }
+        .tabs__label {
+            flex: 1 0 auto;
+            width: 25%;
+            flex-basis: auto;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0.5rem;
+            color: #4e4e4e;
+            background-color: #e5e5e5;
+            cursor: pointer;
         }
 
-        @media only screen and (max-width: 1199.98px) {
-            .main-carousel {
-                max-width: 100%;
-            }
+        .tabs__content {
+            width: 100%;
+            flex-basis: auto;
+            padding: 38px;
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(1):checked~.tabs__label:nth-of-type(1) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(1):checked~.tabs__content:nth-of-type(1) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(1):disabled~.tabs__label:nth-of-type(1):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(1):disabled~.hide-if-disabled:nth-of-type(1) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(2):checked~.tabs__label:nth-of-type(2) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(2):checked~.tabs__content:nth-of-type(2) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(2):disabled~.tabs__label:nth-of-type(2):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(2):disabled~.hide-if-disabled:nth-of-type(2) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(3):checked~.tabs__label:nth-of-type(3) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(3):checked~.tabs__content:nth-of-type(3) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(3):disabled~.tabs__label:nth-of-type(3):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(3):disabled~.hide-if-disabled:nth-of-type(3) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(4):checked~.tabs__label:nth-of-type(4) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(4):checked~.tabs__content:nth-of-type(4) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(4):disabled~.tabs__label:nth-of-type(4):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(4):disabled~.hide-if-disabled:nth-of-type(4) {
+            display: none;
+        }
+
+        .tabs__radio:nth-of-type(5):checked~.tabs__label:nth-of-type(5) {
+            background-color: #fefefe;
+        }
+
+        .tabs__radio:nth-of-type(5):checked~.tabs__content:nth-of-type(5) {
+            display: block;
+        }
+
+        .tabs__radio:nth-of-type(5):disabled~.tabs__label:nth-of-type(5):not(.tabs__label--hide) {
+            color: #8e8e8e;
+            cursor: no-drop;
+        }
+
+        .tabs__radio:nth-of-type(5):disabled~.hide-if-disabled:nth-of-type(5) {
+            display: none;
+        }
+
+        .tabs-wrapper {
+            height: calc (100vh + 100px);
+        }
+
+        .sb-link {
+            display: flex;
+            height: 50px;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #bb5555;
+            transition: background 0.3s;
+        }
+
+
+        .caseology-nav .main-menu a {
+            font-family: "neutrif_prosemi_bold";
+        }
+
+        .brand-logo img {
+            width: auto;
+            height: 35px;
+        }
+
+        .main-menu .main-menu-list {
+            color: #1F1F1F;
+            font-weight: 600;
+        }
+
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .main-menu .main-menu-list:not(:last-of-type) {
+            margin-right: 20px;
+        }
+
+        .mb {
+            margin-bottom: 40px;
         }
 
         @media (min-width: 768px) {
-            .welcome-bar {
-                -ms-flex-pack: justify !important;
-                justify-content: space-between !important;
-            }
-
             .caseology-nav {
                 padding: 10px;
                 display: -ms-flexbox !important;
@@ -721,30 +852,30 @@
                 -ms-flex-pack: justify !important;
                 justify-content: space-between !important;
             }
+
+            .tabs__label {
+                width: 9.0909090909%;
+                flex-basis: auto;
+            }
         }
+
 
         @media (max-width: 767.98px) {
             .caseology-layout-main {
                 margin-bottom: 30px;
             }
 
+            .tabs__content {
+                padding: 28px;
+            }
+
+            .mb {
+                margin-bottom: 20px;
+            }
+
             .welcome-bar {
                 -ms-flex-pack: center !important;
                 justify-content: center !important;
-            }
-
-            #accessories-img {
-                height: 120px !important;
-            }
-
-            .icon-img {
-                height: 160px !important;
-            }
-
-            .category-grid {
-                margin: 5px 0 !important;
-                grid-gap: 5px !important;
-                grid-template-columns: repeat(3, minmax(100px, 1fr));
             }
 
             .caseology-nav {
@@ -758,10 +889,6 @@
                 display: flex !important;
                 -ms-flex-pack: justify !important;
                 justify-content: space-between !important;
-            }
-
-            .caseology-nav .main-menu a {
-                font-size: 25px;
             }
 
             .caseology-nav .search-bar form {
@@ -791,366 +918,23 @@
             .category-btn {
                 font-size: 11px !important;
             }
-        }
 
-        .caseology-nav .main-menu a {
-            font-family: "neutrif_prosemi_bold";
-        }
+            .main-menu .main-menu-list {
+                font-size: 24px;
+            }
 
-        .brand-logo img {
-            width: auto;
-            height: 35px;
-        }
+            .caseology-layout-main h1 {
+                font-size: 30px;
+            }
 
-        .main-menu .main-menu-list {
-            color: #1F1F1F;
-            font-weight: 600;
-        }
+            .caseology-layout-main h3 {
+                font-size: 20px;
+            }
 
-        .main-menu .main-menu-list:not(:last-of-type) {
-            margin-right: 20px;
-        }
-
-        /* MAIN | Main Banner ================================================== */
-        .main-carousel {
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-
-
-        .main-carousel-wrapper {
-            max-width: 100%;
-            margin: auto;
-            position: relative;
-        }
-
-        .main-carousel input {
-            display: none;
-        }
-
-        .slider-inner {
-            width: 400%;
-            /* 100% * # of Total Slider */
-            line-height: 0;
-        }
-
-        article {
-            width: 25%;
-            /* # of Total Slider / 100% */
-            float: left;
-            position: relative;
-        }
-
-        article img {
-            width: 100%;
-        }
-
-        .container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        #apple-img {
-            background-image: url("https://cdn.shopify.com/s/files/1/0737/0479/files/01_apple.jpg?10703");
-        }
-
-        #samsung-img {
-            background-image: url("https://cdn.shopify.com/s/files/1/0737/0479/files/02_samsung.jpg?10703");
-        }
-
-        #google-img {
-            background-image: url("https://cdn.shopify.com/s/files/1/0737/0479/files/03_google.jpg?10703");
-        }
-
-        #accessories-grid {
-            grid-column-start: 1;
-            grid-column-end: 4;
-        }
-
-        #accessories-img {
-            height: 280px;
-            background-image: url("https://cdn.shopify.com/s/files/1/0737/0479/files/04_accessories.jpg?10703");
-        }
-
-        .background {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-        }
-
-        .icon-img {
-            height: 370px;
-        }
-
-        .category-grid {
-            margin: 10px 0;
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: repeat(3, minmax(100px, 1fr));
-        }
-
-        .category-txt {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-            z-index: 1;
-            visibility: hidden;
-        }
-
-        .category-grid a::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.45);
-            visibility: hidden;
-        }
-
-        .category-grid a:hover::after,
-        .category-grid a:hover .category-txt {
-            visibility: visible;
-            transition: ease-in 0.85s;
-        }
-
-        .category-txt h1 {
-            margin-bottom: 23px;
-            font-size: 48px;
-            letter-spacing: 0px;
-            font-family: "neutrif_proregular";
-            color: #fff;
-        }
-
-        .category-btn {
-            background: transparent;
-            border: 1.5px solid #fff;
-            border-radius: 6px;
-            color: #fff;
-            font-size: 29px;
-            padding: 3px 13px;
-        }
-
-        /*---- SET UP CONTROL ----*/
-        .slider-prev-next-control {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
-
-        .slider-prev-next-control label {
-            display: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            opacity: 0.7;
-        }
-
-        .slider-prev-next-control label:hover {
-            opacity: 1;
-        }
-
-        .slider-dot-control {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            padding: 15px;
-            text-align: center;
-            display: -ms-flexbox !important;
-            display: flex !important;
-            -ms-flex-pack: center !important;
-            justify-content: center !important;
-            -ms-flex-align: center !important;
-            align-items: center !important;
-        }
-
-        .slider-dot-control label {
-            cursor: pointer;
-            border-radius: 10px;
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            background: transparent;
-            border: solid thin #fff;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
-            margin-bottom: 0px;
-        }
-
-        .slider-dot-control label:not(:last-of-type) {
-            margin-right: 10px;
-        }
-
-
-        .slider-dot-control label:hover {
-            background: #fff;
-            border: solid thin #fff;
-        }
-
-        /* Info Box */
-        .info {
-            position: absolute;
-            opacity: 0;
-            width: 100%;
-            -webkit-transition: all 1000ms ease-out 600ms;
-            -moz-transition: all 1000ms ease-out 600ms;
-            transition: all 1000ms ease-out 600ms;
-        }
-
-        .info.top-left {
-            top: 30px;
-            left: 30px;
-        }
-
-        .info.top-right {
-            top: 30px;
-            right: 30px;
-        }
-
-        .info.bottom-left {
-            bottom: 30px;
-            left: 30px;
-        }
-
-        .info.bottom-right {
-            bottom: 30px;
-            right: 30px;
-        }
-
-        .info.top-center {
-            top: 13%;
-            left: 50%;
-            transform: translate(-50%, -10%);
-            text-align: center;
-        }
-
-        /* Slider Styling */
-        .slider-wrapper {
-            width: 100%;
-            overflow: hidden;
-            -webkit-transform: translateZ(0);
-            -moz-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            -o-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-transition: all 500ms ease-out;
-            -moz-transition: all 500ms ease-out;
-            transition: all 500ms ease-out;
-        }
-
-        .slider-wrapper .slider-inner {
-            -webkit-transform: translateZ(0);
-            -moz-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            -o-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
-            -moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
-            transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
-        }
-
-        /*---- SET POSITION FOR SLIDE ----*/
-        #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after,
-        #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
-            font-family: "Font Awesome 5 Pro";
-            font-style: normal;
-            font-weight: 400;
-            display: inline-block;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            text-decoration: inherit;
-            margin: 0;
-            line-height: 38px;
-            font-size: 3em;
-            color: #777;
-        }
-
-        #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after {
-            content: "\f054";
-            padding-left: 15px;
-        }
-
-        #slide1:checked~.slider-prev-next-control label:nth-child(2),
-        #slide2:checked~.slider-prev-next-control label:nth-child(3),
-        #slide3:checked~.slider-prev-next-control label:nth-child(4) {
-            display: block;
-            float: right;
-            margin-right: 15px;
-        }
-
-        #slide2:checked~.slider-prev-next-control label:nth-child(1),
-        #slide3:checked~.slider-prev-next-control label:nth-child(2),
-        #slide1:checked~.slider-prev-next-control label:nth-child(4) {
-            display: block;
-            float: left;
-            margin-left: 15px;
-        }
-
-        #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
-            content: "\f053";
-            padding-left: 15px;
-        }
-
-        #slide1:checked~.slider-dot-control label:nth-child(1),
-        #slide2:checked~.slider-dot-control label:nth-child(2),
-        #slide3:checked~.slider-dot-control label:nth-child(3) {
-            background: #fff;
-        }
-
-        #slide1:checked~.slider-wrapper article:nth-child(1) .info,
-        #slide2:checked~.slider-wrapper article:nth-child(2) .info,
-        #slide3:checked~.slider-wrapper article:nth-child(3) .info {
-            opacity: 1;
-        }
-
-        #slide1:checked~.slider-wrapper .slider-inner {
-            margin-left: 0%;
-        }
-
-        #slide2:checked~.slider-wrapper .slider-inner {
-            margin-left: -100%;
-        }
-
-        #slide3:checked~.slider-wrapper .slider-inner {
-            margin-left: -200%;
-        }
-
-        #slide5:checked~.slider-wrapper .slider-inner {
-            margin-left: -400%;
-        }
-
-        /* MAIN | Subscribe ================================================== */
-        .subscribe {
-            background-color: #eaeaea;
-            padding: 50px 0px;
-            margin-top: 20px;
-        }
-
-        .subscribe-text-box {
-            text-align: center;
-            padding-bottom: 20px;
-        }
-
-        .subscribe-text-box h1 {
-            margin-bottom: 10px !important;
+            .caseology-layout-main p,
+            .caseology-layout-main li {
+                font-size: 17px !important;
+            }
         }
     </style>
 
@@ -1185,113 +969,112 @@
     </div>
 
     <div class="caseology-layout-main">
-        <div class="container-fluid main-carousel">
-            <div class="main-carousel-wrapper">
-                <input checked="" type="radio" name="slider" id="slide1">
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-
-                <div class="slider-wrapper">
-                    <div class="slider-inner">
-                        <article id="banner-iphone11">
-                            <a
-                                href="http://www.ebaystores.com/Caseology-USA/Google-Pixel-4-/_i.html?_fsub=32738155016&_sid=1073275056&_trksid=p4634.c0.m322">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/web_main_banner_google_pixel_4_shop_now.jpg?926"
-                                    alt="Caseology | Pixel 4 Series">
-                            </a>
-                        </article>
-
-                        <article id="banner-cyrill">
-                            <a
-                                href="http://www.ebaystores.com/Caseology-USA/iPhone-11-Pro-Max-/_i.html?_fsub=29925502016&_sid=1073275056&_trksid=p4634.c0.m322">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/web_main_banner_iphone.jpg?847"
-                                    alt="Caseology | iPhone 11 Series">
-                            </a>
-                        </article>
-
-                        <article id="banner-galaxy_note10">
-                            <a
-                                href="http://www.ebaystores.com/Caseology-USA/Galaxy-Note-10-/_i.html?_fsub=29848545016&_sid=1073275056&_trksid=p4634.c0.m322">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/note10-collection.jpg?6078"
-                                    alt="Caseology | Galaxy Note 10 Series">
-                            </a>
-                        </article>
+        <div class="container-fluid mb">
+            <img class="img-fluid mb"
+                src="https://cdn.shopify.com/s/files/1/0737/0479/files/main_banner_edit.jpg?11226" />
+            <div class="tabs">
+                <input class="tabs__radio" id="myTab2" type="radio" name="myTabs" value="2" checked>
+                <input class="tabs__radio" id="myTab3" type="radio" name="myTabs" value="3">
+                <input class="tabs__radio" id="myTab4" type="radio" name="myTabs" value="4">
+                <input class="tabs__radio" id="myTab5" type="radio" name="myTabs" value="5">
+                <label class="tabs__label hide-if-disabled" for="myTab2">Payment</label>
+                <label class="tabs__label hide-if-disabled" for="myTab3">Shipping</label>
+                <label class="tabs__label hide-if-disabled" for="myTab4">Return</label>
+                <label class="tabs__label hide-if-disabled" for="myTab5">Warranty</label>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Payment</h2>
+                    <div class="row pt-4">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <p>Paypal is our only accepted method of payment. Your paypal account must be a Verified
+                                Paypal account.</p>
+                            <p><strong>CANCEL / EXCHANGE</strong></p>
+                            <p>If you would like to cancel or change your order, please contact us if you HAVE NOT
+                                received a shipping confirmation.</p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>If the order has not processed yet, the order will be cancelled, and you may place a
+                                    new order.</li>
+                                <li>If the item has been processed for shipping, we cannot cancel the order. You can
+                                    return the order, and a refund will be issued once the item has been returned.</li>
+                            </ul>
+                            <p><strong>** We do not offer exchanges. All exchange requests will be handled as returns.
+                                    Once the item is received at our warehouse, we will issue a refund. You may place a
+                                    new order at your earliest convenience.</strong></p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="slider-dot-control">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Shipping</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p><strong>Free Shipping</strong></p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>Method: USPS First-Class Mail</li>
+                                <li>Weight: Less than 13 ounces</li>
+                                <li>Handling time is usually around 1-2 business days. (May be longer)</li>
+                                <li>Most orders are delivered within the stated shipping time at the time of purchase
+                                </li>
+                                <li>Tracking is available for domestic shipments</li>
+                                <p>Some items may have an extended handling time due to pre-orders, back orders,
+                                    etc.<br>Please check the shipping/delivery date on the listing before purchase.</p>
+                            </ul>
+                            <p><strong>International Shipping</strong></p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>Method: USPS First-Class Mail International (delivery time varies depending on
+                                    country)</li>
+                                <li>Standard (NO TRACKING) - delivered in usually 2-4 weeks</li>
+                                <li>Expedited (FULL/PARTIAL TRACKING) - delivered in usually 1-2 weeks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Return</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p><strong>Only items purchased directly from Caseology are eligible for return.</strong>
+                            </p>
+                            <p>Returned or exchanged items must be in brand new condition in original packaging. This
+                                includes any materials, accessories, package inserts, booklets, and warranty cards. A
+                                minimum 20% restocking may apply based on the item∑s condition. We do not require an RMA
+                                number for returned or exchanged orders.</p>
+                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                <li>Free Returns within 30 days from the date of purchase.</li>
+                                <li>All returned products should be in the original packaging with no missing contents.
+                                </li>
+                                <li>Returned products that are not in original packaging or are missing contents are
+                                    subject to minimum $5 restocking fee.</li>
+                                <li>The refund process may take up to 1 ~ 2 weeks after item has been received.</li>
+                                <li>Caseology Inc. is not liable for lost, stolen, or damaged shipments for returning
+                                    packages.</li>
+                                <li>All Sale and Promotional items will not be eligible for Returns, Exchanges, and/or
+                                    Warranties.</li>
+                                <li>Ship to: CASEOLOGY RMA Department 9975 Toledo Way #100 Irvine, CA 92618 <br>**Please
+                                    include eBay username. We are unable to locate your account without this
+                                    information.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content hide-if-disabled">
+                    <h2>Warranty</h2>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <p><strong>Our 30-day warranty provides coverage for manufacturing defects
+                                    only.</strong><br>Photo confirmation is required.</p>
+                            <p>What is not covered by Warranty?</p>
+                            <li>Normal wear and tear</li>
+                            <li>Misuse, lack of care, mishandling, accidental abuse</li>
+                            <li>Abnormal use of product</li>
+                            <li>Damage caused by improper or unauthorized repair or maintenance</li>
+                            <li>Product that has been modified or altered</li> <br>
+                            <p>Most defective orders are replaced free of charge only after photo confirmation is
+                                provided.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="container-fluid">
-            <div class="category-grid">
-                <a class="position-relative"
-                    href="http://www.ebaystores.com/Caseology-USA/Apple-/_i.html?_fsub=4591772016&_sid=1073275056&_trksid=p4634.c0.m322">
-                    <div id="apple-img" class="background icon-img" alt="apple"></div>
-                    <div class="category-txt">
-                        <h1>Apple</h1>
-                        <button class="category-btn" type="button">Shop Now</button>
-                    </div>
-                </a>
-                <a class="position-relative"
-                    href="http://www.ebaystores.com/Caseology-USA/Samsung-/_i.html?_fsub=4591773016&_sid=1073275056&_trksid=p4634.c0.m322">
-                    <div id="samsung-img" class="background icon-img" alt="samsung"></div>
-                    <div class="category-txt">
-                        <h1>Samsung</h1>
-                        <button class="category-btn" type="button">Shop Now</button>
-                    </div>
-                </a>
-                <a class="position-relative"
-                    href="http://www.ebaystores.com/Caseology-USA/Google-/_i.html?_fsub=4591774016&_sid=1073275056&_trksid=p4634.c0.m322">
-                    <div id="google-img" class="background icon-img" alt="google"></div>
-                    <div class="category-txt">
-                        <h1>Google</h1>
-                        <button class="category-btn" type="button">Shop Now</button>
-                    </div>
-                </a>
-                <a id="accessories-grid" class="position-relative"
-                    href="http://www.ebaystores.com/Caseology-USA/Other-/_i.html?_fsub=1&_lns=1&_sid=1073275056&_trksid=p4634.c0.m322">
-                    <div id="accessories-img" class="background" alt="accessories"></div>
-                    <div class="category-txt accessories-txt">
-                        <h1>Accessories</h1>
-                        <button class="category-btn" type="button">Shop Now</button>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/05_icons.jpg?10703"
-                class="img-fluid img-desktop" alt="Caseology Shipping Benefit">
-        </div>
-
-        <div class="container-fluid subscribe">
-            <div class="subscribe-text-box">
-                <h1>Subscribe Now!</h1>
-                <p>Sign up and get updated with<br>news and promotions.</p>
-            </div>
-            <div class="klaviyo-form-JQT2zL"></div>
-        </div>
-
-
     </div>
-
-    <script async type="text/javascript" id="klaviyo"></script>
-
-    <script async type="text/javascript">
-        var pt01 = "htt";
-        var pt02 = "ps://";
-        var pt03 = "static.";
-        var pt04 = "klaviyo.com/onsite/js/klaviyo.js?company_id=QAY49h";
-        document.getElementById("klaviyo").src = pt01 + pt02 + pt03 + pt04;
-    </script>
 
 </body>
 
