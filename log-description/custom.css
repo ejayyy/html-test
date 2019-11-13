@@ -62,8 +62,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   top: 16%;
+  bottom: 16%;
   right: 0;
-  padding: 167px 52px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
 }
 
 #iphone11-third-txt-vase {
@@ -127,6 +130,15 @@
   display: none;
 }
 
+@media only screen and (max-width: 1259px) {
+  .iphone11-third-txt {
+    padding: 0 52px;
+  }
+  #iphone11-first-txt p {
+    width: 410px;
+  }
+}
+
 @media only screen and (max-width: 1068px) {
   #iphone11-cyrill p {
     font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
@@ -144,16 +156,17 @@
     width: 370px;
   }
   .iphone11-third-txt {
-    padding: 10% 5%;
+    padding: 0 5%;
   }
   #iphone11-fourth-txt {
-    left: 56%;
+    left: 54%;
   }
   #iphone11-fourth-txt p {
     width: 310px;
   }
   #iphone11-fifth-txt {
     left: 8%;
+    top: 84.5%;
   }
   .container-padding {
     padding-top: 26px;
@@ -238,6 +251,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .iphone11-first-img {
+    margin: auto;
+    display: block;
+  }
   #iphone11-first-txt {
     top: 69%;
     left: 24%;
@@ -278,8 +295,9 @@
     width: 85%;
   }
   .iphone11-third-txt {
-    padding: 21px 30px;
+    padding: 77px 30px;
     top: 80%;
+    bottom: 0;
     right: initial;
     width: 85%;
     text-align: left;
@@ -344,6 +362,7 @@
     display: inherit;
   }
 }
+
 @media only screen and (max-width: 734px) {
   #iphone11-cyrill p {
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
