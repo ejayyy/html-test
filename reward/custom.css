@@ -1,0 +1,31 @@
+#reward-join-div div {
+  margin-bottom: 20px;
+}
+#reward-join-div li {
+  margin-bottom: 10px;
+}
+#reward-join-img {
+  position: relative;
+}
+#reward-join-btn {
+  font-size: 16px;
+  padding: 6px 9px;
+  border: solid 1.5px #000;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  text-decoration: none;
+  transform: translate(-50%, -50%);
+}
+.reward-h4 p {
+  font-size: 1.143em;
+  margin-bottom: 20px;
+}
+#reward-tier-chart {
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+#reward-tier-chart img {
+  width: 80%;
+}
