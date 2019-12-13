@@ -1062,8 +1062,10 @@
         #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
         #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
         #slide3:checked~.slider-prev-next-control label:nth-child(4)::after,
+        #slide4:checked~.slider-prev-next-control label:nth-child(1)::after,
         #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
         #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
+        #slide4:checked~.slider-prev-next-control label:nth-child(3)::after,
         #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
             font-family: "Font Awesome 5 Pro";
             font-style: normal;
@@ -1081,14 +1083,16 @@
 
         #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
         #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after {
+        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after,
+        #slide4:checked~.slider-prev-next-control label:nth-child(1)::after {
             content: "\f054";
             padding-left: 15px;
         }
 
         #slide1:checked~.slider-prev-next-control label:nth-child(2),
         #slide2:checked~.slider-prev-next-control label:nth-child(3),
-        #slide3:checked~.slider-prev-next-control label:nth-child(4) {
+        #slide3:checked~.slider-prev-next-control label:nth-child(4),
+        #slide4:checked~.slider-prev-next-control label:nth-child(1) {
             display: block;
             float: right;
             margin-right: 15px;
@@ -1096,6 +1100,7 @@
 
         #slide2:checked~.slider-prev-next-control label:nth-child(1),
         #slide3:checked~.slider-prev-next-control label:nth-child(2),
+        #slide4:checked~.slider-prev-next-control label:nth-child(3),
         #slide1:checked~.slider-prev-next-control label:nth-child(4) {
             display: block;
             float: left;
@@ -1104,6 +1109,7 @@
 
         #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
         #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
+        #slide4:checked~.slider-prev-next-control label:nth-child(3)::after,
         #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
             content: "\f053";
             padding-left: 15px;
@@ -1111,13 +1117,15 @@
 
         #slide1:checked~.slider-dot-control label:nth-child(1),
         #slide2:checked~.slider-dot-control label:nth-child(2),
-        #slide3:checked~.slider-dot-control label:nth-child(3) {
+        #slide3:checked~.slider-dot-control label:nth-child(3),
+        #slide4:checked~.slider-dot-control label:nth-child(4) {
             background: #fff;
         }
 
         #slide1:checked~.slider-wrapper article:nth-child(1) .info,
         #slide2:checked~.slider-wrapper article:nth-child(2) .info,
-        #slide3:checked~.slider-wrapper article:nth-child(3) .info {
+        #slide3:checked~.slider-wrapper article:nth-child(3) .info,
+        #slide4:checked~.slider-wrapper article:nth-child(4) .info {
             opacity: 1;
         }
 
@@ -1190,9 +1198,18 @@
                 <input checked="" type="radio" name="slider" id="slide1">
                 <input type="radio" name="slider" id="slide2">
                 <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
 
                 <div class="slider-wrapper">
                     <div class="slider-inner">
+                        <article id="banner-christmas">
+                            <a
+                                href="https://www.ebay.com/sme/caseology_store/Buy-1-get-1-at-35-off/so.html?_soffid=5708614806&_soffType=OrderSubTotalOffer&_soprvw=1&_ke=eyJrbF9lbWFpbCI6ICJ5b2hAc3BpZ2VuLmNvbSIsICJrbF9jb21wYW55X2lkIjogIlFBWTQ5aCJ9">
+                                <img class="img-fluid img-desktop"
+                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/xmas_ebay_main_banner_2019.jpg?v=1576278823"
+                                    alt="Caseology | Christmas promotions">
+                            </a>
+                        </article>
                         <article id="banner-iphone11">
                             <a
                                 href="http://www.ebaystores.com/Caseology-USA/Google-Pixel-4-/_i.html?_fsub=32738155016&_sid=1073275056&_trksid=p4634.c0.m322">

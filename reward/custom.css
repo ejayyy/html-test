@@ -19,8 +19,8 @@
   transform: translate(-50%, -50%);
 }
 .reward-h4 p {
-  font-size: 1.143em;
-  margin-bottom: 20px;
+  font-size: 1em;
+  margin-bottom: 15px;
 }
 #reward-tier-chart {
   margin-bottom: 0 !important;
@@ -28,4 +28,16 @@
 }
 #reward-tier-chart img {
   width: 80%;
+}
+
+@media only screen and (max-width: 777px) {
+  #reward-tier-chart img {
+    width: 100%;
+  }
+  #reward-join-img img {
+    content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/landing_mobile_nobutton.jpg?v=1575943110");
+  }
+  #reward-join-btn {
+    top: 38%;
+  }
 }
