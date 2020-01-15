@@ -1059,14 +1059,17 @@
         }
 
         /*---- SET POSITION FOR SLIDE ----*/
+        #slide2:checked~.slider-prev-next-control label:nth-child(1),
+        #slide3:checked~.slider-prev-next-control label:nth-child(2),
+        #slide1:checked~.slider-prev-next-control label:nth-child(4) {
+            display: block;
+            float: left;
+            margin-left: 15px;
+        }
+
         #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
         #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after,
-        #slide4:checked~.slider-prev-next-control label:nth-child(1)::after,
-        #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide4:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
+        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after {
             font-family: "Font Awesome 5 Pro";
             font-style: normal;
             font-weight: 400;
@@ -1083,33 +1086,13 @@
 
         #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
         #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after,
-        #slide4:checked~.slider-prev-next-control label:nth-child(1)::after {
+        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after {
             content: "\f054";
             padding-left: 15px;
         }
 
-        #slide1:checked~.slider-prev-next-control label:nth-child(2),
-        #slide2:checked~.slider-prev-next-control label:nth-child(3),
-        #slide3:checked~.slider-prev-next-control label:nth-child(4),
-        #slide4:checked~.slider-prev-next-control label:nth-child(1) {
-            display: block;
-            float: right;
-            margin-right: 15px;
-        }
-
-        #slide2:checked~.slider-prev-next-control label:nth-child(1),
-        #slide3:checked~.slider-prev-next-control label:nth-child(2),
-        #slide4:checked~.slider-prev-next-control label:nth-child(3),
-        #slide1:checked~.slider-prev-next-control label:nth-child(4) {
-            display: block;
-            float: left;
-            margin-left: 15px;
-        }
-
         #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
         #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide4:checked~.slider-prev-next-control label:nth-child(3)::after,
         #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
             content: "\f053";
             padding-left: 15px;
@@ -1141,8 +1124,8 @@
             margin-left: -200%;
         }
 
-        #slide5:checked~.slider-wrapper .slider-inner {
-            margin-left: -400%;
+        #slide4:checked~.slider-wrapper .slider-inner {
+            margin-left: -300%;
         }
 
         /* MAIN | Subscribe ================================================== */
@@ -1198,9 +1181,26 @@
                 <input checked="" type="radio" name="slider" id="slide1">
                 <input type="radio" name="slider" id="slide2">
                 <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
 
                 <div class="slider-wrapper">
                     <div class="slider-inner">
+                        <article id="banner-valut">
+                            <a href="https://spigen.co/2uDHeaL">
+                                <img class="img-fluid img-desktop"
+                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/vault_main_banner_button.jpg?v=1579128209"
+                                    alt="Caseology | Vault Series">
+                            </a>
+                        </article>
+
+                        <article id="banner-chic-leather">
+                            <a href="https://spigen.co/2uDHeaL">
+                                <img class="img-fluid img-desktop"
+                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/chic_leather_main_banner.jpg?v=1578679503"
+                                    alt="Caseology | Chic Leather Series">
+                            </a>
+                        </article>
+
                         <article id="banner-iphone11">
                             <a
                                 href="http://www.ebaystores.com/Caseology-USA/Google-Pixel-4-/_i.html?_fsub=32738155016&_sid=1073275056&_trksid=p4634.c0.m322">
@@ -1218,7 +1218,7 @@
                                     alt="Caseology | iPhone 11 Series">
                             </a>
                         </article>
-
+<!-- 
                         <article id="banner-galaxy_note10">
                             <a
                                 href="http://www.ebaystores.com/Caseology-USA/Galaxy-Note-10-/_i.html?_fsub=29848545016&_sid=1073275056&_trksid=p4634.c0.m322">
@@ -1226,7 +1226,8 @@
                                     src="https://cdn.shopify.com/s/files/1/0737/0479/files/note10-collection.jpg?6078"
                                     alt="Caseology | Galaxy Note 10 Series">
                             </a>
-                        </article>
+                        </article> -->
+
                     </div>
                 </div>
 
@@ -1234,6 +1235,7 @@
                     <label for="slide1"></label>
                     <label for="slide2"></label>
                     <label for="slide3"></label>
+                    <label for="slide4"></label>
                 </div>
             </div>
         </div>
