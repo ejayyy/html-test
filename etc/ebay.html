@@ -1059,45 +1059,6 @@
         }
 
         /*---- SET POSITION FOR SLIDE ----*/
-        #slide2:checked~.slider-prev-next-control label:nth-child(1),
-        #slide3:checked~.slider-prev-next-control label:nth-child(2),
-        #slide1:checked~.slider-prev-next-control label:nth-child(4) {
-            display: block;
-            float: left;
-            margin-left: 15px;
-        }
-
-        #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after {
-            font-family: "Font Awesome 5 Pro";
-            font-style: normal;
-            font-weight: 400;
-            display: inline-block;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            text-decoration: inherit;
-            margin: 0;
-            line-height: 38px;
-            font-size: 3em;
-            color: #777;
-        }
-
-        #slide1:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide2:checked~.slider-prev-next-control label:nth-child(3)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(4)::after {
-            content: "\f054";
-            padding-left: 15px;
-        }
-
-        #slide2:checked~.slider-prev-next-control label:nth-child(1)::after,
-        #slide3:checked~.slider-prev-next-control label:nth-child(2)::after,
-        #slide1:checked~.slider-prev-next-control label:nth-child(4)::after {
-            content: "\f053";
-            padding-left: 15px;
-        }
-
         #slide1:checked~.slider-dot-control label:nth-child(1),
         #slide2:checked~.slider-dot-control label:nth-child(2),
         #slide3:checked~.slider-dot-control label:nth-child(3),
@@ -1105,25 +1066,22 @@
             background: #fff;
         }
 
-        #slide1:checked~.slider-wrapper article:nth-child(1) .info,
-        #slide2:checked~.slider-wrapper article:nth-child(2) .info,
-        #slide3:checked~.slider-wrapper article:nth-child(3) .info,
-        #slide4:checked~.slider-wrapper article:nth-child(4) .info {
+        #slide1:checked~.slider-wrapper article:nth-child(1),
+        #slide2:checked~.slider-wrapper article:nth-child(2),
+        #slide3:checked~.slider-wrapper article:nth-child(3),
+        #slide4:checked~.slider-wrapper article:nth-child(4) {
             opacity: 1;
         }
 
         #slide1:checked~.slider-wrapper .slider-inner {
             margin-left: 0%;
         }
-
         #slide2:checked~.slider-wrapper .slider-inner {
             margin-left: -100%;
         }
-
         #slide3:checked~.slider-wrapper .slider-inner {
             margin-left: -200%;
         }
-
         #slide4:checked~.slider-wrapper .slider-inner {
             margin-left: -300%;
         }
@@ -1185,49 +1143,30 @@
 
                 <div class="slider-wrapper">
                     <div class="slider-inner">
-                        <article id="banner-valut">
+                        <article>
+                            <a href="#">
+                                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/vault_main_banner_button.jpg?v=1579128209"
+                                    class="img-fluid img-desktop" alt="Caseology | Vault Series">
+                            </a>
+                        </article>
+                        <article>
                             <a href="https://spigen.co/2uDHeaL">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/vault_main_banner_button.jpg?v=1579128209"
-                                    alt="Caseology | Vault Series">
+                                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/chic_leather_main_banner.jpg?v=1578679503"
+                                    class="img-fluid img-desktop" alt="Caseology | Chic Leather Series">
                             </a>
                         </article>
-
-                        <article id="banner-chic-leather">
-                            <a href="https://spigen.co/2uDHeaL">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/chic_leather_main_banner.jpg?v=1578679503"
-                                    alt="Caseology | Chic Leather Series">
+                        <article>
+                            <a href="http://www.ebaystores.com/Caseology-USA/Google-Pixel-4-/_i.html?_fsub=32738155016&_sid=1073275056&_trksid=p4634.c0.m322">
+                                <img src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/web_main_banner_google_pixel_4_shop_now.jpg?926"
+                                    class="img-fluid img-desktop" alt="Caseology | Pixel 4 Series">
                             </a>
                         </article>
-
-                        <article id="banner-iphone11">
-                            <a
-                                href="http://www.ebaystores.com/Caseology-USA/Google-Pixel-4-/_i.html?_fsub=32738155016&_sid=1073275056&_trksid=p4634.c0.m322">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/web_main_banner_google_pixel_4_shop_now.jpg?926"
-                                    alt="Caseology | Pixel 4 Series">
+                        <article>
+                            <a href="http://www.ebaystores.com/Caseology-USA/iPhone-11-Pro-Max-/_i.html?_fsub=29925502016&_sid=1073275056&_trksid=p4634.c0.m322">
+                                <img src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/web_main_banner_iphone.jpg?847"
+                                    class="img-fluid img-desktop" alt="Caseology | iPhone 11 Series">
                             </a>
                         </article>
-
-                        <article id="banner-cyrill">
-                            <a
-                                href="http://www.ebaystores.com/Caseology-USA/iPhone-11-Pro-Max-/_i.html?_fsub=29925502016&_sid=1073275056&_trksid=p4634.c0.m322">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/web_main_banner_iphone.jpg?847"
-                                    alt="Caseology | iPhone 11 Series">
-                            </a>
-                        </article>
-<!-- 
-                        <article id="banner-galaxy_note10">
-                            <a
-                                href="http://www.ebaystores.com/Caseology-USA/Galaxy-Note-10-/_i.html?_fsub=29848545016&_sid=1073275056&_trksid=p4634.c0.m322">
-                                <img class="img-fluid img-desktop"
-                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/note10-collection.jpg?6078"
-                                    alt="Caseology | Galaxy Note 10 Series">
-                            </a>
-                        </article> -->
-
                     </div>
                 </div>
 
