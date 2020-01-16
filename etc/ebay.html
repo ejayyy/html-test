@@ -816,35 +816,26 @@
             padding-left: 0px;
             padding-right: 0px;
         }
-
-
         .main-carousel-wrapper {
             max-width: 100%;
             margin: auto;
             position: relative;
         }
-
         .main-carousel input {
             display: none;
         }
-
         .slider-inner {
-            width: 400%;
-            /* 100% * # of Total Slider */
+            width: 500%;
             line-height: 0;
         }
-
         article {
-            width: 25%;
-            /* # of Total Slider / 100% */
+            width: 20%;
             float: left;
             position: relative;
         }
-
         article img {
             width: 100%;
         }
-
         .container-fluid {
             padding-left: 0;
             padding-right: 0;
@@ -1062,17 +1053,11 @@
         #slide1:checked~.slider-dot-control label:nth-child(1),
         #slide2:checked~.slider-dot-control label:nth-child(2),
         #slide3:checked~.slider-dot-control label:nth-child(3),
-        #slide4:checked~.slider-dot-control label:nth-child(4) {
+        #slide4:checked~.slider-dot-control label:nth-child(4),
+        #slide5:checked~.slider-dot-control label:nth-child(5) {
             background: #fff;
         }
-
-        #slide1:checked~.slider-wrapper article:nth-child(1),
-        #slide2:checked~.slider-wrapper article:nth-child(2),
-        #slide3:checked~.slider-wrapper article:nth-child(3),
-        #slide4:checked~.slider-wrapper article:nth-child(4) {
-            opacity: 1;
-        }
-
+        
         #slide1:checked~.slider-wrapper .slider-inner {
             margin-left: 0%;
         }
@@ -1084,6 +1069,9 @@
         }
         #slide4:checked~.slider-wrapper .slider-inner {
             margin-left: -300%;
+        }
+        #slide5:checked~.slider-wrapper .slider-inner {
+            margin-left: -400%;
         }
 
         /* MAIN | Subscribe ================================================== */
@@ -1117,8 +1105,7 @@
             </div>
             <div class="main-menu">
                 <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/Caseology.html">Home</a>
-                <a class="main-menu-list"
-                    href="https://stores.ebay.com/caseologyusa/_i.html?_nkw=&submit=Search&_sid=1118303154">Shop</a>
+                <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/_i.html?_nkw=&submit=Search&_sid=1118303154">Shop</a>
                 <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/Policy.html">Policy</a>
                 <a class="main-menu-list" href="https://stores.ebay.com/caseologyusa/About.html">About us</a>
             </div>
@@ -1140,6 +1127,7 @@
                 <input type="radio" name="slider" id="slide2">
                 <input type="radio" name="slider" id="slide3">
                 <input type="radio" name="slider" id="slide4">
+                <input type="radio" name="slider" id="slide5">
 
                 <div class="slider-wrapper">
                     <div class="slider-inner">
@@ -1167,6 +1155,13 @@
                                     class="img-fluid img-desktop" alt="Caseology | iPhone 11 Series">
                             </a>
                         </article>
+                        <article>
+                            <a href="http://www.ebaystores.com/Caseology-USA/Galaxy-Note-10-/_i.html?_fsub=29848545016&_sid=1073275056&_trksid=p4634.c0.m322">
+                                <img class="img-fluid img-desktop"
+                                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/note10-collection.jpg?6078"
+                                    alt="Caseology | Galaxy Note 10 Series">
+                            </a>
+                        </article>
                     </div>
                 </div>
 
@@ -1175,6 +1170,7 @@
                     <label for="slide2"></label>
                     <label for="slide3"></label>
                     <label for="slide4"></label>
+                    <label for="slide5"></label>
                 </div>
             </div>
         </div>
