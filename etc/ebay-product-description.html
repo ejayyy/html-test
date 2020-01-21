@@ -1,0 +1,556 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Product | Caseology</title>
+    <style>
+        @import url("https://use.typekit.net/rol1ssq.css");
+
+        main[class="caseology"] p,
+        main[class="caseology"] a,
+        main[class="caseology"] span,
+        main[class="caseology"] ul {
+            font-family: azo-sans-web;
+            letter-spacing: -0.375px;
+        }
+
+        main[class="caseology"] b,
+        main[class="caseology"] strong,
+        main[class="caseology"] h1,
+        main[class="caseology"] h2,
+        main[class="caseology"] h3,
+        main[class="caseology"] h4,
+        main[class="caseology"] h5,
+        main[class="caseology"] h6 {
+            font-family: azo-sans-web;
+            font-weight: 600;
+            letter-spacing: -0.375px;
+        }
+
+        main[class="caseology"] .product-description {
+            max-width: 900px !important;
+            padding: 0px 0px 30px;
+        }
+
+        main[class="caseology"] .caseology-policy {
+            max-width: 900px !important;
+            padding: 0px 0px 30px;
+            overflow: hidden;
+        }
+
+        /* Menu Style ================================================== */
+        main[class="caseology"] .caseology-banner {
+            position: relative;
+        }
+
+        main[class="caseology"] .caseology-banner img {
+            object-fit: cover;
+            object-position: top center;
+            width: 100%;
+            height: 400px;
+        }
+
+        main[class="caseology"] .caseology-banner .banner-text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        main[class="caseology"] .caseology-menu {
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -ms-flex-pack: distribute !important;
+            justify-content: space-around !important;
+            -ms-flex-align: center !important;
+            align-items: center !important;
+            background-color: #143157;
+            padding: 20px 15px;
+            margin-bottom: 30px;
+        }
+
+        main[class="caseology"] .caseology-menu .menu-logo svg {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            fill: #000 !important;
+        }
+
+        main[class="caseology"] .caseology-menu .menu-logo .caseology-logo-b {
+            fill: #fff;
+        }
+
+        main[class="caseology"] .caseology-menu .menu-list {
+            font-family: azo-sans-web;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        main[class="caseology"] .caseology-menu .menu-list:hover {
+            text-decoration: none;
+            color: #FFB325;
+        }
+
+        /* Long Description Style ================================================== */
+        main[class="caseology"] .long-description .section-text-box {
+            padding-bottom: 30px;
+        }
+
+        main[class="caseology"] .product-description .product-description-feature {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        main[class="caseology"] .product-description .product-description-feature .feature-description-text-box {
+            padding: 20px 20px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            main[class="caseology"] .product-description {
+                padding: 15px 0px;
+            }
+
+            main[class="caseology"] .product-description .product-description-feature {
+                display: inline-flex;
+                padding: 15px;
+            }
+
+            main[class="caseology"] .product-description .product-description-feature:nth-of-type(3) {
+                padding: 0px 15px;
+            }
+
+            main[class="caseology"] .product-description .product-description-feature img {
+                width: 50%;
+            }
+
+            main[class="caseology"] .product-description .product-description-feature .feature-description-text-box {
+                max-width: 400px;
+                margin: auto;
+            }
+        }
+        @media (max-width: 767.98px) {
+
+            main[class="caseology"] .caseology-brand-identity,
+            main[class="caseology"] .caseology-service {
+                padding-bottom: 15px !important;
+            }
+        }
+
+        main[class="caseology"] .caseology-brand-identity,
+        main[class="caseology"] .caseology-service {
+            padding-bottom: 30px;
+        }
+
+        main[class="caseology"] .caseology-brand-identity img,
+        main[class="caseology"] .caseology-service img {
+            object-fit: cover;
+            object-position: top center;
+            width: 100%;
+            height: 500px;
+        }
+
+        main[class="caseology"] .caseology-brand-identity .banner-text-box,
+        main[class="caseology"] .caseology-service .banner-text-box {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        main[class="caseology"] .caseology-service .col-4 {
+            height: 140px;
+            position: relative;
+            text-align: center;
+        }
+
+        main[class="caseology"] .caseology-service .service-icon {
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+        }
+
+        main[class="caseology"] .caseology-service .col-4 svg {
+            width: 100%;
+            height: 100px;
+            margin: auto;
+        }
+
+        main[class="caseology"] .caseology-service .col-4 p {
+            bottom: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px auto;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        main[class="caseology"] .caseology-brand-logo .logo-img {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<main class="caseology">
+    <div class="container-fluid product-description">
+        <div class="container">
+            <div class="caseology-banner"> <img
+                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/Rolling-Banners2.jpg?5916">
+                <div class="banner-text-box">
+                    <h3>Welcome to Caseology.</h3>
+                    <p>Designed to Stand in Awe.</p>
+                </div>
+            </div>
+            <div class="caseology-menu"> <a href="http://www.ebaystores.com/Caseology-USA" target="_blank"
+                    class="menu-logo"> <svg aria-hidden="true" focusable="false" role="presentation"
+                        class="icon icon--wide icon-title" viewBox="0 0 450 120">
+                        <path class="caseology-logo-b"
+                            d="M97.3 56.1L63.1 21.9c-.7-.7-2-1.2-3.2-1.2-1.2 0-2.4.5-3.2 1.2L21.4 57.3c-1.7 1.7-1.7 4.6 0 6.6l34.2 34.2c.7.7 2 1.2 3.2 1.2 1.2 0 2.4-.5 3.2-1.2l35.4-35.6c.7-.7 1.2-2 1.2-3.2-.1-1.3-.3-2.5-1.3-3.2zm-5.2 3.4L80.7 71l-11-11 11.5-11.5 10.9 11zm-28.8 1c0 1.2.5 2.4 1.2 3.2l11.7 11.7-6.5 6.6L48 60.2l22.5-22.5 6.6 6.6-12.8 12.8c-.7.9-1 2.2-1 3.4zm-20.5 3.2l22.5 22.5-6.6 6.6-32.5-32.6L59.4 27l6.8 6.8-23.4 23.5c-1.7 1.7-1.7 4.7 0 6.4zM153.4 50.7c-2-5.4-7.1-9.5-14.2-9.5-9.3 0-16.6 7.8-16.6 17.8s7.1 17.6 16.6 17.6c6.6 0 12.2-3.7 14.6-8.8l6.8 3.2c-3.7 7.8-11.7 12.9-21.5 12.9-13.2 0-23.9-11-23.9-24.9s10.7-24.9 23.9-24.9c12.9 0 19.3 9.3 21 14.2l-6.7 2.4zM192.7 62v21.5h-6.6V80c-2.2 2.4-5.4 3.9-9.3 3.9-7.1 0-12.2-4.1-12.4-10.5-.2-3.7 1.7-6.8 4.6-9 2.2-1.5 4.9-2 9-2h5.6c1.2 0 2.2-.7 2.2-2.2-.5-3.4-3.2-4.9-6.6-4.9-3.9-.2-6.8 1-9 4.9l-5.1-2.7c3.4-6.1 8.5-8.1 14.2-8.1 7.6.3 13.4 4.7 13.4 12.6zm-6.8 8v-2c-2.2.2-5.4.2-7.8.2-4.9 0-7.8 2.2-7.6 5.4.2 3.2 2.9 4.6 6.1 4.6 5.4.1 9-2.6 9.3-8.2zM216.9 59.5c-.7-2.4-3.2-3.9-6.3-3.9-2.7 0-5.1 1.5-5.1 3.7-.2 2 1 3.2 3.2 3.7 2.4.7 4.9 1.2 6.3 1.5 5.6 1.2 7.8 4.9 7.8 9.5 0 5.9-5.1 10-12 10s-12.2-3.4-13.2-8.8l6.3-1c.5 2.4 2.9 3.9 6.8 3.9 3.4 0 5.4-1.5 5.4-3.9 0-1.7-1-2.9-3.7-3.4-2.9-.7-5.1-1.2-6.1-1.5-4.6-1.2-7.6-4.9-7.6-9.3 0-5.6 5.1-10.5 11.5-10.5s11.2 3.4 12.7 8.3l-6 1.7zM260.1 69.8h-25.6c1.2 4.6 5.1 7.8 9.5 7.8 4.1 0 7.3-2 8.5-4.9l6.1 2.2c-2.2 5.6-7.8 9.3-14.4 9.3-9 0-16.4-7.8-16.4-17.1 0-9.5 7.3-17.1 16.4-17.1 6.8 0 12.4 3.9 14.9 9.8 1.2 3.4 1.2 7.6 1.2 7.6l-.2 2.4zm-6.6-5.2c-.2-1.2-1-3.4-2-4.6-1.7-2.4-4.1-3.9-7.6-3.9-4.6 0-8.5 3.7-9.8 8.3l19.4.2zM280.6 84.2c-9 0-16.4-7.8-16.4-17.1 0-9.5 7.1-17.1 16.4-17.1 9.3 0 16.4 7.6 16.4 17.1 0 9.5-6.9 17.1-16.4 17.1zm0-27.9c-6.1 0-9.8 4.9-9.8 10.7 0 5.6 3.9 10.7 9.8 10.7 6.1 0 9.5-4.6 9.5-10.7.3-6-3.6-10.7-9.5-10.7zM310.9 83.2c-4.9 0-6.8-3.2-6.8-8.3V35.3h6.8l.2 38.6c0 2.7 1.2 3.2 2.9 3.2l3.7.2v6.3l-6.8-.4zM337 84.2c-9 0-16.4-7.8-16.4-17.1 0-9.5 7.1-17.1 16.4-17.1 9.3 0 16.4 7.6 16.4 17.1-.1 9.5-7.1 17.1-16.4 17.1zm0-27.9c-6.1 0-9.8 4.9-9.8 10.7 0 5.6 3.9 10.7 9.8 10.7 6.1 0 9.5-4.6 9.5-10.7 0-6-3.6-10.7-9.5-10.7zM390.7 50.7V82c0 4.4-1.2 8.3-3.7 11.2-2.9 3.7-7.3 6.1-12.7 6.1-4.9 0-9.3-1.7-12.2-4.6-1.7-1.7-3.2-3.9-3.9-6.3l6.1-2.2c.5 1.7 1.2 2.9 2.4 3.9 2 2 4.9 2.7 7.6 2.7 3.4-.2 6.3-1.5 7.8-3.9 1.2-1.7 2-3.9 2-6.8v-3.7c-2.4 3.2-6.1 4.6-10 4.6-9.3.2-15.9-6.1-15.9-16.6.2-10.5 6.3-16.8 15.9-16.8 3.9.2 7.6 1.7 10 4.6v-3.7h6.6v.2zm-6.8 15.6v-.2c-.2-6.8-4.6-10.5-9.5-10.5-5.9 0-10 4.1-10 10.7s4.1 10.7 10 10.7c5.3.1 9.2-4.1 9.5-10.7zM430 50.7l-19.3 47.6h-7.1l6.1-15.4-14.6-32.2h7.1l10.7 24.2 9.8-24.2h7.3z">
+                        </path>
+                    </svg> </a> <a href="http://www.ebaystores.com/Caseology-USA/Apple" target="_blank"
+                    class="menu-list">Apple</a> <a href="http://www.ebaystores.com/Caseology-USA/Samsung"
+                    target="_blank" class="menu-list">Samsung</a> <a href="http://www.ebaystores.com/Caseology-USA/LG"
+                    target="_blank" class="menu-list">LG</a> <a href="http://www.ebaystores.com/Caseology-USA/Google"
+                    target="_blank" class="menu-list">Google</a> <a href="http://www.ebaystores.com/Caseology-USA/Other"
+                    target="_blank" class="menu-list">Other</a> </div>
+        </div> <!-- Long Description -->
+        <div class="container long-description">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-text-box">
+                        <h4>Product Description</h4>
+                        <p>A lightweight unit of protection that snugly guards your phone. Legionís deceptively slim
+                            profile packs durable double layers, encasing your devices with certified military grade
+                            protection. Flexible TPU provides shock absorption, while a rigid outer shell of
+                            Polycarbonate armors your phone from impacts. Legion embodies strength and security--your
+                            phoneís personal bodyguard. </p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="section-text-box">
+                        <h4>Product Features</h4>
+                        <ul>
+                            <li>Dual layered flexible body and rigid outer shell, composed of military grade protection
+                                materials and engineered to provide shock absorption, protects your phone from everyday
+                                drops and tumbles</li>
+                            <li>Precision engineered to enhance your phoneís design, featuring detailed cutouts and
+                                tactile button response</li>
+                            <li>Contoured to hug your phone and fit comfortably into your hands</li>
+                            <li>Compatible with Pixel 4 / Pixel 4 XL and with most wireless chargers</li>
+                            <li>Caseology Legion Designed for Google Pixel 4 / Pixel 4 XL Case</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 product-description-banner"> <img
+                        src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/CO-GP3-LGN-EBC1.jpg?1038"
+                        class="img-fluid" alt="Ètoile for iPhone XS Max"> </div>
+                <div class="col-12 product-description-banner"> <img
+                        src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/CO-GP3-LGN-EBC3.jpg?1038"
+                        class="img-fluid" alt="Ètoile for iPhone XS Max"> </div>
+                <div class="col-12 product-description-banner"> <img
+                        src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/CO-GP3-LGN-EBC2.jpg?1038"
+                        class="img-fluid" alt="Ètoile for iPhone XS Max"> </div>
+                <div class="col-12 product-description-banner"> <img
+                        src="https://cdn.shopify.com/s/files/1/0064/2836/0788/files/CO-GP3-LGN-EBC5.jpg?1038"
+                        class="img-fluid" alt="Ètoile for iPhone XS Max"> </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 product-description-feature"> </div>
+            </div>
+        </div> <!-- Brand & Service Info -->
+        <div class="container-fluid caseology-policy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="tabs-wrapper">
+                            <!-- main wrapper -->
+                            <div class="tabs">
+                                <!-- radio block will be hidden, but will be used to control the tabs --> <input
+                                    class="tabs__radio" id="myTab1" type="radio" name="myTabs" value="1" checked="">
+                                <input class="tabs__radio" id="myTab2" type="radio" name="myTabs" value="2"> <input
+                                    class="tabs__radio" id="myTab3" type="radio" name="myTabs" value="3"> <input
+                                    class="tabs__radio" id="myTab4" type="radio" name="myTabs" value="4"> <input
+                                    class="tabs__radio" id="myTab5" type="radio" name="myTabs" value="5">
+                                <!-- labels will be display as actual tabs --> <label
+                                    class="tabs__label hide-if-disabled" for="myTab1">About us</label> <label
+                                    class="tabs__label hide-if-disabled" for="myTab2">Payment</label> <label
+                                    class="tabs__label hide-if-disabled" for="myTab3">Shipping</label> <label
+                                    class="tabs__label hide-if-disabled" for="myTab4">Return</label> <label
+                                    class="tabs__label hide-if-disabled" for="myTab5">Warranty</label>
+                                <!-- wrappers for tab's content -->
+                                <div class="tabs__content hide-if-disabled">
+                                    <h2>About us</h2>
+                                    <div class="row pt-4">
+                                        <div class="col-sm-12">
+                                            <p>Our company is made up of ordinary people like you, brought together by
+                                                the desire to create something exceptional. We know how the little
+                                                things have a big impact: the right accessory finishes an outfit, a slim
+                                                case protects an expensive phone, the details we choose say something
+                                                about us. So we set out to discover and design the very best
+                                                accessories.</p>
+                                            <p>We keep hard work, brilliant design, and dedication to the customer at
+                                                the heart of everything we do. In five years, we went from a startup
+                                                selling simple rubber cases to one of Amazonís top sellers, providing
+                                                thousands of people with the best-looking accessories around. We
+                                                couldnít have done that without the loyalty of our customers. We are
+                                                always ready to listen and constantly working to exceed expectations
+                                                because what we thought at the start turned out to be true: a
+                                                customer-oriented company is the only way the be.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Payment Policy-->
+                                <div class="tabs__content hide-if-disabled">
+                                    <h2>Payment</h2>
+                                    <div class="row pt-4">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <p>Paypal is our only accepted method of payment. Your paypal account must
+                                                be a Verified Paypal account.</p>
+                                            <p><strong>CANCEL / EXCHANGE</strong></p>
+                                            <p>If you would like to cancel or change your order, please contact us if
+                                                you HAVE NOT received a shipping confirmation.</p>
+                                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                                <li>If the order has not processed yet, the order will be cancelled, and
+                                                    you may place a new order.</li>
+                                                <li>If the item has been processed for shipping, we cannot cancel the
+                                                    order. You can return the order, and a refund will be issued once
+                                                    the item has been returned.</li>
+                                            </ul>
+                                            <p><strong>** We do not offer exchanges. All exchange requests will be
+                                                    handled as returns. Once the item is received at our warehouse, we
+                                                    will issue a refund. You may place a new order at your earliest
+                                                    convenience.</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Shipping Policy-->
+                                <div class="tabs__content hide-if-disabled">
+                                    <h2>Shipping</h2>
+                                    <div class="row pt-4">
+                                        <div class="col-sm-12">
+                                            <p><strong>Free Shipping</strong></p>
+                                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                                <li>Method: USPS First-Class Mail</li>
+                                                <li>Weight: Less than 13 ounces</li>
+                                                <li>Handling time is usually around 1-2 business days. (May be longer)
+                                                </li>
+                                                <li>Most orders are delivered within the stated shipping time at the
+                                                    time of purchase</li>
+                                                <li>Tracking is available for domestic shipments</li>
+                                                <p>Some items may have an extended handling time due to pre-orders, back
+                                                    orders, etc.<br>Please check the shipping/delivery date on the
+                                                    listing before purchase.</p>
+                                            </ul>
+                                            <p><strong>International Shipping</strong></p>
+                                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                                <li>Method: USPS First-Class Mail International (delivery time varies
+                                                    depending on country)</li>
+                                                <li>Standard (NO TRACKING) - delivered in usually 2-4 weeks</li>
+                                                <li>Expedited (FULL/PARTIAL TRACKING) - delivered in usually 1-2 weeks
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Return Policy-->
+                                <div class="tabs__content hide-if-disabled">
+                                    <h2>Return</h2>
+                                    <div class="row pt-4">
+                                        <div class="col-sm-12">
+                                            <p><strong>Only items purchased directly from Caseology are eligible for
+                                                    return.</strong></p>
+                                            <p>Returned or exchanged items must be in brand new condition in original
+                                                packaging. This includes any materials, accessories, package inserts,
+                                                booklets, and warranty cards. A minimum 20% restocking may apply based
+                                                on the item∑s condition. We do not require an RMA number for returned or
+                                                exchanged orders.</p>
+                                            <ul style="list-style-type:disc; padding-left: 40px;">
+                                                <li>Free Returns within 30 days from the date of purchase.</li>
+                                                <li>All returned products should be in the original packaging with no
+                                                    missing contents.</li>
+                                                <li>Returned products that are not in original packaging or are missing
+                                                    contents are subject to minimum $5 restocking fee.</li>
+                                                <li>The refund process may take up to 1 ~ 2 weeks after item has been
+                                                    received.</li>
+                                                <li>Caseology Inc. is not liable for lost, stolen, or damaged shipments
+                                                    for returning packages.</li>
+                                                <li>All Sale and Promotional items will not be eligible for Returns,
+                                                    Exchanges, and/or Warranties.</li>
+                                                <li>Ship to: CASEOLOGY RMA Department 9975 Toledo Way #100 Irvine, CA
+                                                    92618 <br>**Please include eBay username. We are unable to locate
+                                                    your account without this information.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Warranty Policy-->
+                                <div class="tabs__content hide-if-disabled">
+                                    <h2>Warranty</h2>
+                                    <div class="row pt-4">
+                                        <div class="col-sm-12">
+                                            <p><strong>Our 30-day warranty provides coverage for manufacturing defects
+                                                    only.</strong><br>Photo confirmation is required.</p>
+                                            <p>What is not covered by Warranty?</p>
+                                            <li>Normal wear and tear</li>
+                                            <li>Misuse, lack of care, mishandling, accidental abuse</li>
+                                            <li>Abnormal use of product</li>
+                                            <li>Damage caused by improper or unauthorized repair or maintenance</li>
+                                            <li>Product that has been modified or altered</li> <br>
+                                            <p>Most defective orders are replaced free of charge only after photo
+                                                confirmation is provided.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            /*-- Tabs --*/
+                            .tabs {
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+
+                            .tabs__radio {
+                                position: absolute;
+                                left: -9999px;
+                            }
+
+                            .tabs__label {
+                                flex: 1 0 auto;
+                                width: 50%;
+                                flex-basis: auto;
+                                display: flex;
+                                justify-content: center;
+                                padding: 1rem 0.5rem;
+                                color: #4e4e4e;
+                                background-color: #e5e5e5;
+                                cursor: pointer;
+                            }
+
+                            .tabs__content {
+                                width: 100%;
+                                flex-basis: auto;
+                                padding: 0.5rem;
+                                display: none;
+                            }
+
+                            .tabs__radio:nth-of-type(1):checked~.tabs__label:nth-of-type(1) {
+                                background-color: #fefefe;
+                            }
+
+                            .tabs__radio:nth-of-type(1):checked~.tabs__content:nth-of-type(1) {
+                                display: block;
+                            }
+
+                            .tabs__radio:nth-of-type(1):disabled~.tabs__label:nth-of-type(1):not(.tabs__label--hide) {
+                                color: #8e8e8e;
+                                cursor: no-drop;
+                            }
+
+                            .tabs__radio:nth-of-type(1):disabled~.hide-if-disabled:nth-of-type(1) {
+                                display: none;
+                            }
+
+                            .tabs__radio:nth-of-type(2):checked~.tabs__label:nth-of-type(2) {
+                                background-color: #fefefe;
+                            }
+
+                            .tabs__radio:nth-of-type(2):checked~.tabs__content:nth-of-type(2) {
+                                display: block;
+                            }
+
+                            .tabs__radio:nth-of-type(2):disabled~.tabs__label:nth-of-type(2):not(.tabs__label--hide) {
+                                color: #8e8e8e;
+                                cursor: no-drop;
+                            }
+
+                            .tabs__radio:nth-of-type(2):disabled~.hide-if-disabled:nth-of-type(2) {
+                                display: none;
+                            }
+
+                            .tabs__radio:nth-of-type(3):checked~.tabs__label:nth-of-type(3) {
+                                background-color: #fefefe;
+                            }
+
+                            .tabs__radio:nth-of-type(3):checked~.tabs__content:nth-of-type(3) {
+                                display: block;
+                            }
+
+                            .tabs__radio:nth-of-type(3):disabled~.tabs__label:nth-of-type(3):not(.tabs__label--hide) {
+                                color: #8e8e8e;
+                                cursor: no-drop;
+                            }
+
+                            .tabs__radio:nth-of-type(3):disabled~.hide-if-disabled:nth-of-type(3) {
+                                display: none;
+                            }
+
+                            .tabs__radio:nth-of-type(4):checked~.tabs__label:nth-of-type(4) {
+                                background-color: #fefefe;
+                            }
+
+                            .tabs__radio:nth-of-type(4):checked~.tabs__content:nth-of-type(4) {
+                                display: block;
+                            }
+
+                            .tabs__radio:nth-of-type(4):disabled~.tabs__label:nth-of-type(4):not(.tabs__label--hide) {
+                                color: #8e8e8e;
+                                cursor: no-drop;
+                            }
+
+                            .tabs__radio:nth-of-type(4):disabled~.hide-if-disabled:nth-of-type(4) {
+                                display: none;
+                            }
+
+                            .tabs__radio:nth-of-type(5):checked~.tabs__label:nth-of-type(5) {
+                                background-color: #fefefe;
+                            }
+
+                            .tabs__radio:nth-of-type(5):checked~.tabs__content:nth-of-type(5) {
+                                display: block;
+                            }
+
+                            .tabs__radio:nth-of-type(5):disabled~.tabs__label:nth-of-type(5):not(.tabs__label--hide) {
+                                color: #8e8e8e;
+                                cursor: no-drop;
+                            }
+
+                            .tabs__radio:nth-of-type(5):disabled~.hide-if-disabled:nth-of-type(5) {
+                                display: none;
+                            }
+
+                            @media screen and (min-width: 600px) {
+                                .tabs__label {
+                                    width: 9.0909090909%;
+                                    flex-basis: auto;
+                                }
+                            }
+
+                            .tabs-wrapper {
+                                height: calc (100vh + 100px);
+                            }
+
+                            .sb-link {
+                                display: flex;
+                                height: 50px;
+                                align-content: center;
+                                align-items: center;
+                                justify-content: center;
+                                text-decoration: none;
+                                color: #bb5555;
+                                transition: background 0.3s;
+                            }
+                        </style>
+</main>
