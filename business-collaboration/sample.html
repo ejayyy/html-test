@@ -8,10 +8,11 @@
                         class="pb-35 color-black d-md-inline-block d-lg-inline-block d-xl-inline-block d-sm-none d-none">
                         Bring out your brand with custom made mobile accessories for you and your customers</p>
                     <p id="mobile-txt"
-                        class="pb-35 color-black d-md-none d-lg-none d-xl-none d-sm-inline-block d-inline-block">
-                        Custom made mobile accessories for your customers</p>
-                    <div class="join-btn-container"><button id="join-btn" class="btn btn--secondary btn--full">Join
-                            Now</button></div>
+                        class="pb-35 color-black d-md-none d-lg-none d-xl-none d-sm-inline-block d-inline-block">Custom
+                        made mobile accessories for your customers</p>
+                    <div class="join-btn-container">
+                        <a id="join-btn" href="https://spigen.formstack.com/forms/cyrill_business_opportunity" class="btn btn--secondary btn--full" target="_blank">Join Now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +122,7 @@
         <div class="mx-auto p-description">
             <p>Come Look at the Limitless Possibilities of Inspiration and Beauty</p>
             <div class="mw-200 mt-60 mx-auto"><a class="btn btn--secondary btn--full" download="cyrill-catalog"
-                    href="https://drive.google.com/file/d/1BqvKsF6zexd3BtXyZtsFYJ6Rm1aQxn43/view?usp=sharing">Download</a>
+                    href="https://cdn.shopify.com/s/files/1/0015/1810/8724/files/120519_e-Catalog.pdf?26007">Download</a>
             </div>
         </div>
     </div>
@@ -130,50 +131,13 @@
     <div id="form-container" class="form-container text-center main-description">
         <h2 class="pb-30">CONNECT WITH US</h2>
         <div class="p-description">
-            <p>It's not a big step, simply tell us your name and your brand. <br
-                    class="d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none pb-10" /> We're ready
-                to start a conversation.</p>
-            <div class="mw-200 mt-60 mx-auto"><button id="load-form" class="btn bg-transparent btn-join btn--full"> JOIN
-                    NOW<i id="join-chevron" class="pl-5 fas fa-chevron-down"></i> </button></div>
-            <div id="form-section" class="form-width mx-auto text-left" style="display: none;"><iframe
-                    id="business-form" src="https://spigen.formstack.com/forms/cyrill_business_collaboration"
-                    width="100%" frameborder="0"></iframe></div>
+            <p>It's not a big step, simply tell us your name and your brand.
+                <br class="d-xl-inline-block d-lg-inline-block d-md-inline-block d-sm-none d-none pb-10" />
+                We're ready to start a conversation.
+            </p>
+            <div class="mw-200 mt-60 mx-auto">
+                <a href="https://spigen.formstack.com/forms/cyrill_business_opportunity" target="_blank" class="btn bg-transparent btn-join btn--full"> JOIN NOW</a>
+            </div>
         </div>
     </div>
 </section>
-
-<script>
-    var $section = $("#form-section"), $formContainer = $("#form-container"), $chevron = $("#join-chevron");
-    var headerHeight = $("[data-js-desktop-sticky]").height();
-    var isShow = true, toggleClass = "main-description", chevronUp = "fa-chevron-up", chevronDown = "fa-chevron-down";
-
-    $("#fsCell72852624").remove();
-
-    function loadForm() {
-        if (isShow) {
-            $chevron.removeClass(chevronDown).addClass(chevronUp);
-            $section.slideDown(2000);
-            $formContainer.removeClass(toggleClass);
-        }
-        else {
-            $chevron.removeClass(chevronUp).addClass(chevronDown);
-            $section.slideUp(1500);
-            if (!$formContainer.hasClass(toggleClass)) {
-                $formContainer.addClass(toggleClass);
-            }
-        }
-    }
-
-    $('#load-form').on('click', function () {
-        isShow = $section.is(":hidden") ? true : false;
-        loadForm();
-    });
-    $("#join-btn").on("click", function () {
-        isShow = true;
-        loadForm();
-
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $section.offset().top - headerHeight
-        }, 2000);
-    });
-</script>
