@@ -818,11 +818,11 @@
             display: none;
         }
         .slider-inner {
-            width: 400%;
+            width: 500%;
             line-height: 0;
         }
         article {
-            width: 25%;
+            width: 20%;
             float: left;
             position: relative;
         }
@@ -1046,7 +1046,8 @@
         #slide1:checked~.slider-dot-control label:nth-child(1),
         #slide2:checked~.slider-dot-control label:nth-child(2),
         #slide3:checked~.slider-dot-control label:nth-child(3),
-        #slide4:checked~.slider-dot-control label:nth-child(4) {
+        #slide4:checked~.slider-dot-control label:nth-child(4),
+        #slide5:checked~.slider-dot-control label:nth-child(5) {
             background: #fff;
         }
         
@@ -1061,6 +1062,9 @@
         }
         #slide4:checked~.slider-wrapper .slider-inner {
             margin-left: -300%;
+        }
+        #slide5:checked~.slider-wrapper .slider-inner {
+            margin-left: -400%;
         }
 
         /* MAIN | Subscribe ================================================== */
@@ -1116,9 +1120,16 @@
                 <input type="radio" name="slider" id="slide2">
                 <input type="radio" name="slider" id="slide3">
                 <input type="radio" name="slider" id="slide4">
+                <input type="radio" name="slider" id="slide5">
 
                 <div class="slider-wrapper">
                     <div class="slider-inner">
+                        <article>
+                            <a href="">
+                                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/ebay_main_banner_galaxy_s20_series_camera_1.jpg?v=1580759381"
+                                    class="img-fluid img-desktop" alt="Caseology | S20 Series">
+                            </a>
+                        </article>
                         <article>
                             <a href="https://spigen.co/2RxXyll">
                                 <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/vault_main_banner_button.jpg?v=1579128209"
@@ -1151,6 +1162,7 @@
                     <label for="slide2"></label>
                     <label for="slide3"></label>
                     <label for="slide4"></label>
+                    <label for="slide5"></label>
                 </div>
             </div>
         </div>
