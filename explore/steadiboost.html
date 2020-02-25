@@ -8,15 +8,23 @@
     <title>SteadiBoost</title>
 </head>
 <style>
-    .bg-black {
-        background-color: #000;
-    }
-
     h1,
     h4,
     small,
     p {
         color: #fff;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .bg-black {
+        background-color: #000;
     }
 
     .scene9-title {
@@ -32,6 +40,10 @@
     }
 
     @media only screen and (max-width: 991px) {
+        .desktop {
+            display: none;
+        }
+
         .scene9-title {
             font-size: 20px;
         }
@@ -39,11 +51,11 @@
 </style>
 
 <body class="bg-black">
-    <div id="scene1" class="text-center container">
+    <section id="scene1" class="text-center container">
         <h1 class="mb-5">Ready, Steady, Charge.</h1>
         <iframe src="https://player.vimeo.com/video/393403756" frameborder="0" allow="autoplay; fullscreen"></iframe>
-    </div>
-    <div id="scene2" class="text-center container">
+    </section>
+    <section id="scene2" class="text-center container">
         <div>
             <h1>SteadiBoost</h1>
             <h1 class="text-muted">Wireless Charger</h1>
@@ -56,7 +68,7 @@
             <h1>SteadiBoost</h1>
             <h1 class="text-muted">Car Charger</h1>
         </div>
-        <div>
+        <div class="desktop">
             <img class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422" />
             <img class="img-fluid"
@@ -64,7 +76,7 @@
             <img class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_03.jpg?v=1582652422" />
         </div>
-        <div>
+        <div class="mobile">
             <img class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_m_01.jpg?v=1582652422" />
             <img class="img-fluid"
@@ -72,61 +84,59 @@
             <img class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_m_03.jpg?v=1582652422" />
         </div>
-    </div>
-    <div id="scene3" class="container-fluid text-center">
-        <img class="img-fluid"
+    </section>
+    <section id="scene3" class="container-fluid text-center">
+        <img class="img-fluid desktop"
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_03_01_d.jpg?v=1582652509">
-        <img class="img-fluid"
+        <img class="img-fluid mobile"
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_03_01_m.jpg?v=1582652508">
-    </div>
-    <div id="scene4" class="container text-center">
+    </section>
+    <section id="scene4" class="container text-center">
         <h4>Design</h4>
         <h1>Power Charge with Spigen’s DNA</h1>
-        <div>
+        <div class="desktop">
             <img class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_d_01.png?v=1582652669">
             <img class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_d_02.png?v=1582652669">
         </div>
-        <div>
-            <img class="img-fluid"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_m_01.jpg?v=1582652669">
-        </div>
-    </div>
-    <div id="scene5" class="container text-center">
+        <img class="img-fluid mobile"
+            src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_m_01.jpg?v=1582652669">
+    </section>
+    <section id="scene5" class="container text-center">
         <h4>Technology</h4>
         <h1>Bringing out the best of charge.</h1>
         <h1>Optimised charging for your device</h1>
         <img class="img-fluid"
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925" />
-    </div>
-    <div id="scene6" class="container text-center">
+    </section>
+    <section id="scene6" class="container text-center">
         <small>Durability</small>
         <h4>Pushed to the limits</h4>
         <h4>To last a year longer.</h4>
         <div>
             <h1>Salt-water testing</h1>
-            <img class="img-fluid"
+            <img class="img-fluid desktop"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_d_01.jpg?v=1582653604" />
-            <img class="img-fluid"
+            <img class="img-fluid mobile"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_01.jpg?v=1582653604" />
         </div>
         <div>
             <h1>Extreme temperature testing</h1>
-            <img class="img-fluid"
+            <img class="img-fluid desktop"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_d_02.jpg?v=1582653604" />
-            <img class="img-fluid"
+            <img class="img-fluid mobile"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_02.jpg?v=1582653604" />
         </div>
         <div>
             <h1>Drop testing</h1>
-            <img class="img-fluid"
+            <img class="img-fluid desktop"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_d_03.jpg?v=1582653604" />
-            <img class="img-fluid"
+            <img class="img-fluid mobile"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_03.jpg?v=1582653604" />
         </div>
-    </div>
-    <div id="scene7" class="container text-center">
+    </section>
+    <section id="scene7" class="container text-center">
         <h4>Safety</h4>
         <h1>Worry no more,</h1>
         <h1>We got you.</h1>
@@ -135,23 +145,21 @@
             <small>Defends overcharge and overvoltage.</small>
         </div>
         <div>
-            <img class="img-fluid"
+            <img class="img-fluid desktop"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_01.jpg?v=1582653875" />
-            <img class="img-fluid"
+            <img class="img-fluid desktop"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_02.jpg?v=1582653875" />
-        </div>
-        <div>
-            <img class="img-fluid"
+            <img class="img-fluid mobile"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_m_01.jpg?v=1582653875" />
         </div>
-    </div>
-    <div id="scene8">
-        <img class="img-fluid"
+    </section>
+    <section id="scene8" class="container-fluid px-0">
+        <img class="img-fluid desktop"
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_08_d_01.jpg?v=1582654028">
-        <img class="img-fluid"
+        <img class="img-fluid mobile"
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_08_m_01.jpg?v=1582654027">
-    </div>
-    <div id="scene9" class="container text-center mb-5">
+    </section>
+    <section id="scene9" class="container text-center">
         <h1>Choose your Style.</h1>
         <div class="row">
             <div class="col-12 col-md-4">
@@ -200,63 +208,71 @@
                 <a class="btn btn-primary scene9-btn" href="">Buy</a>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
 <script>
-    let scene5Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00016.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00017.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00018.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00021.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00022.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00023.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00024.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00026.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00028.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00029.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00030.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00031.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00034.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00036.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00037.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00042.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00045.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00046.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00047.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00048.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00050.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00051.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00053.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00057.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00059.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00061.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00062.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00065.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00066.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00067.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00068.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00070.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00071.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00077.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00079.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00081.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00082.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00084.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00089.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00090.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00093.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00094.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00095.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00097.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00101.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00102.jpg?v=1582652926",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00105.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00106.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00108.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00109.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00110.jpg?v=1582652925",
-        "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
+    $(function () {
+        let scene5Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00016.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00017.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00018.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00021.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00022.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00023.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00024.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00026.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00028.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00029.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00030.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00031.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00034.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00036.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00037.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00042.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00045.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00046.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00047.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00048.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00050.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00051.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00053.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00057.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00059.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00061.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00062.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00065.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00066.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00067.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00068.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00070.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00071.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00077.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00079.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00081.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00082.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00084.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00089.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00090.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00093.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00094.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00095.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00097.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00101.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00102.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00105.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00106.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00108.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00109.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00110.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
+        let controller = new ScrollMagic.Controller();
+    });
 </script>
