@@ -14,36 +14,67 @@
     p {
         color: #fff;
     }
-
     .mobile {
         display: none;
     }
-
     .bg-black {
         background-color: #000;
     }
 
-    #scene3 {
+    #scene2{
+        right: 0!important;
+    }
+    .scene2-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-30%);
+    }
+    .scene2-fadein {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease-out, transform 0.3s ease-out;
+        will-change: opacity, visibility;
+    }
+    .scene2-fadein.is-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .scene2-textup {
+        transform: translateY(-50%);
+    }
+    #scene2-subtext{
+        overflow: hidden;
+        height: 60px;
+    }
+    #scene3{
         display: flex;
         justify-content: center;
+        overflow-x: hidden;
+        overflow-y: visible;
+        padding-bottom: 250px;
+        margin-top: 200px;
     }
-
-    #scene3-img-container {
-        width: 1110px;
+    #scene3-img-container{
         overflow: hidden;
     }
-
-    #scene3-img {
-        margin: -80px 0 0 -15px;
-        max-width: 1200px;
+    #scene3-img{
+        margin: -80px -70px -86px -102px;
+        max-width: 1110px;
     }
 
+    #scene4{
+        right: 0!important;
+    }
+    #scene4-txt{
+        opacity: 0;
+    }
     .scene9-title {
         font-size: 25px;
         line-height: 0.3;
         margin-bottom: 40px;
     }
-
     .scene9-btn {
         font-size: 23px;
         padding: 5px 49px;
@@ -54,11 +85,9 @@
         .desktop {
             display: none;
         }
-
         .mobile {
             display: block;
         }
-
         .scene9-title {
             font-size: 20px;
         }
@@ -75,7 +104,7 @@
     <section id="scene2" class="text-center container mx-auto">
         <div class="position-relative">
             <img id="scene2-img" class="desktop img-fluid scene2-fadein scene2-wireless"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422" />
+                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422" />           
             <img class="mobile img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_m_01.jpg?v=1582652422" />
             <div class="scene2-text scene2-fadein scene2-wireless">
@@ -89,7 +118,7 @@
         </div>
     </section>
     <div id="trigger3"></div>
-    <section id="scene3" class="my-5">
+    <section id="scene3">
         <div id="scene3-img-container">
             <img id="scene3-img" class="img-fluid desktop"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_03_01_d.jpg?v=1582652509">
@@ -232,11 +261,120 @@
     $(function () {
         let controller = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 450, offset: 370 })
-            .setPin("#scene3").addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 400, offset: 360 })
-            .setTween("#scene3-img-container", 0.5, { scale: 1.6 }).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 400, offset: 360 })
-            .setTween("#scene3", 0.5, { height: 900 }).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 340, duration: 500 })
+			.setPin("#scene2").addIndicators({name: "pin"}).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340 })
+            .setClassToggle(".scene2-wireless", "is-visible").addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340 })
+            .setClassToggle(".scene2-text", "scene2-textup").addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 400 }).addIndicators({name: "wall"})
+            .setTween("#scene2-subtext1", {transform: "translateY(-56px)"}).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 400 })
+            .setTween("#scene2-subtext2", {transform: "translateY(-56px)"}).addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 460 })
+            .setTween("#scene2-subtext2", {transform: "translateY(-112px)"}).addIndicators({name: "car"}).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 460 })
+            .setTween("#scene2-subtext3", {transform: "translateY(-112px)"}).addTo(controller)
+
+        let scene2Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_02.jpg?v=1582652422",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_03.jpg?v=1582652422"]
+        let obj = {curImg: 0}
+        let imgSrc = TweenMax.to(obj, 0.5,
+            {
+                curImg: scene2Imgs.length - 1,
+                roundProps: "curImg",
+                immediateRender: true,
+                ease: Linear.easeNone,
+                onUpdate: function () {
+                    $("#scene2-img").attr("src", scene2Imgs[obj.curImg]);
+                }
+            })
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340, duration: 300 })
+            .setTween(imgSrc).addIndicators({name: "w"}).addTo(controller)
+
+
+        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 300 })
+            .setTween("#scene3-img-container", 0.5, {scale: 1.6}).addIndicators().addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 300 })
+            .setTween("#scene3-img", 0.5, {margin: 0, maxWidth: 1150}).addIndicators().addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 80, offset: 675})
+			.setPin("#scene3").addTo(controller).addIndicators({name: "pin"})
+
+/*        new ScrollMagic.Scene({triggerElement: "#trigger4", triggerHook: 1, duration: 800})
+			.setPin("#scene4").addIndicators({name: "pin"}).addTo(controller)
+     /*   new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 300 }).addIndicators({name: "left"})
+            .setTween("#scene4-img-container", {transform: "translateY(-56px)"}).addTo(controller)
+/*
+        let scene5Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00016.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00017.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00018.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00021.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00022.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00023.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00024.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00026.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00028.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00029.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00030.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00031.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00034.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00036.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00037.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00042.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00045.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00046.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00047.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00048.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00050.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00051.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00053.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00057.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00059.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00061.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00062.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00065.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00066.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00067.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00068.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00070.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00071.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00077.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00079.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00081.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00082.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00084.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00089.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00090.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00093.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00094.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00095.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00097.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00101.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00102.jpg?v=1582652926",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00105.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00106.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00108.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00109.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00110.jpg?v=1582652925",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
+        let obj = {curImg: 0};
+        let tween = TweenMax.to(obj, 0.5,
+            {
+                curImg: scene5Imgs.length - 1,
+                roundProps: "curImg",
+                repeat: 3,
+                immediateRender: true,
+                ease: Linear.easeNone,
+                onUpdate: function () {
+                    $("#scene5-img").attr("src", scene5Imgs[obj.curImg]);
+                }
+            }
+        );
+        new ScrollMagic.Scene({triggerElement: "#scene5", duration: 300})
+            .setTween(tween).addTo(controller)*/
     });
 </script>
