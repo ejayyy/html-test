@@ -9,7 +9,7 @@
 </head>
 <style>
     h1,
-    h4,
+    h4,h5,
     small,
     p {
         color: #fff;
@@ -64,7 +64,7 @@
         max-width: 1110px;
     }
 
-    #scene4, #scene5{
+    #scene4, #scene5, #scene6{
         right: 0!important;
     }
     #scene4-img2{
@@ -83,6 +83,29 @@
         height: 100%;
     }
 
+    #trigger6{
+        margin-top: 100px;
+    }
+    #scene6-text{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -33px;
+    }
+    #scene6-heading{
+        margin-bottom: 95px;
+    }
+    #scene6-subtext2, #scene6-subtext3{
+        display: none;
+    }
+    #scene6-img-container{
+        display: flex;
+        overflow: hidden;
+    }
+
+    #scene9{
+        margin: 200px auto;
+    }
     .scene9-title {
         font-size: 25px;
         line-height: 0.3;
@@ -166,30 +189,28 @@
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925" />
         </div>
     </section>
+    <div id="trigger6"></div>
     <section id="scene6" class="container text-center">
-        <small>Durability</small>
-        <h4>Pushed to the limits</h4>
-        <h4>To last a year longer.</h4>
-        <div>
-            <h1>Salt-water testing</h1>
-            <img class="img-fluid desktop"
+        <div id="scene6-text" class="scene2-fadein">
+            <h5 id="scene6-heading">Durability<br>Pushed to the limits To last a year longer.</h5>
+            <h1 id="scene6-subtext1">Salt-water testing</h1>
+            <h1 id="scene6-subtext2">Extreme temperature testing</h1>
+            <h1 id="scene6-subtext3">Drop testing</h1>
+        </div>
+        <div id="scene6-img-container" class="desktop">
+            <img id="scene6-img1" class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_d_01.jpg?v=1582653604" />
-            <img class="img-fluid mobile"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_01.jpg?v=1582653604" />
-        </div>
-        <div>
-            <h1>Extreme temperature testing</h1>
-            <img class="img-fluid desktop"
+            <img id="scene6-img2" class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_d_02.jpg?v=1582653604" />
-            <img class="img-fluid mobile"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_02.jpg?v=1582653604" />
-        </div>
-        <div>
-            <h1>Drop testing</h1>
-            <img class="img-fluid desktop"
+            <img id="scene6-img3" class="img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_d_03.jpg?v=1582653604" />
-            <img class="img-fluid mobile"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_03.jpg?v=1582653604" />
+        </div>
+        <img class="img-fluid mobile"
+            src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_01.jpg?v=1582653604" />
+        <img class="img-fluid mobile"
+            src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_02.jpg?v=1582653604" />
+        <img class="img-fluid mobile"
+            src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_03.jpg?v=1582653604" />
         </div>
     </section>
     <section id="scene7" class="container text-center">
@@ -382,14 +403,13 @@
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00110.jpg?v=1582652925",
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
         let obj5 = {curImg: 0};
-        new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 500, offset: 250})
-			.setPin("#scene5").addIndicators({name: "pin5"}).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 480, offset: 250})
+			.setPin("#scene5").addTo(controller)
         new ScrollMagic.Scene({ triggerElement: "#scene5", offset: 250 })
             .setClassToggle("#scene5-text", "is-visible")
-            .setTween("#scene5-text", {transform: "translateY(-48px)"}).addTo(controller).addIndicators()
+            .setTween("#scene5-text", {transform: "translateY(-48px)"}).addTo(controller)
 
-        let tween = TweenMax.to(obj5, 0.5,
-            {
+        let tween = TweenMax.to(obj5, 0.5, {
                 curImg: scene5Imgs.length - 1,
                 roundProps: "curImg",
                 immediateRender: true,
@@ -397,9 +417,34 @@
                 onUpdate: function () {
                     $("#scene5-img").attr("src", scene5Imgs[obj5.curImg]);
                 }
-            }
-        );
+            })
         new ScrollMagic.Scene({triggerElement: "#scene5", duration: 300, offset: 400})
-            .setTween(tween).addTo(controller).addIndicators({name:"img"})
+            .setTween(tween).addTo(controller)
+
+        
+        new ScrollMagic.Scene({triggerElement: "#trigger6", duration: 265, offset: 280})
+			.setPin("#scene6").addIndicators({name: "pin"}).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 280})
+            .setClassToggle("#scene6-text", "is-visible").setTween("#scene6-text", {transform: "translateY(-48px)"})
+            .addIndicators({name: "text"}).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 300})
+            .setTween("#scene6-heading", {marginBottom: 76}).addTo(controller)
+
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 400})
+            .setClassToggle("#scene6-subtext1", "d-none")
+            .setTween("#scene6-img1", {marginLeft: -1110})
+            .addTo(controller).addIndicators({name: "2"})
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 405})
+            .setTween("#scene6-subtext2", {display: "block"})
+            .addTo(controller).addIndicators({name: "3"})
+
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 500})
+            .setClassToggle("#scene6-subtext2", "d-none")
+            .setTween("#scene6-img2", {marginLeft: -1110})
+            .addTo(controller).addIndicators({name: "2"})
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 505})
+            .setClassToggle("#scene6-subtext3", "d-block")
+            .addTo(controller).addIndicators({name: "3"})
+        /***/
     });
 </script>
