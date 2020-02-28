@@ -64,18 +64,25 @@
         max-width: 1110px;
     }
 
-    #scene4, #scene5, #scene6, #scene7{
+    #scene5, #scene6, #scene7{
         right: 0!important;
     }
+    #scene4{
+        margin-top: 320px;
+        right: 0!important;
+    }
+    #scene4-img-container{
+        display: flex;
+        justify-content: center;
+    }
     #scene4-img2{
-        position: absolute;
-        left: 19%;
-        top: 32.2%;
+        transform: translateY(37%);
+        margin-left: -206px;
     }
 
     #scene5-img-container::after{
         content: '';
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 61%);
+        background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 67%);
         position: absolute;
         top: 0;
         left: 0;
@@ -189,13 +196,13 @@
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_03_01_m.jpg?v=1582652508">
     </section>
     <div id="trigger4"></div>
-    <section id="scene4" class="container">
+    <section id="scene4" class="container h-100">
         <div id="scene4-text" class="scene2-fadein text-center">
             <h4>Design</h4>
             <h1>Power Charge with Spigen’s DNA</h1>
         </div>
-        <div id="scene4-img-container" class="desktop my-5 h-100">
-            <img id="scene4-img1" class="img-fluid position-absolute" width="35%"
+        <div id="scene4-img-container" class="desktop">
+            <img id="scene4-img1" class="img-fluid" width="35%"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_d_01.png?v=1582652669">
             <img id="scene4-img2" class="img-fluid" width="35%"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_d_02.png?v=1582652669">
@@ -372,13 +379,11 @@
 			.setPin("#scene3").addTo(controller).addIndicators({name:"pin"})
 
 
-        new ScrollMagic.Scene({triggerElement: "#trigger4", triggerHook: 1, duration: 265})
-			.setPin("#scene4").addIndicators({name: "pin"}).addTo(controller).addIndicators({name:"pin"})
-        new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 690 })
-            .setTween("#scene4-img2", {transform: "translateY(-48px)"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 690 })
+        new ScrollMagic.Scene({triggerElement: "#trigger4", duration: 500, offset: 700})
+			.setPin("#scene4").addIndicators({name: "pin"}).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 510 })
+            .setTween("#scene4-img2", {transform: "translateY(170px)"})
             .setClassToggle("#scene4-text", "is-visible").addTo(controller)
-
 
         let scene5Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925",
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00016.jpg?v=1582652925",
@@ -434,9 +439,9 @@
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00110.jpg?v=1582652925",
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
         let obj5 = {curImg: 0};
-        new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 480, offset: 250})
+        new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 1700, offset: 325})
 			.setPin("#scene5").addTo(controller).addIndicators({name:"pin"})
-        new ScrollMagic.Scene({ triggerElement: "#scene5", offset: 250 })
+        new ScrollMagic.Scene({ triggerElement: "#scene5", offset: 340 })
             .setClassToggle("#scene5-text", "is-visible")
             .setTween("#scene5-text", {transform: "translateY(-48px)"}).addTo(controller)
 
@@ -449,8 +454,8 @@
                     $("#scene5-img").attr("src", scene5Imgs[obj5.curImg]);
                 }
             })
-        new ScrollMagic.Scene({triggerElement: "#scene5", duration: 300, offset: 400})
-            .setTween(tween).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#scene5", duration: 1500, offset: 400})
+            .setTween(tween).addTo(controller).addIndicators()
 
         
         new ScrollMagic.Scene({triggerElement: "#trigger6", duration: 265, offset: 280})
