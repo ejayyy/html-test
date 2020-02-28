@@ -64,7 +64,7 @@
         max-width: 1110px;
     }
 
-    #scene4, #scene5, #scene6{
+    #scene4, #scene5, #scene6, #scene7{
         right: 0!important;
     }
     #scene4-img2{
@@ -103,7 +103,33 @@
         overflow: hidden;
     }
 
-    #scene9{
+    #scene7-heading{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+    }
+    #scene7-img-container{
+        padding-bottom: 45%;
+    }
+    #scene7-img{
+        transform: translateY(58%);
+    }
+    #scene7-subtext{
+        display: none;
+        text-align: left;
+        position: absolute;
+        bottom: 43.6%;
+        right: 28.4%;
+        border-left: 1px solid #fff;
+        padding-left: 5px;
+    }
+    #scene7-subtext-heading{
+        color: #d1d48d;
+        margin-bottom: 0;
+    }
+
+    #scene8, #scene9{
         margin: 200px auto;
     }
     .scene9-title {
@@ -213,22 +239,25 @@
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_03.jpg?v=1582653604" />
         </div>
     </section>
+    <div id="trigger7"></div>
     <section id="scene7" class="container text-center">
-        <h4>Safety</h4>
-        <h1>Worry no more,</h1>
-        <h1>We got you.</h1>
-        <div>
-            <p>Smart IC Chip Protection</p>
-            <small>Defends overcharge and overvoltage.</small>
+        <div id="scene7-heading" class="scene2-fadein">
+            <h4>Safety</h4>
+            <h1>Worry no more,</h1>
+            <h1>We got you.</h1>
         </div>
-        <div>
-            <img class="img-fluid desktop"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_01.jpg?v=1582653875" />
-            <img class="img-fluid desktop"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_02.jpg?v=1582653875" />
-            <img class="img-fluid mobile"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_m_01.jpg?v=1582653875" />
+        <div id="scene7-img-container">
+            <img id="scene7-img" class="img-fluid desktop" width="80%"
+            src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_01.jpg?v=1582653875" />
         </div>
+        <div id="scene7-subtext">
+            <div id="scene7-subtext-container" class="scene2-fadein">
+                <p id="scene7-subtext-heading">Smart IC Chip Protection</p>
+                <small>Defends overcharge<br>and overvoltage.</small>
+            </div>
+        </div>
+        <img class="img-fluid mobile"
+            src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_m_01.jpg?v=1582653875" />
     </section>
     <section id="scene8" class="container-fluid px-0">
         <img class="img-fluid desktop"
@@ -340,14 +369,16 @@
         new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 300 })
             .setTween("#scene3-img", 0.5, {margin: 0, maxWidth: 1150}).addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 80, offset: 675})
-			.setPin("#scene3").addTo(controller)
+			.setPin("#scene3").addTo(controller).addIndicators({name:"pin"})
+
 
         new ScrollMagic.Scene({triggerElement: "#trigger4", triggerHook: 1, duration: 265})
-			.setPin("#scene4").addIndicators({name: "pin"}).addTo(controller)
+			.setPin("#scene4").addIndicators({name: "pin"}).addTo(controller).addIndicators({name:"pin"})
         new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 690 })
             .setTween("#scene4-img2", {transform: "translateY(-48px)"}).addTo(controller)
         new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 690 })
             .setClassToggle("#scene4-text", "is-visible").addTo(controller)
+
 
         let scene5Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925",
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00016.jpg?v=1582652925",
@@ -404,7 +435,7 @@
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
         let obj5 = {curImg: 0};
         new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 480, offset: 250})
-			.setPin("#scene5").addTo(controller)
+			.setPin("#scene5").addTo(controller).addIndicators({name:"pin"})
         new ScrollMagic.Scene({ triggerElement: "#scene5", offset: 250 })
             .setClassToggle("#scene5-text", "is-visible")
             .setTween("#scene5-text", {transform: "translateY(-48px)"}).addTo(controller)
@@ -426,25 +457,53 @@
 			.setPin("#scene6").addIndicators({name: "pin"}).addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 280})
             .setClassToggle("#scene6-text", "is-visible").setTween("#scene6-text", {transform: "translateY(-48px)"})
-            .addIndicators({name: "text"}).addTo(controller)
+            .addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 300})
             .setTween("#scene6-heading", {marginBottom: 76}).addTo(controller)
 
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 400})
             .setClassToggle("#scene6-subtext1", "d-none")
             .setTween("#scene6-img1", {marginLeft: -1110})
-            .addTo(controller).addIndicators({name: "2"})
+            .addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 405})
             .setTween("#scene6-subtext2", {display: "block"})
-            .addTo(controller).addIndicators({name: "3"})
+            .addTo(controller)
 
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 500})
             .setClassToggle("#scene6-subtext2", "d-none")
             .setTween("#scene6-img2", {marginLeft: -1110})
-            .addTo(controller).addIndicators({name: "2"})
+            .addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 505})
             .setClassToggle("#scene6-subtext3", "d-block")
-            .addTo(controller).addIndicators({name: "3"})
-        /***/
+            .addTo(controller)
+
+
+        new ScrollMagic.Scene({triggerElement: "#trigger7", duration: 400, offset: 430})
+			.setPin("#scene7")
+            .addIndicators({name: "pin"}).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 430})
+            .setClassToggle("#scene7-heading", "is-visible")
+            .setTween("#scene7-heading", {transform: "translateY(-48px)"}).addTo(controller)
+
+        let scene7Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_01.jpg?v=1582653875",
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_02.jpg?v=1582653875"]
+        let obj7 = {curImg: 0};
+        let tween7 = TweenMax.to(obj7, 0.5,
+            {
+                curImg: scene7Imgs.length - 1,
+                roundProps: "curImg",
+                immediateRender: true,
+                ease: Linear.easeNone,
+                onUpdate: function () {
+                    $("#scene7-img").attr("src", scene7Imgs[obj7.curImg])
+                }
+            }
+        )
+        new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 480, duration: 150})
+            .setTween(tween7).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 630, duration: 50})
+            .setTween("#scene7-subtext", 0.5, {display: "block", height: 280}).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 680})
+            .setClassToggle("#scene7-subtext-container", "is-visible").addTo(controller)
     });
 </script>
