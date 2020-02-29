@@ -12,24 +12,28 @@
     h4,h5,
     small,
     p {
+        font-weight: 500;
         color: #fff;
     }
     .mobile {
         display: none;
     }
-    .bg-black {
+    #main-div {
         background-color: #000;
     }
 
     #scene2{
         right: 0!important;
     }
-    .scene2-text {
+    #scene2-text {
         position: absolute;
         left: 0;
         right: 0;
         top: 50%;
         transform: translateY(-30%);
+    }
+    #scene2-heading{
+        line-height: 0.7;
     }
     .scene2-fadein {
         opacity: 0;
@@ -46,7 +50,7 @@
     }
     #scene2-subtext{
         overflow: hidden;
-        height: 60px;
+        height: 70px;
     }
     #scene3{
         display: flex;
@@ -134,17 +138,25 @@
     }
 
     #scene8, #scene9{
-        margin: 200px auto;
+        padding: 200px 0;
     }
     .scene9-title {
         font-size: 25px;
-        line-height: 0.3;
+        line-height: 0.2;
+        font-weight: 500;
         margin-bottom: 40px;
     }
     .scene9-btn {
-        font-size: 23px;
-        padding: 5px 49px;
-        border-radius: 50px;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: none;
+        color: #fff!important;
+        background-color: #637fe7!important;
+        border-radius: 50px!important;
+        padding: 14px 41px;
+    }
+    #scene9 img{
+        padding: 50px;
     }
 
     @media only screen and (max-width: 991px) {
@@ -160,21 +172,21 @@
     }
 </style>
 
-<body class="bg-black">
+<div id="main-div">
     <section id="scene1" class="text-center container">
-        <h1 class="mt-5">Ready, Steady, Charge.</h1>
+        <h1 class="pt-100 pb-50">Ready, Steady, Charge.</h1>
         <iframe src="https://player.vimeo.com/video/393403756?autoplay=1&autopause=0&muted=1&controls=0" width="100%"
-            height="100%" frameborder="0"></iframe>
+            height="670px" frameborder="0"></iframe>
     </section>
     <div id="trigger2"></div>
     <section id="scene2" class="text-center container mx-auto">
-        <div class="position-relative">
+        <div class="mt-100 position-relative">
             <img id="scene2-img" class="desktop img-fluid scene2-fadein scene2-wireless"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422" />           
             <img class="mobile img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_m_01.jpg?v=1582652422" />
-            <div class="scene2-text scene2-fadein scene2-wireless">
-                <h1 class="mb-0">SteadiBoost</h1>
+            <div id="scene2-text" class="scene2-fadein scene2-wireless">
+                <h1 id="scene2-heading">SteadiBoost</h1>
                 <div id="scene2-subtext">
                     <h1 id="scene2-subtext1" class="text-muted">Wireless Charger</h1>
                     <h1 id="scene2-subtext2" class="text-muted">Wall Charger</h1>
@@ -241,7 +253,6 @@
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_02.jpg?v=1582653604" />
         <img class="img-fluid mobile"
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_03.jpg?v=1582653604" />
-        </div>
     </section>
     <div id="trigger7"></div>
     <section id="scene7" class="container text-center">
@@ -270,56 +281,58 @@
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_08_m_01.jpg?v=1582654027">
     </section>
     <section id="scene9" class="container text-center">
-        <h1>Choose your Style.</h1>
+        <h1 class="mb-40">Choose your Style.</h1>
         <div class="row">
             <div class="col-12 col-md-4">
-                <img class="img-fluid p-5"
+                <img class="img-fluid"
                     src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/f316.png?v=1582654027" />
                 <div class="scene9-title">
                     <p>SteadiBoost Flex</p>
                     <p>Wireless Charger</p>
                 </div>
-                <a class="btn btn-primary scene9-btn" href="">Buy</a>
+                <a class="btn scene9-btn" href="/collections/all/products/spigen-steadiboost-flex-convertible-wireless-charger?variant=31489910669412">Buy</a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="img-fluid p-5"
+                <img class="img-fluid"
                     src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/f309.png?v=1582654027" />
                 <div class="scene9-title">
                     <p>SteadiBoost Compact</p>
                     <p>Wireless Charger</p>
                 </div>
-                <a class="btn btn-primary scene9-btn" href="">Buy</a>
+                <a class="btn scene9-btn" href="/collections/all/products/steadiboost-compact-wireless-charger?variant=31492712071268">Buy</a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="img-fluid p-5"
+                <img class="img-fluid"
                     src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/x35w.png?v=1582654028" />
                 <div class="scene9-title">
                     <p>SteadiBoost</p>
                     <p>Car Charger</p>
                 </div>
-                <a class="btn btn-primary scene9-btn" href="">Buy</a>
+                <a class="btn scene9-btn" href="/collections/all/products/steadiboost-wireless-car-charger?variant=31489884455012">Buy</a>
             </div>
+        </div>
+        <div class="row mt-100">
             <div class="col-12 col-md-4">
-                <img class="img-fluid p-5"
+                <img class="img-fluid"
                     src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/f210.png?v=1582654027" />
                 <div class="scene9-title">
                     <p>SteadiBoost PD</p>
                     <p>Wall Charger</p>
                 </div>
-                <a class="btn btn-primary scene9-btn" href="">Buy</a>
+                <a class="btn scene9-btn" href="/collections/all/products/steadiboost-pd-wall-charger?variant=31492769579108">Buy</a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="img-fluid p-5"
+                <img class="img-fluid"
                     src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/f30qc_28a422ff-10d3-428b-b7a0-8f892eabb7f2.png?v=1582654027" />
                 <div class="scene9-title">
                     <p>SteadiBoost PD & QC</p>
                     <p>Car Charger</p>
                 </div>
-                <a class="btn btn-primary scene9-btn" href="">Buy</a>
+                <a class="btn scene9-btn" href="/collections/all/products/steadiboost-pd-car-charger-with-qc-3-0?variant=31492758339684">Buy</a>
             </div>
         </div>
     </section>
-</body>
+</div>
 
 </html>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
@@ -333,18 +346,18 @@
     $(function () {
         let controller = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 340, duration: 500 })
+        new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 500 })
 			.setPin("#scene2").addIndicators({name: "pin"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340 })
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 450 })
             .setClassToggle(".scene2-wireless", "is-visible").addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340 })
-            .setClassToggle(".scene2-text", "scene2-textup").addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 450 })
+            .setClassToggle("#scene2-text", "scene2-textup").addTo(controller)
 
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 400 }).addIndicators({name: "wall"})
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 }).addIndicators({name: "wall"})
             .setTween("#scene2-subtext1", {transform: "translateY(-56px)"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 400 })
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
             .setTween("#scene2-subtext2", {transform: "translateY(-56px)"}).addTo(controller)
-
+/*
         new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 460 })
             .setTween("#scene2-subtext2", {transform: "translateY(-112px)"}).addIndicators({name: "car"}).addTo(controller)
         new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 460 })
@@ -366,7 +379,7 @@
             })
         new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340, duration: 300 })
             .setTween(imgSrc).addIndicators({name: "w"}).addTo(controller)
-
+/**/
 
         new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 300 })
             .setTween("#scene3-img-container", 0.5, {scale: 1.6}).addTo(controller)
@@ -506,6 +519,5 @@
             .setTween("#scene7-subtext", 0.5, {display: "block", height: 280}).addTo(controller).addIndicators()
         new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 750}).addIndicators()
             .setClassToggle("#scene7-subtext-container", "is-visible").addTo(controller)
-            /***/
     });
 </script>
