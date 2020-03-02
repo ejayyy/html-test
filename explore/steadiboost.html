@@ -29,7 +29,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 50%;
+        top: 47%;
         transform: translateY(-30%);
     }
     #scene2-heading{
@@ -51,6 +51,15 @@
     #scene2-subtext{
         overflow: hidden;
         height: 70px;
+        position: relative;
+    }
+    #scene2-subtext h1{
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    #scene2-subtext2, #scene2-subtext3{
+        top: 100%;
     }
     #scene3{
         display: flex;
@@ -71,19 +80,25 @@
     #scene5, #scene6, #scene7{
         right: 0!important;
     }
-    #scene4{
+    #trigger4{
         margin-top: 320px;
+    }
+    #scene4{
         right: 0!important;
     }
     #scene4-img-container{
         display: flex;
         justify-content: center;
+        margin-top: 73px;
     }
     #scene4-img2{
         transform: translateY(37%);
-        margin-left: -206px;
+        margin-left: -167px;
     }
 
+    #trigger5{
+        margin-top: 200px;
+    }
     #scene5-img-container::after{
         content: '';
         background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 67%);
@@ -182,7 +197,7 @@
     <section id="scene2" class="text-center container mx-auto">
         <div class="mt-100 position-relative">
             <img id="scene2-img" class="desktop img-fluid scene2-fadein scene2-wireless"
-                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422" />           
+                src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422" />
             <img class="mobile img-fluid"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_m_01.jpg?v=1582652422" />
             <div id="scene2-text" class="scene2-fadein scene2-wireless">
@@ -205,15 +220,15 @@
             src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_03_01_m.jpg?v=1582652508">
     </section>
     <div id="trigger4"></div>
-    <section id="scene4" class="container h-100">
+    <section id="scene4" class="container">
         <div id="scene4-text" class="scene2-fadein text-center">
             <h4>Design</h4>
             <h1>Power Charge with Spigen’s DNA</h1>
         </div>
         <div id="scene4-img-container" class="desktop">
-            <img id="scene4-img1" class="img-fluid" width="35%"
+            <img id="scene4-img1" class="img-fluid" width="20%"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_d_01.png?v=1582652669">
-            <img id="scene4-img2" class="img-fluid" width="35%"
+            <img id="scene4-img2" class="img-fluid" width="20%"
                 src="https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_04_d_02.png?v=1582652669">
         </div>
         <img class="img-fluid mobile"
@@ -346,54 +361,62 @@
     $(function () {
         let controller = new ScrollMagic.Controller()
 
-        new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 500 })
+        new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 800 })
 			.setPin("#scene2").addIndicators({name: "pin"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 450 })
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 420 })
             .setClassToggle(".scene2-wireless", "is-visible").addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 450 })
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 420 })
+            .setTween("#scene2-text", {transform: "translateY(-59%)"})
             .setClassToggle("#scene2-text", "scene2-textup").addTo(controller)
-
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 }).addIndicators({name: "wall"})
-            .setTween("#scene2-subtext1", {transform: "translateY(-56px)"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
-            .setTween("#scene2-subtext2", {transform: "translateY(-56px)"}).addTo(controller)
-/*
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 460 })
-            .setTween("#scene2-subtext2", {transform: "translateY(-112px)"}).addIndicators({name: "car"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 460 })
-            .setTween("#scene2-subtext3", {transform: "translateY(-112px)"}).addTo(controller)
 
         let scene2Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_01.jpg?v=1582652422",
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_02.jpg?v=1582652422",
-            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_03.jpg?v=1582652422"]
-        let obj = {curImg: 0}
-        let imgSrc = TweenMax.to(obj, 0.5,
-            {
-                curImg: scene2Imgs.length - 1,
-                roundProps: "curImg",
-                immediateRender: true,
-                ease: Linear.easeNone,
-                onUpdate: function () {
-                    $("#scene2-img").attr("src", scene2Imgs[obj.curImg]);
-                }
-            })
-        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 340, duration: 300 })
-            .setTween(imgSrc).addIndicators({name: "w"}).addTo(controller)
-/**/
+            "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_03.jpg?v=1582652422"],
+            scene2Img = document.getElementById("scene2-img")
 
-        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 300 })
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 }).addIndicators({name: "wall"})
+            .setTween("#scene2-subtext1", {top: "-100%"}).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
+            .setTween("#scene2-subtext2", {top: 0}).addTo(controller)
+            .on("enter leave", function (e) {
+                scene2Img.classList.remove("is-visible")
+                scene2Img.src = e.type == "enter" ? scene2Imgs[1] : scene2Imgs[0]
+
+                setTimeout(function() {
+                    scene2Img.classList.add("is-visible")
+                }, 400)
+            })
+
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 }).addIndicators({name: "car"})
+            .setTween("#scene2-subtext2", {top: "-100%"}).addTo(controller)
+        new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 })
+            .setTween("#scene2-subtext3", {top: 0}).addTo(controller)
+            .on("enter leave", function (e) {
+                scene2Img.classList.remove("is-visible")
+                scene2Img.src = e.type == "enter" ? scene2Imgs[2] : scene2Imgs[1]
+
+                setTimeout(function() {
+                    scene2Img.classList.add("is-visible")
+                }, 400)
+            })
+
+
+
+        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 280 })
             .setTween("#scene3-img-container", 0.5, {scale: 1.6}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 300 })
+        new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 280 })
             .setTween("#scene3-img", 0.5, {margin: 0, maxWidth: 1150}).addTo(controller)
-        new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 80, offset: 675})
+        new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 80, offset: 650})
 			.setPin("#scene3").addTo(controller).addIndicators({name:"pin"})
 
 
-        new ScrollMagic.Scene({triggerElement: "#trigger4", duration: 500, offset: 700})
+
+        new ScrollMagic.Scene({triggerElement: "#trigger4", duration: 500, offset: 350})
 			.setPin("#scene4").addIndicators({name: "pin"}).addTo(controller)
-        new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 510 })
-            .setTween("#scene4-img2", {marginTop: 0})
+        new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 400 })
+            .setTween("#scene4-img2", {transform: "translateY(27%)"}).addIndicators()
             .setClassToggle("#scene4-text", "is-visible").addTo(controller)
+
 
 
         let scene5Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00014.jpg?v=1582652925",
@@ -450,10 +473,10 @@
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00110.jpg?v=1582652925",
             "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
         let obj5 = {curImg: 0};
-        new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 1700, offset: 325})
+        new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 1700, offset: 350})
 			.setPin("#scene5").addTo(controller).addIndicators({name:"pin"})
         new ScrollMagic.Scene({ triggerElement: "#scene5", offset: 340 })
-            .setClassToggle("#scene5-text", "is-visible")
+            .setClassToggle("#scene5-text", "is-visible").addIndicators()
             .setTween("#scene5-text", {transform: "translateY(-48px)"}).addTo(controller)
 
         let tween = TweenMax.to(obj5, 0.5, {
@@ -465,8 +488,8 @@
                     $("#scene5-img").attr("src", scene5Imgs[obj5.curImg]);
                 }
             })
-        new ScrollMagic.Scene({triggerElement: "#scene5", duration: 1500, offset: 400})
-            .setTween(tween).addTo(controller)
+        new ScrollMagic.Scene({triggerElement: "#scene5", duration: 1700, offset: 400})
+            .setTween(tween).addTo(controller).addIndicators()
 
         
         new ScrollMagic.Scene({triggerElement: "#trigger6", duration: 1200, offset: 280})
