@@ -121,9 +121,6 @@
     #scene6-heading{
         margin-bottom: 95px;
     }
-    #scene6-subtext2, #scene6-subtext3{
-        display: none;
-    }
     #scene6-img-container{
         display: flex;
         overflow: hidden;
@@ -136,14 +133,14 @@
         margin-top: 40px;
     }
     #scene7-img-container{
-        margin-top: 120px;
+        margin-top: 60px;
     }
     #scene7-subtext{
         display: none;
         text-align: left;
         position: absolute;
-        bottom: 30.9%;
-        right: 28.4%;
+        bottom: 32.9%;
+        right: 31.4%;
         border-left: 1px solid #fff;
         padding-left: 5px;
     }
@@ -250,9 +247,7 @@
     <section id="scene6" class="container text-center">
         <div id="scene6-text" class="scene2-fadein">
             <h5 id="scene6-heading">Durability<br>Pushed to the limits To last a year longer.</h5>
-            <h1 id="scene6-subtext1">Salt-water testing</h1>
-            <h1 id="scene6-subtext2">Extreme temperature testing</h1>
-            <h1 id="scene6-subtext3">Drop testing</h1>
+            <h1 id="scene6-subtext">Salt-water testing</h1>
         </div>
         <div id="scene6-img-container" class="desktop">
             <img id="scene6-img1" class="img-fluid"
@@ -491,8 +486,9 @@
         new ScrollMagic.Scene({triggerElement: "#scene5", duration: 1700, offset: 400})
             .setTween(tween).addTo(controller).addIndicators()
 
-        
-        new ScrollMagic.Scene({triggerElement: "#trigger6", duration: 1200, offset: 280})
+
+
+        new ScrollMagic.Scene({triggerElement: "#trigger6", duration: 1200, offset: 330})
 			.setPin("#scene6").addIndicators({name: "pin"}).addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 280})
             .setClassToggle("#scene6-text", "is-visible").setTween("#scene6-text", {transform: "translateY(-48px)"})
@@ -500,24 +496,24 @@
         new ScrollMagic.Scene({triggerElement: "#scene6", offset: 300})
             .setTween("#scene6-heading", {marginBottom: 76}).addTo(controller)
 
-        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 700})
-            .setClassToggle("#scene6-subtext1", "d-none").addIndicators()
-            .setTween("#scene6-img1", {marginLeft: -1110})
-            .addTo(controller)
-        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 705})
-            .setTween("#scene6-subtext2", {display: "block"}).addIndicators()
-            .addTo(controller)
-
-        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 1100})
-            .setClassToggle("#scene6-subtext2", "d-none").addIndicators()
-            .setTween("#scene6-img2", {marginLeft: -1110})
-            .addTo(controller)
-        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 1105})
-            .setClassToggle("#scene6-subtext3", "d-block").addIndicators()
+        let scene6Subtext = ["Salt-water testing", "Extreme temperature testing", "Drop testing"]
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 700}).addIndicators()
+            .on("enter leave", function (e) {
+                document.getElementById("scene6-subtext").innerHTML = e.type == "enter" ? scene6Subtext[1] : scene6Subtext[0]
+            })
+            .setTween("#scene6-img1", {marginLeft: "-100%"})
             .addTo(controller)
 
+        new ScrollMagic.Scene({triggerElement: "#scene6", offset: 1100}).addIndicators()
+            .on("enter leave", function (e) {
+                document.getElementById("scene6-subtext").innerHTML = e.type == "enter" ? scene6Subtext[2] : scene6Subtext[1]
+            })
+            .setTween("#scene6-img2", {marginLeft: "-100%"})
+            .addTo(controller)
 
-        new ScrollMagic.Scene({triggerElement: "#trigger7", duration: 900, offset: 430})
+
+
+        new ScrollMagic.Scene({triggerElement: "#trigger7", duration: 900, offset: 380})
 			.setPin("#scene7")
             .addIndicators({name: "pin"}).addTo(controller)
         new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 430})
