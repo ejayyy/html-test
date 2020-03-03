@@ -1,6 +1,10 @@
 $(function () {
     let controller = new ScrollMagic.Controller()
 
+    controller.scrollPos(function () {
+        return window.innerWidth > 1024 ? window.pageYOffset : 0
+    })
+
     new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 800 })
         .setPin("#scene2").addIndicators({ name: "pin" }).addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 420 })
@@ -52,11 +56,11 @@ $(function () {
         .setPin("#scene4").addIndicators({ name: "pin" }).addTo(controller)
 
     new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 400 })
-        .setTween("#scene4-img1", { transform: "translate(0px, 1px)" }).addIndicators({"name": "left"})
+        .setTween("#scene4-img1", { transform: "translate(0px, 1px)" }).addIndicators({ "name": "left" })
         .setClassToggle("#scene4-text", "is-visible").addTo(controller)
 
     new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 430 })
-        .setTween("#scene4-img2", { transform: "translate(0px, 151.74px)" }).addIndicators({"name": "right"})
+        .setTween("#scene4-img2", { transform: "translate(0px, 151.74px)" }).addIndicators({ "name": "right" })
         .addTo(controller)
 
 
