@@ -6,7 +6,7 @@ $(function () {
     })
 
     new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 800 })
-        .setPin("#scene2").addIndicators({ name: "pin" }).addTo(controller)
+        .setPin("#scene2").addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 420 })
         .setClassToggle(".scene2-wireless", "is-visible").addTo(controller)
 
@@ -15,7 +15,7 @@ $(function () {
         "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_03.jpg?v=1582652422"],
         scene2Img = document.getElementById("scene2-img")
 
-    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 }).addIndicators({ name: "wall" })
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
         .setTween("#scene2-subtext1", { top: "-100%" }).addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
         .setTween("#scene2-subtext2", { top: 0 }).addTo(controller)
@@ -28,7 +28,7 @@ $(function () {
             }, 250)
         })
 
-    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 }).addIndicators({ name: "car" })
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 })
         .setTween("#scene2-subtext2", { top: "-100%" }).addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 })
         .setTween("#scene2-subtext3", { top: 0 }).addTo(controller)
@@ -48,19 +48,19 @@ $(function () {
     new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 280 })
         .setTween("#scene3-img", 0.5, { margin: 0, maxWidth: 1150 }).addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 80, offset: 650 })
-        .setPin("#scene3").addTo(controller).addIndicators({ name: "pin" })
+        .setPin("#scene3").addTo(controller)
 
 
 
     new ScrollMagic.Scene({ triggerElement: "#trigger4", duration: 500, offset: 350 })
-        .setPin("#scene4").addIndicators({ name: "pin" }).addTo(controller)
+        .setPin("#scene4").addTo(controller)
 
     new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 400 })
-        .setTween("#scene4-img1", { transform: "translate(0px, 1px)" }).addIndicators({ "name": "left" })
+        .setTween("#scene4-img1", { transform: "translate(0px, 1px)" })
         .setClassToggle("#scene4-text", "is-visible").addTo(controller)
 
     new ScrollMagic.Scene({ triggerElement: "#scene4", offset: 430 })
-        .setTween("#scene4-img2", { transform: "translate(0px, 151.74px)" }).addIndicators({ "name": "right" })
+        .setTween("#scene4-img2", { transform: "translate(0px, 151.74px)" })
         .addTo(controller)
 
 
@@ -120,9 +120,9 @@ $(function () {
         "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/all_00111.jpg?v=1582652925"]
     let obj5 = { curImg: 0 };
     new ScrollMagic.Scene({ triggerElement: "#trigger5", duration: 1700, offset: 350 })
-        .setPin("#scene5").addTo(controller).addIndicators({ name: "pin" })
+        .setPin("#scene5").addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene5", offset: 340 })
-        .setClassToggle("#scene5-text", "is-visible").addIndicators()
+        .setClassToggle("#scene5-text", "is-visible")
         .setTween("#scene5-text", { transform: "translateY(-48px)" }).addTo(controller)
 
     let tween = TweenMax.to(obj5, 0.5, {
@@ -135,12 +135,12 @@ $(function () {
         }
     })
     new ScrollMagic.Scene({ triggerElement: "#scene5", duration: 1700, offset: 400 })
-        .setTween(tween).addTo(controller).addIndicators()
+        .setTween(tween).addTo(controller)
 
 
 
     new ScrollMagic.Scene({ triggerElement: "#trigger6", duration: 1200, offset: 330 })
-        .setPin("#scene6").addIndicators({ name: "pin" }).addTo(controller)
+        .setPin("#scene6").addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene6", offset: 280 })
         .setClassToggle("#scene6-text", "is-visible").setTween("#scene6-text", { transform: "translateY(-48px)" })
         .addTo(controller)
@@ -148,14 +148,14 @@ $(function () {
         .setTween("#scene6-heading", { marginBottom: 76 }).addTo(controller)
 
     let scene6Subtext = ["Salt-water testing", "Extreme temperature testing", "Drop testing"]
-    new ScrollMagic.Scene({ triggerElement: "#scene6", offset: 700 }).addIndicators()
+    new ScrollMagic.Scene({ triggerElement: "#scene6", offset: 700 })
         .on("enter leave", function (e) {
             document.getElementById("scene6-subtext").innerHTML = e.type == "enter" ? scene6Subtext[1] : scene6Subtext[0]
         })
         .setTween("#scene6-img1", { marginLeft: "-100%" })
         .addTo(controller)
 
-    new ScrollMagic.Scene({ triggerElement: "#scene6", offset: 1100 }).addIndicators()
+    new ScrollMagic.Scene({ triggerElement: "#scene6", offset: 1100 })
         .on("enter leave", function (e) {
             document.getElementById("scene6-subtext").innerHTML = e.type == "enter" ? scene6Subtext[2] : scene6Subtext[1]
         })
@@ -166,9 +166,9 @@ $(function () {
 
     new ScrollMagic.Scene({ triggerElement: "#trigger7", duration: 900, offset: 380 })
         .setPin("#scene7")
-        .addIndicators({ name: "pin" }).addTo(controller)
+        .addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 430 })
-        .setClassToggle("#scene7-heading", "is-visible").addIndicators()
+        .setClassToggle("#scene7-heading", "is-visible")
         .setTween("#scene7-heading", { transform: "translateY(-48px)" }).addTo(controller)
 
     let scene7Imgs = ["https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_07_d_01.jpg?v=1582653875",
@@ -184,9 +184,9 @@ $(function () {
         }
     })
     new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 650, duration: 200 })
-        .setTween(tween7).addTo(controller).addIndicators()
+        .setTween(tween7).addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 700, duration: 200 })
-        .setTween("#scene7-subtext", 0.5, { display: "block", height: 250 }).addTo(controller).addIndicators()
-    new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 750 }).addIndicators()
+        .setTween("#scene7-subtext", 0.5, { display: "block", height: 250 }).addTo(controller)
+    new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 750 })
         .setClassToggle("#scene7-subtext-container", "is-visible").addTo(controller)
 });

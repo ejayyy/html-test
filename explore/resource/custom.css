@@ -194,6 +194,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  main {
+    margin-bottom: 0 !important;
+  }
   #main-div section {
     padding: 50px 0;
   }
@@ -214,6 +217,10 @@
     margin: 0 !important;
     min-height: 0 !important;
   }
+  #main-div .owl-carousel {
+    touch-action: manipulation;
+  }
+
   .scene-fadein {
     opacity: 1;
     visibility: visible;
@@ -222,7 +229,7 @@
   }
 
   #scene1 iframe {
-    height: 200px;
+    height: 220px;
   }
 
   .scene2-subtext {
@@ -247,15 +254,6 @@
 
   #scene6-text {
     position: initial;
-  }
-  #scene6-img1 {
-    content: url("https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_01.jpg?v=1583255953");
-  }
-  #scene6-img2 {
-    content: url("https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_02.jpg?v=1583255953");
-  }
-  #scene6-img3 {
-    content: url("https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_06_m_03.jpg?v=1583255953");
   }
 
   #scene7-subtext {
