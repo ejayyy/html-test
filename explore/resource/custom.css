@@ -111,6 +111,13 @@
   margin-left: -167px;
 }
 
+#scene4-text,
+#scene5-text,
+#scene6-text,
+#scene7-heading {
+  margin-top: 30px;
+}
+
 #trigger5 {
   margin-top: 200px;
 }
@@ -144,9 +151,6 @@
 #trigger7 {
   margin-top: 280px;
 }
-#scene7-heading {
-  margin-top: 40px;
-}
 #scene7-img-container {
   position: relative;
   margin-top: 60px;
@@ -175,19 +179,20 @@
   padding: 200px 0;
 }
 .scene9-title {
-  font-size: 25px;
+  font-size: 28px;
   line-height: 0.2;
-  font-weight: 500;
-  margin-bottom: 40px;
 }
 .scene9-btn {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 18px;
   text-transform: none;
   color: #fff !important;
-  background-color: #637fe7 !important;
+  background-color: #1a73e8 !important;
   border-radius: 50px !important;
-  padding: 14px 41px;
+  border: 1px solid transparent;
+  padding: 10px 40px;
+  line-height: 1.45;
+  letter-spacing: -0.035em;
+  margin-top: 50px;
 }
 #scene9 img {
   padding: 50px;
@@ -220,6 +225,21 @@
   #main-div .owl-carousel {
     touch-action: manipulation;
   }
+  #main-div .owl-dots {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 6px;
+    height: 6px;
+    margin: 5px 3px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #c8f183;
+  }
 
   .scene-fadein {
     opacity: 1;
@@ -245,6 +265,9 @@
     color: #a5a5a5;
   }
 
+  #scene4-text,
+  #scene5-text,
+  #scene7-heading,
   #trigger4,
   #trigger5,
   #trigger6,
@@ -254,6 +277,7 @@
 
   #scene6-text {
     position: initial;
+    margin-top: 0;
   }
 
   #scene7-subtext {
@@ -261,10 +285,8 @@
     bottom: 49%;
     right: 7.5%;
     height: 139px !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
     padding-left: 3px;
-  }
-  #scene7-heading {
-    margin-top: 0;
   }
   #scene7-subtext small {
     display: block;
@@ -279,6 +301,9 @@
   }
   #scene7-img-container {
     margin-top: 0;
+  }
+  #scene7-subtext-container {
+    margin-top: -3px;
   }
 
   .scene9-title {
