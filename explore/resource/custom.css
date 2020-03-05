@@ -62,9 +62,11 @@
   right: 0;
   color: #a5a5a5 !important;
 }
-#scene2-subtext2,
-#scene2-subtext3 {
+#scene2-subtext2 {
   top: 100%;
+}
+#scene2-subtext3 {
+  top: 200%;
 }
 #scene3 {
   display: flex;

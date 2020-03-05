@@ -5,7 +5,7 @@ $(function () {
         return window.innerWidth > 1024 ? window.pageYOffset : 0
     })
 
-    new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 800 })
+    new ScrollMagic.Scene({ triggerElement: "#trigger2", offset: 400, duration: 1700 })
         .setPin("#scene2").addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 420 })
         .setClassToggle(".scene2-wireless", "is-visible").addTo(controller)
@@ -15,9 +15,11 @@ $(function () {
         "https://cdn.shopify.com/s/files/1/0168/7781/3860/files/Scene_02_d_03.jpg?v=1582652422"],
         scene2Img = document.getElementById("scene2-img")
 
-    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
-        .setTween("#scene2-subtext1", { top: "-100%" }).addTo(controller)
-    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 650 })
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 1120 })
+        .setTween("#scene2-subtext1", { top: -70 }).addTo(controller)
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 1120 })
+        .setTween("#scene2-subtext3", { top: 70 }).addTo(controller)
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 1120 })
         .setTween("#scene2-subtext2", { top: 0 }).addTo(controller)
         .on("enter leave", function (e) {
             scene2Img.classList.remove("is-visible")
@@ -28,9 +30,11 @@ $(function () {
             }, 250)
         })
 
-    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 })
-        .setTween("#scene2-subtext2", { top: "-100%" }).addTo(controller)
-    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 900 })
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 1720 })
+        .setTween("#scene2-subtext1", { top: -140 }).addTo(controller)
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 1720 })
+        .setTween("#scene2-subtext2", { top: -70 }).addTo(controller)
+    new ScrollMagic.Scene({ triggerElement: "#scene2", offset: 1720 })
         .setTween("#scene2-subtext3", { top: 0 }).addTo(controller)
         .on("enter leave", function (e) {
             scene2Img.classList.remove("is-visible")
