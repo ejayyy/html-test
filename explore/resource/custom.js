@@ -194,7 +194,7 @@ $(function () {
     new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 700, duration: 200 })
         .setTween("#scene7-subtext", 0.5, { display: "block", height: 250 }).addTo(controller)
     new ScrollMagic.Scene({ triggerElement: "#trigger7", offset: 750 })
-        .setClassToggle("#scene7-subtext-container", "is-visible").addTo(controller)
+        .setClassToggle(".scene7-subtext-container", "is-visible").addTo(controller)
 
 
 

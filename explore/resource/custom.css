@@ -162,7 +162,7 @@
   text-align: left;
   position: absolute;
   bottom: 48.8%;
-  right: 24.1%;
+  right: 25.5%;
   border-left: 1px solid #fff;
   padding-left: 7px;
 }
@@ -170,7 +170,10 @@
   font-size: 18px;
   line-height: 21px;
 }
-#scene7-subtext-heading {
+.scene7-subtext-container {
+  margin-bottom: 20px;
+}
+.scene7-subtext-heading {
   color: #c8f183 !important;
   margin-bottom: 8px;
   font-size: 21px;
@@ -285,7 +288,7 @@
   #scene7-subtext {
     display: block !important;
     bottom: 49%;
-    right: 7.5%;
+    right: 1.9%;
     height: 139px !important;
     border-left: 1px solid rgba(255, 255, 255, 0.4);
     padding-left: 3px;
@@ -296,7 +299,7 @@
     font-weight: 700;
     line-height: 12px;
   }
-  #scene7-subtext-heading {
+  .scene7-subtext-heading {
     font-size: 13px;
     font-weight: 700 !important;
     margin-bottom: 0;
@@ -304,8 +307,9 @@
   #scene7-img-container {
     margin-top: 0;
   }
-  #scene7-subtext-container {
+  .scene7-subtext-container {
     margin-top: -3px;
+    margin-bottom: 17px;
   }
 
   .scene9-title {
