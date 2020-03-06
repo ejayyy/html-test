@@ -76,13 +76,6 @@
   padding-bottom: 250px;
   margin-top: 200px;
 }
-#scene3-img-container {
-  overflow: hidden;
-}
-#scene3-img {
-  margin: -80px -70px -86px -102px;
-  max-width: 1110px;
-}
 
 #scene5,
 #scene6,
@@ -284,23 +277,31 @@
     position: initial;
     margin-top: 0;
   }
+  #scene6-slider .item {
+    position: relative;
+  }
+  #scene6-slider .item h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
 
   #scene7-subtext {
     display: block !important;
-    bottom: 49%;
-    right: 1.9%;
-    height: 139px !important;
+    bottom: 50.8%;
+    right: 6.2%;
+    height: 131px !important;
     border-left: 1px solid rgba(255, 255, 255, 0.4);
     padding-left: 3px;
   }
   #scene7-subtext small {
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     line-height: 12px;
   }
   .scene7-subtext-heading {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700 !important;
     margin-bottom: 0;
   }

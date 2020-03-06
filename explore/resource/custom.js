@@ -47,12 +47,10 @@ $(function () {
 
 
 
-    new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 280 })
-        .setTween("#scene3-img-container", 0.5, { scale: 1.6 }).addTo(controller)
-    new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 200, offset: 280 })
-        .setTween("#scene3-img", 0.5, { margin: 0, maxWidth: 1150 }).addTo(controller)
-    new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 80, offset: 650 })
+    new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 600, offset: 640 })
         .setPin("#scene3").addTo(controller)
+    new ScrollMagic.Scene({ triggerElement: "#scene3", duration: 300, offset: 280 })
+        .setTween("#scene3-img-container", 0.5, { scale: 1.6, padding: 0 }).addTo(controller)
 
 
 
