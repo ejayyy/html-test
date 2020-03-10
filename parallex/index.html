@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Parallex</title>
+</head>
+<style>
+    img{
+        max-width: 100%;
+    }
+    #parallax1-img {
+        position: absolute;
+        right: 0;
+    }
+    #parallax1-txt {
+        position: absolute;
+        top: 50%;
+        left: 13%;
+        text-align: center;
+        color: #fff;
+        transform: translateY(-50%);
+    }
+    #parallax1-txt p {
+        margin-bottom: 31px;
+    }
+    #parallax1-container{
+        z-index: 1;
+    }
+
+    #parallax1-txt h2,
+    .parallax-txt h3,
+    #parallax3-txt h3 {
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    #parallax2-container {
+        z-index: 2;
+        width: 850px;
+        margin: -100px auto 0 auto;
+    }
+
+    #parallax2-img-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #parallax3-txt {
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        right: 10%;
+    }
+
+    #parallax3-txt2 {
+        position: absolute;
+        text-align: center;
+    }
+
+    #parallax4-txt-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #parallax4-txt-container img {
+        width: 50%;
+    }
+
+    .parallax-background {
+        position: relative;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .parallax-relative {
+        position: relative;
+    }
+
+    .parallax-btn {
+        text-decoration: none;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        padding: 6px 10px;
+        border-radius: 2px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .parallax-txt {
+        text-align: center;
+        margin: 48px 0;
+    }
+</style>
+
+<div>
+    <section>
+        <div id="parallax1-container" class="parallax-relative">
+            <img id="parallax1-img" src="https://cdn.shopify.com/s/files/1/0737/0479/files/1_phone.png?v=1583856536">
+            <div id="parallax1-txt">
+                <h2>Form meets function.</h2>
+                <p>3D honeycomb texture provides a<br>secure grip and a tactile experience.</p>
+                <a href="" class="parallax-btn">Shop Parallax</a>
+            </div>
+            <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/1_bg.jpg?v=1583856535">
+        </div>
+        <div id="parallax2-container" class="parallax-relative parallax-container">
+            <img id="parallax2-img" src="https://cdn.shopify.com/s/files/1/0737/0479/files/2_design.jpg?v=1583856536">
+            <div class="parallax-txt">
+                <h3>Modernist design.</h3>
+                <p>Bold and minimalist lines inspired<br>by modern architecture.</p>
+            </div>
+            <div id="parallax2-img-block">
+                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/3_ocean_blue.jpg?v=1583856535">
+                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/4_midnight_green.jpg?v=1583856534">
+                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/5_burgundy.jpg?v=1583856534">
+                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/6_aqua_green.jpg?v=1583856535">
+            </div>
+            <div class="parallax-txt">
+                <h3>Express yourself.</h3>
+                <p>A playful color palette made to<br>complement your mood and style.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+</html>
