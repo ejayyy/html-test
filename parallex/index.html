@@ -10,6 +10,15 @@
         max-width: 100%;
     }
 
+    #parallax-landing h2 {
+        font-size: 2.8em;
+    }
+
+    #parallax-landing p {
+        font-size: 1.4em;
+        line-height: 1.7;
+    }
+
     #parallax1-img {
         position: absolute;
         right: 0;
@@ -17,7 +26,7 @@
 
     #parallax1-txt {
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 13%;
         text-align: center;
         color: #fff;
@@ -25,12 +34,44 @@
     }
 
     #parallax1-txt p {
-        margin-bottom: 31px;
+        margin-bottom: 50px;
     }
 
     #parallax2-img-block {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #parallax2-img-block div {
+        overflow: hidden;
+        position: relative;
+    }
+
+    #parallax2-img-block img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #parallax2-img-block img:hover,
+    #parallax2-img-block img:active {
+        transform: scale(1.2);
+        transition: transform 1s;
+    }
+
+    #parallax3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+
+    #parallax3-img {
+        position: relative;
+        width: 53%;
     }
 
     #parallax3-txt {
@@ -42,9 +83,9 @@
 
     #parallax3-txt2 {
         position: absolute;
-        bottom: 26%;
-        left: 25%;
-        height: 290px;
+        left: 26%;
+        bottom: 18%;
+        height: 31%;
         display: flex;
         align-items: flex-end;
     }
@@ -56,16 +97,15 @@
         bottom: 0;
         left: 50%;
         border-left: 1px dashed rgba(255, 255, 255, 0.7);
-        transform: translate(-50%);
         z-index: 3;
-        height: 261px;
+        height: 90%;
     }
 
     #parallax3-txt3 {
         position: absolute;
-        bottom: 26%;
-        left: 37%;
-        height: 257px;
+        left: 40%;
+        bottom: 18%;
+        height: 25%;
         display: flex;
         align-items: flex-end;
     }
@@ -77,15 +117,8 @@
         bottom: 0;
         left: 50%;
         border-left: 1px dashed rgba(255, 255, 255, 0.7);
-        transform: translate(-50%);
         z-index: 3;
-        height: 230px;
-    }
-
-    #parallax3-img {
-        position: absolute;
-        top: 0;
-        left: 0;
+        height: 88%;
     }
 
     #parallax4-txt-container {
@@ -94,6 +127,16 @@
         grid-column-gap: 60px;
         text-align: center;
         margin-bottom: 70px;
+    }
+
+    #parallax4-txt-container::before {
+        position: absolute;
+        content: "Drop-test certified.";
+        top: -100px;
+        left: 0;
+        right: 0;
+        font-weight: 900;
+        font-size: 2.3em;
     }
 
     #parallax4-txt-container p {
@@ -107,6 +150,10 @@
         transform: translateY(-50%);
         color: #fff;
         text-align: center;
+    }
+
+    #parallax5-txt h2 {
+        margin-bottom: 40px;
     }
 
     #parallax6 {
@@ -152,7 +199,7 @@
         align-items: center;
         margin-bottom: 50px;
         font-weight: 700;
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .parallax-relative {
@@ -163,10 +210,16 @@
         text-decoration: none;
         color: #fff;
         border: 2px solid rgba(255, 255, 255, 0.6);
-        padding: 6px 10px;
+        padding: 9px 15px;
         border-radius: 2px;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.5em;
+    }
+
+    .parallax-btn:hover,
+    .parallax-btn:focus {
+        border: 2px solid #ffc559;
+        text-decoration: none;
     }
 
     .parallax-txt {
@@ -180,7 +233,8 @@
 
     .parallax-heading {
         font-weight: 900;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        font-size: 2.3em;
     }
 
     .parallax-container {
@@ -192,9 +246,233 @@
     .parallax-active {
         opacity: 1 !important;
     }
+
+    .parallax2-txt {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        color: #fff;
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 1460px) {
+        #parallax-landing h2 {
+            font-size: 2.5em;
+        }
+
+        #parallax-landing h2 {
+            font-size: 2.5em;
+        }
+
+        #parallax1-txt {
+            left: 8%;
+        }
+
+        #parallax3-img {
+            width: 51%;
+        }
+
+        #parallax3-txt2 {
+            left: 25%;
+            bottom: 25%;
+            height: 26%;
+        }
+
+        #parallax3-txt3 {
+            left: 38%;
+            bottom: 25%;
+            height: 20%;
+        }
+
+        #parallax4-txt-container::before {
+            top: -70px;
+        }
+
+        #parallax3-txt,
+        #parallax5-txt {
+            right: 6%;
+        }
+
+        .parallax-btn {
+            font-size: 1.3em;
+        }
+    }
+
+    @media only screen and (max-width: 990px) {
+        #parallax-landing h2 {
+            font-size: 27px;
+        }
+
+        #parallax-landing p {
+            font-size: 19px;
+            line-height: 1.56;
+        }
+
+        #parallax1-img {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/1_phone_033edf5d-47ea-4bb6-b01d-dea791d49c49.png?v=1583856764");
+        }
+
+        #parallax1-img2 {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/1_bg_c27abaaa-9135-46c2-accc-9b650ca96134.jpg?v=1583856764");
+        }
+
+        #parallax1-txt {
+            transform: none;
+            top: 61%;
+            left: 0;
+            right: 0;
+        }
+
+        #parallax2-img {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/2_design_99c80dbe-4d0b-4a52-872f-4aa17470be85.jpg?v=1583856764");
+            padding: 0 25px;
+        }
+
+        #parallax2-img1 {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/3_ocean_blue_c202eb82-ea20-4704-a778-af4cda12debd.jpg?v=1583856764");
+        }
+
+        #parallax2-img2 {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/4_midnight_green_70f57128-dc2f-4e3b-b3dc-aceaeb4906ab.jpg?v=1583856764");
+        }
+
+        #parallax2-img3 {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/5_burgundy_3aac1de4-c5ad-4058-a2b3-242491b21a81.jpg?v=1583856763");
+        }
+
+        #parallax2-img4 {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/6_aqua_green_9f2adc1b-8773-4a54-8624-cd0a0f2a9404.jpg?v=1583856763");
+        }
+
+        .parallax2-txt {
+            font-size: 22px !important;
+        }
+
+        #parallax3-img {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/7_phone_7ea4af0d-ca46-46a4-856f-45d7108bd8ed.png?v=1583856765");
+            width: 100%;
+        }
+
+        #parallax3-img2 {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/7_bg_a1f80647-9774-426c-9f5b-282646fe7430.jpg?v=1583856764");
+        }
+
+        #parallax3-txt {
+            top: 70%;
+            left: 0;
+            right: 0;
+        }
+
+        #parallax3-txt2 {
+            bottom: 38.3%;
+            left: 35.7%;
+            height: 181px;
+        }
+
+        #parallax3-txt2::before {
+            border-left: 1px dashed #fff;
+            height: 152px;
+        }
+
+        #parallax3-txt3 {
+            bottom: 34.6%;
+            left: 58%;
+            height: 178px;
+        }
+
+        #parallax3-txt3 p {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #parallax3-txt3::before {
+            border-left: 1px dashed #fff;
+            height: 121px;
+        }
+
+        #parallax4 {
+            margin-top: -75px;
+        }
+
+        #parallax4-heading {
+            display: none;
+        }
+
+        #parallax4-txt-container {
+            display: block;
+            padding: 0 50px;
+        }
+
+        #parallax4-txt-container::before {
+            content: "";
+        }
+
+        #parallax4-txt-container div:not(:last-of-type) {
+            margin: 30px 0;
+        }
+
+        #parallax5-txt {
+            top: 7%;
+            transform: none;
+            left: 0;
+            right: 0;
+        }
+
+        #parallax5-img {
+            content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/10_lifeshot_cf455d87-5d1f-4d02-8327-29bc20416f84.jpg?v=1583856765");
+        }
+
+        #parallax6 {
+            padding: 50px 0;
+        }
+
+        #parallax6-container {
+            text-align: center;
+            font-size: 19px;
+            margin: 0 auto 30px auto;
+        }
+
+        #parallax6-container p {
+            width: 60%;
+            text-align: center;
+        }
+
+        #parallax6-icon-desktop {
+            display: none;
+        }
+
+        #parallax6-icon-mobile {
+            display: block;
+            width: 30%;
+            margin: auto;
+        }
+
+        .parallax-heading {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .parallax-container {
+            width: 100%;
+            margin: -35px 0 0 0;
+        }
+
+        .parallax-txt {
+            margin: 70px 0;
+        }
+
+        .parallax-btn {
+            padding: 6px 17px;
+            font-size: 20px;
+        }
+    }
 </style>
 
-<div>
+<div id="parallax-landing">
     <section>
         <div class="parallax-relative parallax-above-container">
             <img id="parallax1-img" src="https://cdn.shopify.com/s/files/1/0737/0479/files/1_phone.png?v=1583856536">
@@ -203,7 +481,7 @@
                 <p>3D honeycomb texture provides a<br>secure grip and a tactile experience.</p>
                 <a href="/collections/parallax" class="parallax-btn">Shop Parallax</a>
             </div>
-            <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/1_bg.jpg?v=1583856535">
+            <img id="parallax1-img2" src="https://cdn.shopify.com/s/files/1/0737/0479/files/1_bg.jpg?v=1583856535">
         </div>
         <div class="parallax-relative parallax-container">
             <img id="parallax2-img" src="https://cdn.shopify.com/s/files/1/0737/0479/files/2_design.jpg?v=1583856536">
@@ -212,10 +490,26 @@
                 <p>Bold and minimalist lines inspired<br>by modern architecture.</p>
             </div>
             <div id="parallax2-img-block">
-                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/3_ocean_blue.jpg?v=1583856535">
-                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/4_midnight_green.jpg?v=1583856534">
-                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/5_burgundy.jpg?v=1583856534">
-                <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/6_aqua_green.jpg?v=1583856535">
+                <div>
+                    <img id="parallax2-img1"
+                        src="https://cdn.shopify.com/s/files/1/0737/0479/files/3_ocean_blue.jpg?v=1583856535">
+                    <h3 class="parallax2-txt parallax-heading">Ocean Blue</h3>
+                </div>
+                <div>
+                    <img id="parallax2-img2"
+                        src="https://cdn.shopify.com/s/files/1/0737/0479/files/4_midnight_green.jpg?v=1583856534">
+                    <h3 class="parallax2-txt parallax-heading">Midnight Green</h3>
+                </div>
+                <div>
+                    <img id="parallax2-img3"
+                        src="https://cdn.shopify.com/s/files/1/0737/0479/files/5_burgundy.jpg?v=1583856534">
+                    <h3 class="parallax2-txt parallax-heading">Burgundy</h3>
+                </div>
+                <div>
+                    <img id="parallax2-img4"
+                        src="https://cdn.shopify.com/s/files/1/0737/0479/files/6_aqua_green.jpg?v=1583856535">
+                    <h3 class="parallax2-txt parallax-heading">Aqua Green</h3>
+                </div>
             </div>
             <div class="parallax-txt">
                 <h3 class="parallax-heading">Express yourself.</h3>
@@ -226,20 +520,22 @@
     <section>
         <div class="parallax-relative parallax-above-container">
             <div id="parallax3-txt">
-                <h3 class="parallax-heading">Double the protection.</h3>
+                <h2 class="parallax-heading">Double the protection.</h2>
                 <p>Dual-layered design shields your phone<br>from anything life throws its way.</p>
             </div>
-            <div id="parallax3-txt2">
-                <p>Soft TPU</p>
+            <div id="parallax3">
+                <div id="parallax3-txt2">
+                    <p>Soft TPU</p>
+                </div>
+                <div id="parallax3-txt3">
+                    <p>Hard PC Bumper</p>
+                </div>
+                <img id="parallax3-img"
+                    src="https://cdn.shopify.com/s/files/1/0737/0479/files/7_phone_new.png?v=1583950502">
             </div>
-            <div id="parallax3-txt3">
-                <p>Hard PC Bumper</p>
-            </div>
-            <img id="parallax3-img" src="https://cdn.shopify.com/s/files/1/0737/0479/files/7_phone.png?v=1583856538">
-            <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/7_bg.jpg?v=1583856535">
+            <img id="parallax3-img2" src="https://cdn.shopify.com/s/files/1/0737/0479/files/7_bg.jpg?v=1583856535">
         </div>
-        <div class="parallax-relative parallax-container">
-            <h3 class="parallax-heading text-center">Drop-test certified.</h3>
+        <div id="parallax4" class="parallax-relative parallax-container">
             <div id="parallax4-txt-container">
                 <div>
                     <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/8_corner.jpg?v=1583856534">
@@ -257,7 +553,7 @@
             <img id="parallax5-img"
                 src="https://cdn.shopify.com/s/files/1/0737/0479/files/10_lifeshot.jpg?v=1583856537">
             <div id="parallax5-txt">
-                <h3 class="parallax-heading">Style meets practicality.</h3>
+                <h2 class="parallax-heading">Style meets practicality.</h2>
                 <a href="/collections/parallax" class="parallax-btn">Shop Parallax</a>
             </div>
         </div>
