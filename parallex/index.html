@@ -54,6 +54,7 @@
         object-fit: cover;
     }
 
+    #parallax2-img-block img.hoverd,
     #parallax2-img-block img:hover,
     #parallax2-img-block img:active {
         transform: scale(1.2);
@@ -576,5 +577,10 @@
         </div>
     </section>
 </div>
+<script>
+    $('.parallax2-txt').hover(function () {
+        $(this).siblings('img').toggleClass('hoverd')
+    });
+</script>
 
 </html>
