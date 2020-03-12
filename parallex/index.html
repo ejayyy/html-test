@@ -51,16 +51,16 @@
         position: relative;
     }
 
-    #parallax2-img-block img {
+    .parallax2-imgs {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    #parallax2-img-block img.hoverd,
-    #parallax2-img-block img:hover,
-    #parallax2-img-block img:active {
+    .parallax2-imgs.hoverd,
+    .parallax2-imgs:hover,
+    .parallax2-imgs:active {
         transform: scale(1.2);
         transition: transform 1s;
     }
@@ -123,6 +123,10 @@
         border-left: 1px dashed rgba(255, 255, 255, 0.7);
         z-index: 3;
         height: 88%;
+    }
+
+    .parallax4-div {
+        overflow: hidden;
     }
 
     #parallax4-txt-container {
@@ -476,22 +480,22 @@
             </div>
             <div id="parallax2-img-block">
                 <div>
-                    <img id="parallax2-img1"
+                    <img id="parallax2-img1" class="parallax2-imgs"
                         src="https://cdn.shopify.com/s/files/1/0737/0479/files/3_ocean_blue.jpg?v=1583856535">
                     <h3 class="parallax2-txt parallax-heading">Ocean Blue</h3>
                 </div>
                 <div>
-                    <img id="parallax2-img2"
+                    <img id="parallax2-img2" class="parallax2-imgs"
                         src="https://cdn.shopify.com/s/files/1/0737/0479/files/4_midnight_green.jpg?v=1583856534">
                     <h3 class="parallax2-txt parallax-heading">Midnight Green</h3>
                 </div>
                 <div>
-                    <img id="parallax2-img3"
+                    <img id="parallax2-img3" class="parallax2-imgs"
                         src="https://cdn.shopify.com/s/files/1/0737/0479/files/5_burgundy.jpg?v=1583856534">
                     <h3 class="parallax2-txt parallax-heading">Burgundy</h3>
                 </div>
                 <div>
-                    <img id="parallax2-img4"
+                    <img id="parallax2-img4" class="parallax2-imgs"
                         src="https://cdn.shopify.com/s/files/1/0737/0479/files/6_aqua_green.jpg?v=1583856535">
                     <h3 class="parallax2-txt parallax-heading">Aqua Green</h3>
                 </div>
@@ -523,11 +527,17 @@
         <div id="parallax4" class="parallax-relative parallax-container">
             <div id="parallax4-txt-container">
                 <div>
-                    <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/8_corner.jpg?v=1583856534">
+                    <div class="parallax4-div">
+                        <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/8_corner.jpg?v=1583856534"
+                            class="parallax2-imgs">
+                    </div>
                     <p>Air space technology cushions<br>corners from drops.</p>
                 </div>
                 <div>
-                    <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/9_pattern.jpg?v=1583856534">
+                    <div class="parallax4-div">
+                        <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/9_pattern.jpg?v=1583856534"
+                            class="parallax2-imgs">
+                    </div>
                     <p>Inner defense pattern provides<br>maximum shock absorption.</p>
                 </div>
             </div>
