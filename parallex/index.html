@@ -34,7 +34,11 @@
     }
 
     #parallax1-txt p {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+    }
+
+    #parallax2-img {
+        display: block;
     }
 
     #parallax2-img-block {
@@ -68,7 +72,6 @@
         right: 0;
         bottom: 0;
     }
-
 
     #parallax3-img {
         position: relative;
@@ -133,7 +136,7 @@
     #parallax4-txt-container::before {
         position: absolute;
         content: "Drop-test certified.";
-        top: -100px;
+        top: -70px;
         left: 0;
         right: 0;
         font-weight: 900;
@@ -151,10 +154,6 @@
         transform: translateY(-50%);
         color: #fff;
         text-align: center;
-    }
-
-    #parallax5-txt h2 {
-        margin-bottom: 40px;
     }
 
     #parallax6 {
@@ -190,8 +189,12 @@
     }
 
     #parallax6-icon-desktop img {
-        width: 7%;
+        width: 11%;
         opacity: 0.4;
+    }
+
+    #parallax6-ah {
+        width: 4% !important;
     }
 
     #parallax6-container {
@@ -208,19 +211,7 @@
     }
 
     .parallax-btn {
-        text-decoration: none;
-        color: #fff;
-        border: 2px solid rgba(255, 255, 255, 0.6);
-        padding: 9px 15px;
-        border-radius: 2px;
-        font-weight: 500;
-        font-size: 1.5em;
-    }
-
-    .parallax-btn:hover,
-    .parallax-btn:focus {
-        border: 2px solid #ffc559;
-        text-decoration: none;
+        margin-top: 0;
     }
 
     .parallax-txt {
@@ -296,10 +287,6 @@
         #parallax5-txt {
             right: 6%;
         }
-
-        .parallax-btn {
-            font-size: 1.3em;
-        }
     }
 
     @media only screen and (max-width: 990px) {
@@ -368,9 +355,10 @@
         }
 
         #parallax3-txt2 {
-            bottom: 38.3%;
+            bottom: 0;
             left: 35.7%;
             height: 181px;
+            top: 39%;
         }
 
         #parallax3-txt2::before {
@@ -379,9 +367,10 @@
         }
 
         #parallax3-txt3 {
-            bottom: 34.6%;
+            bottom: 0;
             left: 58%;
-            height: 178px;
+            height: 181px;
+            top: 42.7%;
         }
 
         #parallax3-txt3 p {
@@ -465,11 +454,6 @@
         .parallax-txt {
             margin: 70px 0;
         }
-
-        .parallax-btn {
-            padding: 6px 17px;
-            font-size: 20px;
-        }
     }
 </style>
 
@@ -480,7 +464,7 @@
             <div id="parallax1-txt">
                 <h2 class="parallax-heading">Form meets function.</h2>
                 <p>3D honeycomb texture provides a<br>secure grip and a tactile experience.</p>
-                <a href="/collections/parallax" class="parallax-btn">Shop Parallax</a>
+                <a href="/collections/parallax" class="btn btn--banner parallax-btn">Shop Parallax</a>
             </div>
             <img id="parallax1-img2" src="https://cdn.shopify.com/s/files/1/0737/0479/files/1_bg.jpg?v=1583856535">
         </div>
@@ -555,7 +539,7 @@
                 src="https://cdn.shopify.com/s/files/1/0737/0479/files/10_lifeshot.jpg?v=1583856537">
             <div id="parallax5-txt">
                 <h2 class="parallax-heading">Style meets practicality.</h2>
-                <a href="/collections/parallax" class="parallax-btn">Shop Parallax</a>
+                <a href="/collections/parallax" class="btn btn--banner parallax-btn">Shop Parallax</a>
             </div>
         </div>
     </section>
@@ -568,7 +552,7 @@
         <div id="parallax6-icon-desktop">
             <img class="parallax-active" src="https://cdn.shopify.com/s/files/1/0737/0479/files/1.png?v=1583876747">
             <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/2.png?v=1583876747">
-            <img
+            <img id="parallax6-ah"
                 src="https://cdn.shopify.com/s/files/1/0737/0479/files/3_64f6c488-d3db-4bd8-bb37-51bf57492df6.png?v=1583876747">
             <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/4.png?v=1583876747">
         </div>
