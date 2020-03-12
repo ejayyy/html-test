@@ -164,6 +164,14 @@
         padding: 100px 0;
     }
 
+    #parallax-chevron-left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: 3;
+    }
+
     #parallax-chevron-left::before {
         font-family: FontAwesome;
         font-weight: normal;
@@ -171,6 +179,14 @@
         cursor: pointer;
         font-style: normal;
         opacity: 0.4;
+    }
+
+    #parallax-chevron-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 3;
     }
 
     #parallax-chevron-right::before {
@@ -182,17 +198,13 @@
         opacity: 0.4;
     }
 
-    #parallax6-icon-desktop {
+    #parallax6-icon {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    #parallax6-icon-mobile {
-        display: none;
-    }
-
-    #parallax6-icon-desktop img {
+    #parallax6-icon img {
         width: 11%;
         opacity: 0.4;
     }
@@ -202,12 +214,16 @@
     }
 
     #parallax6-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 50px;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 17px;
+        text-align: center;
+        width: 72%;
+        margin: 0 auto 50px auto;
+    }
+
+    #parallax6-slick .slick-track {
+        display: flex;
+        align-items: center;
     }
 
     .parallax-relative {
@@ -417,6 +433,7 @@
         }
 
         #parallax5-img {
+            display: block;
             content: url("https://cdn.shopify.com/s/files/1/0737/0479/files/10_lifeshot_cf455d87-5d1f-4d02-8327-29bc20416f84.jpg?v=1583856765");
         }
 
@@ -426,23 +443,35 @@
 
         #parallax6-container {
             text-align: center;
-            font-size: 19px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 20px auto;
+            width: 90%;
         }
 
-        #parallax6-container p {
-            width: 60%;
-            text-align: center;
+        #parallax6-slick p {
+            padding: 0 20px;
+            font-size: 16px;
         }
 
-        #parallax6-icon-desktop {
+
+        #parallax6-icon {
+            width: 100%;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+        }
+
+        #parallax6-icon img {
             display: none;
+            width: 50%;
+            margin: auto;
         }
 
-        #parallax6-icon-mobile {
+        #parallax6-ah {
+            width: 14% !important;
+        }
+
+        #parallax6-icon img.parallax-active {
             display: block;
-            width: 30%;
-            margin: auto;
         }
 
         .parallax-heading {
@@ -555,25 +584,39 @@
     </section>
     <section id="parallax6" class="bg-darkgray">
         <div id="parallax6-container">
-            <span id="parallax-chevron-left" class="chevron"></span>
-            <p>"The best of both worlds in a slim package."</p>
-            <span id="parallax-chevron-right" class="chevron"></span>
+            <div id="parallax6-slick">
+                <p>"The best of both worlds in a slim package."</p>
+                <p>"Durable yet stylish, keeping the phone<br class="medium-down--hide"> safe without subtracting from its design."
+                </p>
+                <p>"The Parallax case checks all of the boxes"</p>
+                <p>"A distinct, minimalist design that aims to combine style and<br class="medium-down--hide"> protection
+                    into one seamless package"</p>
+            </div>
         </div>
-        <div id="parallax6-icon-desktop">
+        <div id="parallax6-icon">
             <img class="parallax-active" src="https://cdn.shopify.com/s/files/1/0737/0479/files/1.png?v=1583876747">
             <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/2.png?v=1583876747">
             <img id="parallax6-ah"
                 src="https://cdn.shopify.com/s/files/1/0737/0479/files/3_64f6c488-d3db-4bd8-bb37-51bf57492df6.png?v=1583876747">
             <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/4.png?v=1583876747">
         </div>
-        <div id="parallax6-icon-mobile">
-            <img src="https://cdn.shopify.com/s/files/1/0737/0479/files/1.png?v=1583876747">
-        </div>
     </section>
 </div>
+
 <script>
     $('.parallax2-txt').hover(function () {
         $(this).siblings('img').toggleClass('hoverd')
+    });
+
+    let activeClass = 'parallax-active',
+        iconImg = '#parallax6-icon img'
+    $('#parallax6-slick').slick({
+        arrows: true,
+        prevArrow: '<span id="parallax-chevron-left"></span>',
+        nextArrow: '<span id="parallax-chevron-right"></span>'
+    }).on('afterChange', function (event, slick, currentSlide, nextSlide) {
+        $(iconImg).removeClass(activeClass)
+        $(`${iconImg}:eq(${currentSlide})`).addClass(activeClass)
     });
 </script>
 
