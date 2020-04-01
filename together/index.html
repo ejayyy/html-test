@@ -8,23 +8,36 @@
 
 <style>
 .covid-bg{
+    position: relative;
+    background-color: #006499;
+    height: 635px;
+}
+.covid-bottom-bg{
     background-color: #006499;
     text-align: center;
-    padding: 80px 0;
 }
 .covid-bg img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 20%;
 }
 #subheading{
-    width: 34%;
     margin: auto;
-    padding: 70px 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+#subheading-state {
+    width: 50%;
+    margin: auto;
 }
 #how-protect{
     padding: 50px 0 100px 0;
 }
 #how-protect img{
-    width: 30%;
+    height: 110px;
+    width: auto;
     margin-bottom: 13px;
 }
 .covid-p p{
@@ -40,53 +53,87 @@
     color:#006499;
     font-weight: 600;
 }
-.covid-btn{
-    background-color: #fff;
-    padding: 6px 50px;
-    color: #006499!important;
-}
-.covid-btn-heading{
-    color: #fff;
-    font-weight: 500;
-    padding: 3px 0 40px 0;
-    margin-bottom: 0;
-}
-#divide_line {
-    border-right: 1px solid #fff;
-    padding: 50px 0px;
-}
 #vertical_line{
     height: 40px;
     border-right: 2px solid #949494;
     width: 50%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+}
+#covid-last-section {
+    padding: 80px 0;
+}
+#covid-last-section div {
+    padding: 60px 30px;
+}
+#covid-last-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    margin-top: 5px;
+    color: #fff;
+}
+.covid-btn{
+    background-color: #fff;
+    padding: 20px 50px;
+    color: #006499!important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 14px;
+}
+.covid-btn-heading{
+    color: #fff;
+    font-size: 20px!important;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.035em;
+    padding: 20px 0px 30px 0px;
+}
+#divide_line {
+    border-right: 1px solid #fff;
+    padding: 50px 0px;
+    margin: 25px 0;
 }
 @media only screen and (max-width: 1024px){
-    #subheading {
-        width: 47%;
+    .covid-bg{
+        height: 500px;
+    }
+    #subheading-state {
+        width: 60%;
     }
 }
 @media only screen and (max-width: 777px){
     .covid-bg img{
-        width: 67%;
+        width: 60%;
     }
-    .covid-p p{
+    .covid-p p,
+    .covid-btn-heading{
         font-size: 16px;
     }
-    #subheading {
+    #subheading-state {
         width: 100%;
     }
     #how-protect {
         padding-bottom: 50px;
     }
     #how-protect div:not(:last-of-type) {
-        margin-bottom: 30px;
+        margin-bottom: 75px;
+    }
+    #vertical_line{
+        margin-bottom: 50px;
     }
     #divide_line{
         border-right: none;
         border-bottom: 1px solid #fff;
         padding: 0 0 50px 0;
-        margin-bottom: 50px;
+        margin: 0 0 50px 0;
+    }
+    #covid-last-section {
+        padding: 50px 10px;
+    }
+}
+@media only screen and (max-width: 541px){
+    .covid-bg img{
+        width: 75%;
     }
 }
 </style>
@@ -99,34 +146,37 @@
 </section>
 <section>
     <div id="subheading" class="container covid-p">
-        <p class="mt-0">Times may be tough, but so are we.  We recognize that we are stronger as a team, and it is our goal to provide help and support to those in our community.</p>
-        <p>Protection has always been our top priority, and now, we are putting our best effort towards creating a safe environment for everyone, including you. Here is how we're stepping up.</p>
+        <div class="row">
+            <div class="col-12">
+                <div id="subheading-state">
+                    <p class="mt-0">Time’s may be tough, but so are we. Protection has always been our top priority, and now, we are putting our best effort towards creating a safe environment for everyone, including you. We recognize that we are stronger as a team, and it is our goal to provide help and support to those in our community. Here is how we’re stepping up.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section>
     <div class="container text-center">
         <h2 class="heading">How we're protecting</h2>
         <div id="how-protect" class="row covid-p">
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 px-md-25">
                 <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/work_from_home_icon_a5efd797-a197-4c10-aa6f-2ff4af68787e.png?v=1585700438" alt="home">
-                <h3 class="heading" role="heading" aria-level="2">Work from home</h3>
-                <p>All our employees are staying safe and working remotely in accordance with California’s Safer-at-home measures.  We’re still a tight-knit team, ensuring that we can continue to be here for any questions or concerns you may have.</p>
+                <h3 class="heading" role="heading" aria-level="2">Working from home</h3>
+                <p>We’re still here for you, not from our offices but from our homes. We’re staying safe due to California’s stay-at-home mandate. We are still here to answer any questions you may have so don’t hesitate to reach out.</p>
             </div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 px-md-25">
                 <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/safe_shipping.png?v=1585700438" alt="shipping">
-                <h3 class="heading" role="heading" aria-level="2">Safe shipping</h3>
-                <p>To ensure the safety of our team, we are taking extra precautions with protective gear, frequent hand washing, social distancing, and use of hand sanitizing stations in our California warehouse.  All packages are safely packaged and shipped with minimal processing time.</p>
+                <h3 class="heading" role="heading" aria-level="2">Safe and clean shipping</h3>
+                <p>At our warehouse in California, we’re taking extra precautions such as providing masks and gloves daily, and providing hand sanitizing stations at a safe distance. This ensures the safety of you and our team, while all packages are safely shipped within minimal processing time.</p>
             </div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                <div class="about-us-higlight-text-box">
-                    <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/Vector_Smart_Object.png?v=1585700438" alt="return">
-                    <h3 class="heading" role="heading" aria-level="2">Worry-free return</h3>
-                    <p>Enjoy shopping stress-free with an extended window for returns. All orders placed between March 1, 2020, and May 31, 2020 will be eligible for 60-day returns.  Feel free to return at your convenience, hassle-free.</p>
-                </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 px-md-25">
+                <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/Vector_Smart_Object.png?v=1585700438" alt="return">
+                <h3 class="heading" role="heading" aria-level="2">Worry-free returns</h3>
+                <p>No need to fret because we got you. From March 1, 2020 to May 31, 2020, all orders will be eligible for 60-day returns. We want to give you a smooth shopping experience, with zero hassle.</p>
             </div>
         </div>
     </div>
-    <div id="vertical-line"></div>
+    <div id="vertical_line"></div>
 </section>
 <section>
     <div class="container covid-p">
@@ -134,15 +184,15 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 order-last">
                 <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/giving_it_all_lifeshot.jpg?v=1585700440" alt="Holding together a bunch of people" />
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 my-auto order-last p-20">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 my-auto order-last p-20">
                 <h2 class="heading" role="heading" aria-level="2">Giving it all</h2>
-                <p>From April 9th to May 31st, we are donating all proceeds from www.spigen.com . Join us in our goal to donate a total of $50,000 to Direct Relief, a charity that aids healthcare workers with medical resources both at home and abroad.</p>
+                <p>Starting on April 9th to May 31st, we are donating all our proceeds from www.spigen.com. Be a part of our efforts in donating $50,000 to Direct Relief, a charity that aids healthcare workers with medical resources both at home and abroad.  </p>
             </div>
         </div>
-        <div class="row pb-md-80 pb-50">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 my-auto order-last order-lg-first p-20">
+        <div class="row pb-md-100 pb-50">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 my-auto order-last order-lg-first p-20">
                 <h2 class="heading" role="heading" aria-level="2">Join Direct Relief</h2>
-                <p>We want to do our part to protect those fighting in the front lines. Our partnership with Direct Relief allows us to directly help our healthcare heroes as they work tirelessly to protect us. Big shoutout to all the HCWs out there!</p>
+                <p>We want to do our part to protect those fighting in the front lines. Our partnership with Direct Relief allows us to directly help our healthcare heroes as they work tirelessly to protect us. Shoutout to all the HCWs out there!</p>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 order-first order-lg-last">
                 <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/direct_relief_lifeshot.jpg?v=1585700441" alt="A surgeon stare at left side" /></div>
@@ -150,18 +200,18 @@
     </div>
 </section>
 <section>
-    <div class="covid-bg">
-        <div class="container">
-            <div class="row">
+    <div class="covid-bottom-bg">
+        <div class="container-fluid">
+            <div id="covid-last-section" class="row">
                 <div id="divide_line" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <h2 class="heading text-white" role="heading" aria-level="2">You can help directly</h2>
-                    <p class="covid-btn-heading">Let's come together and help.</p>
-                    <a href="" class="covid-btn">Help now</a>
+                    <h2 role="heading" aria-level="2">What is Direct Relief?</h2>
+                    <p class="covid-btn-heading">See how they’re changing lives.</p>
+                    <a href="" class="covid-btn">Learn more</a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 my-auto">
-                    <h2 class="heading text-white" role="heading" aria-level="2">What is Direct Relief?</h2>
-                    <p class="covid-btn-heading">See how they are helping others</p>
-                    <a href="" class="covid-btn">Learn more</a>
+                    <h2 role="heading" aria-level="2">Join us</h2>
+                    <p class="covid-btn-heading">You can make a difference</p>
+                    <a href="" class="covid-btn">Help now</a>
                 </div>
             </div>
         </div>
