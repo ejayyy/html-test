@@ -42,22 +42,34 @@
     font-size: 20px;
     margin-top: 12px;
     margin-bottom: 0;
-    text-align: left!important;
+    text-align: left;
     letter-spacing: -0.035em;
 }
 .heading {
     color:#006499;
     font-weight: 600;
 }
-.heading h2 {
+h2.heading {
     font-size: 40px;
     letter-spacing: -0.035em;
 }
-#vertical_line{
-    height: 40px;
-    border-right: 2px solid #949494;
-    width: 50%;
+#covid-mid-banner{
     margin-bottom: 100px;
+    max-width: 1400px;
+    padding: 75px 0;
+}
+#covid-mid-banner img{
+    width: 34%;
+}
+#covid-mid-banner h2{
+    color: #fff;
+    margin-top: 30px;
+}
+#covid-mid-banner p{
+    color: #fff;
+    width: 40%;
+    margin: 20px auto 0 auto;
+    text-align: center;
 }
 #covid-last-section {
     padding: 50px 0;
@@ -92,9 +104,22 @@
     border-right: 1px solid #fff;
     padding: 50px 0px;
 }
+@media only screen and (max-width: 1370px){
+    #covid-mid-banner p{
+        width: 42%;
+    }
+}
+@media only screen and (max-width: 1210px){
+    #covid-mid-banner p{
+        width: 47%;
+    }
+}
 @media only screen and (max-width: 1024px){
     #subheading-state {
         width: 60%;
+    }
+    #covid-mid-banner p{
+        width: 58%;
     }
 }
 @media only screen and (max-width: 777px){
@@ -111,8 +136,11 @@
     #how-protect div:not(:last-of-type) {
         margin-bottom: 75px;
     }
-    #vertical_line{
+    #covid-mid-banner{
         margin-bottom: 50px;
+    }
+    #covid-mid-banner p {
+        width: 82%;
     }
     #divide_line{
         border-right: none;
@@ -122,6 +150,15 @@
     }
     #covid-banner {
         content: url("https://cdn.shopify.com/s/files/1/0808/0067/files/mainbanner_covid_19_whole_mobile_1.jpg?v=1585855752");
+    }
+}
+@media only screen and (max-width: 541px){
+    #covid-mid-banner img {
+        width: 54%;
+    }
+    #covid-mid-banner p {
+        width: 100%;
+        padding: 0 20px;
     }
 }
 </style>
@@ -162,7 +199,13 @@
             </div>
         </div>
     </div>
-    <div id="vertical_line"></div>
+</section>
+<section>
+    <div id="covid-mid-banner" class="container covid-bottom-bg covid-p">
+        <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/logos.png?v=1586193447" alt="Spigen | DirectRelief">
+        <h2 class="heading">100% Proceeds for Covid-19 Relief</h2>
+        <p>We’re partnering with Direct Relief to aid healthcare workers with medical resources globally. Join us in bringing relief to brave workers fighting on the front lines. Let’s make a difference together.</p>
+    </div>
 </section>
 <section>
     <div class="container covid-p">
@@ -171,14 +214,14 @@
                 <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/giving_it_all_lifeshot.jpg?v=1585700440" alt="Holding together a bunch of people" />
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 my-auto order-last p-20">
-                <h2 class="heading" role="heading" aria-level="2">Giving it all</h2>
-                <p>Starting on April 9th to May 31st, we are donating all our proceeds from www.spigen.com. Be a part of our efforts in donating $50,000 to Direct Relief, a charity that aids healthcare workers with medical resources both at home and abroad.  </p>
+                <h2 class="heading" role="heading" aria-level="2">Giving with purpose</h2>
+                <p>You are a part of this movement. Each purchase made will go towards providing materials and supplies to those leading the battle against Covid-19. All proceeds of each item ordered through Spigen Branded Webstores from April 9th to the 30th will go directly towards purchasing and distributing equipment to medical personnel, primarily in hospitals and urgent care centers.</p>
             </div>
         </div>
         <div class="row pb-md-100 pb-50">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 my-auto order-last order-lg-first p-20">
                 <h2 class="heading" role="heading" aria-level="2">Join Direct Relief</h2>
-                <p>We want to do our part to protect those fighting in the front lines. Our partnership with Direct Relief allows us to directly help our healthcare heroes as they work tirelessly to protect us. Shoutout to all the HCWs out there!</p>
+                <p>Healthcare workers are on the front lines, often with minimal protective gear to keep themselves safe. Our partnership allows us to directly help our healthcare heroes as they work tirelessly to protect us. We’ve set a goal to reach $50,000 in donations to support relief efforts for Covid-19. So join us and together we will make a difference.</p>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 order-first order-lg-last">
                 <img src="https://cdn.shopify.com/s/files/1/0808/0067/files/direct_relief_lifeshot.jpg?v=1585700441" alt="A surgeon stare at left side" /></div>
@@ -192,12 +235,12 @@
                 <div id="divide_line" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <h2 role="heading" aria-level="2">What is Direct Relief?</h2>
                     <p class="covid-btn-heading">See how they’re changing lives.</p>
-                    <a href="" class="covid-btn">Learn more</a>
+                    <a href="https://www.directrelief.org/emergency/coronavirus-outbreak/" class="covid-btn">Learn more</a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 my-auto">
-                    <h2 role="heading" aria-level="2">Join us</h2>
-                    <p class="covid-btn-heading">You can make a difference</p>
-                    <a href="" class="covid-btn">Help now</a>
+                    <h2 role="heading" aria-level="2">Questions or thoughts?</h2>
+                    <p class="covid-btn-heading">Connect and share your thoughts.</p>
+                    <a href="https://support.spigen.com/portal/newticket" class="covid-btn">Contact us</a>
                 </div>
             </div>
         </div>
