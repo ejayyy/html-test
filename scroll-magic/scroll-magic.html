@@ -1,0 +1,181 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        html body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        #video-container {
+            position: relative;
+        }
+
+        #pin1 {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        #filter {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            opacity: 0.5;
+        }
+
+        .text-container {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-weight: 900;
+            font-size: xx-large;
+        }
+
+        .container {
+            opacity: 0;
+            -webkit-transition: opacity .5s ease-in;
+            -moz-transition: opacity .5s ease-in;
+            -ms-transition: opacity .5s ease-in;
+            -o-transition: opacity .5s ease-in;
+            transition: opacity .5s ease-in;
+        }
+
+        .container.visible {
+            opacity: 1;
+        }
+
+        .testimonial-container {
+            background-color: blueviolet;
+        }
+
+        .testimonial-container article {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: large;
+        }
+
+        #footer {
+            background-color: aliceblue;
+            height: 1000px;
+        }
+    </style>
+    <title>Scroll Magic</title>
+</head>
+
+<body>
+    <section id="trigger1">
+        <div id="video-container">
+            <div id="filter"></div>
+            <video id="pin1" autoplay loop muted>
+                <source src="resource/ofood.mp4" type="video/webm">
+            </video>
+        </div>
+    </section>
+    <section>
+        <article id="title1" class="container">
+            <div class="text-container">
+                <h1>Rooted in Fermentation</h1>
+                <h1>Fueled by Tradition</h1>
+            </div>
+        </article>
+        <article id="title2" class="container">
+            <div class="text-container">
+                <h3>Tradition meets perfection.</h3>
+            </div>
+        </article>
+        <article id="title3" class="container">
+            <div class="text-container testimonial-container">
+                <article>
+                    <h3>WE ARE INDUSTRY LEADERS</h3>
+                    <p>
+                        in sharing the dynamic flavors of Korean food,<br>
+                        while maintaining integrity through quality ingredients<br>
+                        and offering both traditional and inventive products<br>
+                        that are Vegan, Gluten-Free, Organic and Non-GMO.
+                    </p>
+                </article>
+            </div>
+        </article>
+    </section>
+    <section id="footer"></section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+    integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"
+    integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.velocity.min.js"
+    integrity="sha512-ulK7pbTIY9j6WjPyRImdSqhubR5JN+KRrpCCSalyjqImnZeloOHjVLuMVux4QHte+dtApVNFJDYO4FTCvLa8yA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
+    integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    var controller = new ScrollMagic.Controller();
+    document.addEventListener("DOMContentLoaded", function () {
+        var background = new ScrollMagic.Scene({
+            triggerElement: "#trigger1",
+            triggerHook: "onLeave",
+        })
+            .setPin("#trigger1")
+            .addIndicators({ name: "1" })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#title1",
+            offset: 100,
+            duration: 300,
+        })
+            .setPin("#title1")
+            .setClassToggle("#title1", "visible")
+            .addIndicators({ name: "2" })
+            // .setTween("#title1 .text-container", { top: '50%' })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#title2",
+            offset: 100,
+            duration: 200,
+        })
+            .setPin("#title2")
+            .setClassToggle("#title2", "visible")
+            .addIndicators({ name: "3" })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#title3",
+            offset: 100,
+            duration: 100,
+        })
+            .setPin("#title3")
+            .setClassToggle("#title3", "visible")
+            .addIndicators({ name: "4" })
+            .addTo(controller);
+
+        // new ScrollMagic.Scene({
+        //     triggerElement: "#trigger2",
+        //     offset: 100,
+        // })
+        //     .addIndicators({ name: "5" })
+        //     .addTo(controller)
+        //     .on("enter", function (e) {
+        //         background.removePin();
+        //     });;
+    });
+</script>
+
+</html>
