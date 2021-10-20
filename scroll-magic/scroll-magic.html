@@ -11,7 +11,6 @@
         }
 
         #background {
-            background-color: blueviolet;
             z-index: -1;
         }
 
@@ -33,16 +32,20 @@
 
         .text-container {
             width: 100%;
-            height: 100vh;
+            height: 80vh;
             text-align: center;
             color: #fff;
             font-weight: 900;
             font-size: xx-large;
         }
 
+        #fade-in {
+            opacity: 0;
+        }
+
         .testimonial-container {
             position: relative;
-            background-color: blueviolet;
+            background-color: #000;
         }
 
         .testimonial-container article {
@@ -75,11 +78,11 @@
             <h1>Rooted in Fermentation</h1>
             <h1>Fueled by Tradition</h1>
         </article>
-        <article class="text-container">
+        <article id="last-sentence" class="text-container">
             <h3>Tradition meets perfection.</h3>
         </article>
     </section>
-    <section class="text-container testimonial-container">
+    <section id="fade-in" class="text-container testimonial-container">
         <article>
             <h3>WE ARE INDUSTRY LEADERS</h3>
             <p>
@@ -120,6 +123,24 @@
         })
             .setPin("#background")
             .addIndicators({ name: "1" })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#last-sentence",
+            offset: 300,
+            duration: '80%'
+        })
+            .setTween(TweenMax.to("#last-sentence", 0.5, { backgroundColor: "#000" }))
+            .addIndicators({ name: "2" })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#last-sentence",
+            offset: 300,
+            duration: '80%'
+        })
+            .setTween(TweenMax.to("#fade-in", 0.5, { opacity: 1 }))
+            .addIndicators({ name: "3" })
             .addTo(controller);
     });
 </script>
