@@ -34,6 +34,25 @@
             opacity: 0.5;
         }
 
+        #fixed-text {
+            position: absolute;
+            top: 0;
+            transform: translateY(50%);
+            z-index: 1;
+        }
+
+        #last-section {
+            position: relative;
+            height: 100%;
+        }
+
+        #last-sentence {
+            position: absolute;
+            top: 0;
+            transform: translateY(50%);
+            margin-top: 7em;
+        }
+
         .text-container {
             width: 100%;
             height: 80vh;
@@ -76,12 +95,12 @@
                 <source src="sample.mp4" type="video/webm">
             </video>
         </div>
-    </section>
-    <section id="last-section">
-        <article class="text-container">
+        <article id="fixed-text" class="text-container">
             <h1>Rooted in Fermentation</h1>
             <h1>Fueled by Tradition</h1>
         </article>
+    </section>
+    <section id="last-section">
         <article id="last-sentence" class="text-container">
             <h3>Tradition meets perfection.</h3>
         </article>
@@ -95,7 +114,6 @@
                 and offering both traditional and inventive products<br>
                 that are Vegan, Gluten-Free, Organic and Non-GMO.
             </p>
-        </article>
         </article>
     </section>
     <footer id="footer">
@@ -130,6 +148,14 @@
         })
             .setPin("#background", { pushFollowers: false })
             .addIndicators({ name: "1" })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: "#last-section",
+            duration: '80%'
+        })
+            .setTween(TweenMax.to("#fixed-text", 0.5, { transform: "translateY(-50%)" }))
+            .addIndicators({ name: "a" })
             .addTo(controller);
 
         new ScrollMagic.Scene({
