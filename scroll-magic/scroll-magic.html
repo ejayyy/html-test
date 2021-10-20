@@ -10,6 +10,10 @@
             margin: 0;
         }
 
+        h1 {
+            margin: 0;
+        }
+
         #background {
             z-index: -1;
         }
@@ -56,7 +60,7 @@
             font-size: large;
         }
 
-        #footer {
+        footer {
             background-color: aliceblue;
             height: 300px;
         }
@@ -73,7 +77,7 @@
             </video>
         </div>
     </section>
-    <section>
+    <section id="last-section">
         <article class="text-container">
             <h1>Rooted in Fermentation</h1>
             <h1>Fueled by Tradition</h1>
@@ -94,8 +98,11 @@
         </article>
         </article>
     </section>
-    <footer id="footer" class="testimonial-container">
+    <footer id="footer">
         <h1>FOOTER</h1>
+    </footer>
+    <footer id="footer2">
+        <h1>FOOTER2</h1>
     </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
@@ -117,11 +124,11 @@
 <script>
     var controller = new ScrollMagic.Controller();
     document.addEventListener("DOMContentLoaded", function () {
-        new ScrollMagic.Scene({
+        var background = new ScrollMagic.Scene({
             triggerElement: "#background",
             triggerHook: "onLeave",
         })
-            .setPin("#background")
+            .setPin("#background", { pushFollowers: false })
             .addIndicators({ name: "1" })
             .addTo(controller);
 
@@ -130,7 +137,7 @@
             offset: 300,
             duration: '80%'
         })
-            .setTween(TweenMax.to("#last-sentence", 0.5, { backgroundColor: "#000" }))
+            .setTween(TweenMax.to("#last-section", 0.5, { backgroundColor: "#000" }))
             .addIndicators({ name: "2" })
             .addTo(controller);
 
@@ -141,6 +148,19 @@
         })
             .setTween(TweenMax.to("#fade-in", 0.5, { opacity: 1 }))
             .addIndicators({ name: "3" })
+            .addTo(controller);
+
+        new ScrollMagic.Scene({
+            triggerElement: '#footer',
+            duration: 200
+        })
+            .on("start", function () {
+                background.setPin("#background", { pushFollowers: false })
+            })
+            .on("end", function () {
+                background.removePin();
+            })
+            .addIndicators({ name: "4" })
             .addTo(controller);
     });
 </script>
