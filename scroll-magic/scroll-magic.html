@@ -14,30 +14,26 @@
             margin: 0;
         }
 
-        #background {
-            z-index: -1;
-        }
-
         #video-container video {
+            position: fixed;
             width: 100%;
             height: 100vh;
             object-fit: cover;
+            z-index: -1;
         }
 
         #filter {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
             background: #000;
             opacity: 0.5;
         }
 
         #fixed-text {
             position: absolute;
-            top: 0;
-            transform: translateY(50%);
+            top: 50%;
+            transform: translateY(-50%);
             z-index: 1;
         }
 
@@ -48,14 +44,11 @@
 
         #last-sentence {
             position: absolute;
-            top: 0;
-            transform: translateY(50%);
-            margin-top: 7em;
+            top: 100%;
         }
 
         .text-container {
             width: 100%;
-            height: 80vh;
             text-align: center;
             color: #fff;
             font-weight: 900;
@@ -63,7 +56,7 @@
         }
 
         #fade-in {
-            opacity: 0;
+            /* opacity: 0; */
         }
 
         .testimonial-container {
@@ -88,24 +81,23 @@
 </head>
 
 <body>
-    <section id="background">
-        <div id="video-container">
-            <div id="filter"></div>
-            <video autoplay loop muted>
-                <source src="sample.mp4" type="video/webm">
-            </video>
-        </div>
-        <article id="fixed-text" class="text-container">
-            <h1>Rooted in Fermentation</h1>
-            <h1>Fueled by Tradition</h1>
-        </article>
-    </section>
+    <div id="video-container">
+        <div id="filter"></div>
+        <video autoplay loop muted>
+            <source src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/ofood.mp4?v=1634779180"
+                type="video/webm">
+        </video>
+    </div>
+    <article id="fixed-text" class="text-container">
+        <h1>Rooted in Fermentation</h1>
+        <h1>Fueled by Tradition</h1>
+    </article>
     <section id="last-section">
         <article id="last-sentence" class="text-container">
             <h3>Tradition meets perfection.</h3>
         </article>
     </section>
-    <section id="fade-in" class="text-container testimonial-container">
+    <!-- <section id="fade-in" class="text-container testimonial-container">
         <article>
             <h3>WE ARE INDUSTRY LEADERS</h3>
             <p>
@@ -115,12 +107,9 @@
                 that are Vegan, Gluten-Free, Organic and Non-GMO.
             </p>
         </article>
-    </section>
+    </section> -->
     <footer id="footer">
         <h1>FOOTER</h1>
-    </footer>
-    <footer id="footer2">
-        <h1>FOOTER2</h1>
     </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
@@ -142,22 +131,14 @@
 <script>
     var controller = new ScrollMagic.Controller();
     document.addEventListener("DOMContentLoaded", function () {
-        var background = new ScrollMagic.Scene({
-            triggerElement: "#background",
-            triggerHook: "onLeave",
-        })
-            .setPin("#background", { pushFollowers: false })
-            .addIndicators({ name: "1" })
-            .addTo(controller);
-
         new ScrollMagic.Scene({
-            triggerElement: "#last-section",
+            triggerElement: "#last-sentence",
             duration: '80%'
         })
-            .setTween(TweenMax.to("#fixed-text", 0.5, { transform: "translateY(-50%)" }))
+            .setTween(TweenMax.to("#fixed-text", 0.5, { transform: "translateY(-100%)" }))
             .addIndicators({ name: "a" })
             .addTo(controller);
-
+/*
         new ScrollMagic.Scene({
             triggerElement: "#last-sentence",
             offset: 300,
@@ -170,12 +151,12 @@
         new ScrollMagic.Scene({
             triggerElement: "#last-sentence",
             offset: 300,
-            duration: '80%'
+            duration: '100%'
         })
-            .setTween(TweenMax.to("#fade-in", 0.5, { opacity: 1 }))
+            .setTween(TweenMax.to("#fade-in", 0.5, { top: '-10%' }))
             .addIndicators({ name: "3" })
             .addTo(controller);
-
+/*
         new ScrollMagic.Scene({
             triggerElement: '#footer',
             duration: 200
@@ -187,7 +168,7 @@
                 background.removePin();
             })
             .addIndicators({ name: "4" })
-            .addTo(controller);
+            .addTo(controller);*/
     });
 </script>
 
