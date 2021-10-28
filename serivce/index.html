@@ -1,25 +1,162 @@
-<style>
-    html,
-    body {
-        margin: 0;
-    }
+<html lang="en">
 
-    .text-center {
-        text-align: center;
-    }
-</style>
-<article class="text-center">
-    <h3>FOOD SERVICE</h3>
-    <p>We See below for a selection of our Food Service items. We currently have distribution across the United States
-        and internationally. We also provide formulas and sizes of products.</p>
-</article>
-<article class="text-center">
-    <h3>INDUSTRIAL</h3>
-    <p>We supply a variety of products to the Industrial Channel. We also provide custom formulas and sizes of products.
-        See below for a selection of our Industrial items. We currently have distribution across the United States and
-        internationally.</p>
-</article>
-<article class="text-center">
-    <h4>For further details, specifications and quotations,<br />please email info@daesangamerica.com or<br />reach out
-        via the Contact Us page.</h4>
-</article>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Service</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .service-article {
+            margin: 2em auto;
+        }
+
+        .service-article h1 {
+            margin: 0 0 1em;
+        }
+
+        .service-article p {
+            margin: 0;
+        }
+
+        #service {
+            width: 31%;
+        }
+
+        #industry {
+            width: 40%;
+        }
+
+        .main-carousel {
+            width: 80%;
+            margin-left: auto;
+            padding: 0 0 3em;
+        }
+
+        .carousel-cell {
+            width: 23%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article id="service" class="service-article text-center">
+        <h1>FOOD SERVICE</h1>
+        <p>We See below for a selection of our Food Service items. We currently have distribution across the United
+            States
+            and internationally. We also provide formulas and sizes of products.</p>
+    </article>
+    <div class="main-carousel">
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+            <p>txt</p>
+        </div>
+    </div>
+    <article id="industry" class="service-article text-center">
+        <h1>INDUSTRIAL</h1>
+        <p>We supply a variety of products to the Industrial Channel. We also provide custom formulas and sizes of
+            products.
+            See below for a selection of our Industrial items. We currently have distribution across the United States
+            and
+            internationally.</p>
+    </article>
+    <div class="main-carousel">
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="resource.jpg">
+        </div>
+    </div>
+    <article class="text-center">
+        <h2>For further details, specifications and quotations,<br />please email info@daesangamerica.com or<br />reach
+            out
+            via the Contact Us page.</h2>
+    </article>
+</body>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+    document.querySelectorAll('.main-carousel').forEach(x => {
+        new Flickity(x, {
+            cellAlign: 'left',
+            contain: true,
+            lazyLoad: true,
+            pageDots: false
+        })
+    })
+</script>
+
+</html>
