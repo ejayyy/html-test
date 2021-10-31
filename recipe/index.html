@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Recipe</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <style>
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-        }
-
         figure {
             margin: 0;
         }
@@ -26,14 +21,19 @@
             text-align: center;
         }
 
+        #title-section h2 {
+            font-size: calc(2rem*var(---font-adjust-heading));
+            font-weight: 600;
+        }
+
         #title-section input {
-            background: url(resource.jpg) no-repeat scroll 26px 6px;
+            background: url(https://cdn.shopify.com/s/files/1/0602/9928/0598/files/icon_search.png?v=1634930057) no-repeat scroll 25px 15px;
             background-size: 4%;
             padding-left: 52px;
             border: #bdbdbd solid 2px;
-            height: 40px;
+            height: 53px;
             width: 26%;
-            border-radius: 30px;
+            border-radius: 50px;
         }
 
         .recipe-container {
@@ -48,9 +48,9 @@
         }
 
         .recipe-container figcaption {
-            padding-top: 1em;
-            font-size: 20px;
-            font-weight: 900;
+            font-size: 16px;
+            font-weight: 600;
+            width: 80%
         }
 
         .horizontal-container {
@@ -63,41 +63,32 @@
             padding-top: 0;
         }
     </style>
-</head>
-
-<body>
     <section id="title-section">
-        <h1>WHAT RECIPE ARE YOU LOOKING FOR?</h1>
-        <input type="text" />
+        <h2>What Recipe Are You Looking For?</h2>
+        <input type="text" placeholder="Search keywords" />
     </section>
     <section class="recipe-container">
-        <figure>
-            <img src="resource.jpg" />
+        <figure><img
+                src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_recipe_tofu_kimchi.jpg?v=1634929085" />
             <figcaption>Tofu with Stir-Fried Kimchi</figcaption>
         </figure>
-        <figure>
-            <img src="resource.jpg" />
+        <figure><img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_recipe_japchae.jpg?v=1634929085" />
             <figcaption>Japchae - Stir Fried Korean Glass Noodles</figcaption>
         </figure>
-        <figure>
-            <img src="resource.jpg" />
+        <figure><img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/kburger.jpg?v=1635382792" />
             <figcaption>K-Burger with Kimchi and Tofu</figcaption>
         </figure>
     </section>
-    <section class="horizontal-container recipe-container">
-        <img src="resource.jpg" />
-        <div>
-            <figcaption>Tteokbokki – Spicy Stir Fried Rice Cakes</figcaption>
-            <p>descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription
-            </p>
-        </div>
-    </section>
     <section class="recipe-container">
-        <figure>
-            <img src="resource.jpg" />
-            <figcaption>Sundubu Kimchi Salad - Soft Tofu Sala with Kimchi</figcaption>
+        <figure><img
+                src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_recipe_spicy_rice_cake.jpg?v=1634929085" />
+            <figcaption>Tteokbokki – Spicy Stir Fried Rice Cakes</figcaption>
+        </figure>
+        <figure><img
+                src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_recipe_soft_tofu.jpg?v=1634929085" />
+            <figcaption>Sundubu Kimchi Salad - Soft Tofu Salad with Kimchi</figcaption>
         </figure>
     </section>
-</body>
+    </body>
 
 </html>
