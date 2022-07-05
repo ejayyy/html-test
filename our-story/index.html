@@ -1,4 +1,4 @@
-<link href="../general.css" rel="stylesheet" type="text/css"/>
+<link href="../general.css" rel="stylesheet" type="text/css" />
 <style>
     #our-story-page #section1 {
         position: relative;
@@ -22,14 +22,9 @@
         background-color: lightgray;
     }
 
-    #our-story-page #section3 .values-div {
-        width: 60%;
-        margin: auto;
-    }
-
     .values-div div {
         display: inline-block;
-        width: 49%;
+        width: 33%;
         margin: 3% 0;
     }
 
@@ -37,18 +32,13 @@
         height: 3.4rem;
     }
 
-    #section4 div {
-        display: inline-block;
-        width: 35%;
-        vertical-align: middle;
-    }
-
-    #section4 img {
-        width: 100%;
+    #our-story-page #section5-div {
+        width: 60%;
     }
 
     #our-story-page .border-div {
-        width: 60%;
+        position: relative;
+        width: 80%;
         text-align: center;
         padding: 3%;
         margin: 3.5% auto;
@@ -61,8 +51,51 @@
         justify-content: space-between;
     }
 
-    #our-story-page .history-div img {
-        margin-bottom: 100px;
+    #our-story-page .guide-line {
+        padding: 3em 5%;
+    }
+
+    #our-story-page .line {
+        background: #000;
+        height: 1px;
+        position: relative;
+    }
+
+    #our-story-page .circle {
+        position: absolute;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        height: 0.5em;
+        width: 0.5em;
+        border-radius: 50%;
+        background: #000;
+    }
+
+    #our-story-page .line::before,
+    #our-story-page .line::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        content: '';
+        height: 0.5em;
+        width: 0.5em;
+        border-radius: 50%;
+        background: #000;
+    }
+
+    #our-story-page .line::after {
+        left: auto;
+        right: 0;
+    }
+
+    #our-story-page #section6 div {
+        margin: 2em 0.7em;
+    }
+
+    #our-story-page #section6 img {
+        height: 60px;
+        margin-bottom: 1em;
     }
 </style>
 <div id="our-story-page">
@@ -73,68 +106,66 @@
         </div>
     </section>
     <section>
-        <h3 class="text-center">We are the industry leaders in sharing<br>
-            the dynamic flavors of Korea food,<br>
-            through offering products that are<br>Vegan, Gluten-Free, and Non-GMO.</h3>
+        <h3 class="text-center">We are the industry leaders in sharing<br>the dynamic flavors of Korea food,<br>through offering products that are<br>Vegan, Gluten-Free, and Non-GMO.</h3>
     </section>
     <section class="text-center" id="section3">
         <h2>Our Values</h2>
         <div class="values-div">
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <p>AUTHENTIC</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <p>FUN</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <p>HONESTY</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <p>TRUST</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <p>EXPERT</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <p>HONESTY</p>
             </div>
         </div>
     </section>
-    <section class="text-center" id="section4">
-        <div class="text-left">
+    <section class="stack-div">
+        <div>
             <h2>Food Technology</h2>
             <p>We are the industry leaders in sharing the dynamic flavors of Korea food, through offering products that are Vegan, Gluten-Free, and Non-GMO.</p>
         </div>
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-        </div>
+        <img class="order-1" src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
     </section>
     <section class="text-center">
         <h2>History</h2>
         <p>The Better Tasting LifeThe Better Tasting LifeThe Better Tasting Life</p>
-        <div class="border-div history-div">
-            <div>
+        <div id="section5-div" class="border-div">
+            <div class="history-div">
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
+                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
+                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
+            </div>
+            <div class="guide-line">
+                <div class="circle"></div>
+                <div class="line"></div>
+            </div>
+            <div class="history-div">
                 <div>
                     <h5>1996</h5>
                     <p>청정원 탄생</p>
                 </div>
-            </div>
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <div>
                     <h5>2008</h5>
                     <p>청정원 BI 리뉴얼</p>
                 </div>
-            </div>
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
                 <div>
                     <h5>2014</h5>
                     <p>새로워진 청정원</p>
@@ -145,23 +176,23 @@
     <section class="text-center">
         <h2>Our Sub-Brands</h2>
         <p>O'Food has several sister and sub-brands with niche objectives in different categories, all of which are suitable to accommodate your needs.</p>
-        <div class="border-div values-div" id="section6-div">
-            <div class="text-center">
+        <div class="border-div stack-div" id="section6">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/logo_jongga.png?v=1634930567">
                 <h4>JONGGA</h4>
                 <p>The uncontested No. 1 Kimchi brand in Korea. Now available worldwide, including the U.S. in Costco, Walmart, and more!</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/hongcho.png?v=1652726639">
                 <h4>HONGCHO</h4>
                 <p>Tangy, sweet, refreshing! Hongcho is the leading brand widely renowned for its tasty & healthy drinking vinegar products.</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/sounchang.png?v=1652726639">
                 <h4>SUNCHANG</h4>
                 <p>The city where it all began. Sunchang is a premium brand known for its traditional fermentation methods and quality taste.</p>
             </div>
-            <div class="text-center">
+            <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/anjuya.png?v=1652726639">
                 <h4>ANJUYA</h4>
                 <p>The kind of food that makes you crave a beer! Anjuya is a frozen meal brand with a wide range of ready-to-eat dishes.</p>
