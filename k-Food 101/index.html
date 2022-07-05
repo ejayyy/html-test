@@ -1,15 +1,22 @@
 <link href="../general.css" rel="stylesheet" type="text/css" />
 <style>
     #k-food-101-page #section1 .title-container {
-        padding-top: 8%;
+        padding-top: var(--margin);
     }
 
     #k-food-101-page .last-section {
-        padding-bottom: 8%;
+        padding-bottom: var(--margin);
     }
 
     #k-food-101-page #section2 {
-        padding: 8% 0;
+        padding: var(--margin) 0;
+        color: #fff;
+        background-color: #000;
+    }
+
+    #k-food-101-page #section2 h1,
+    #k-food-101-page #section2 h2 {
+        color: #fff;
     }
 
     #k-food-101-page #section1 {
@@ -20,7 +27,6 @@
         display: inline-block;
         font-size: 2rem;
         font-weight: 900;
-        margin: 0;
         padding: 0 7% 1.2%;
         border-bottom: 3px solid #dedede;
     }
@@ -28,42 +34,30 @@
     #k-food-101-page #section1 .subtitle {
         font-size: 3rem;
         font-weight: 900;
-        margin: 0;
     }
 
-    #k-food-101-page #section1 .korean {
-        color: #5a5a5a;
-        margin: 2rem 0 1rem;
+    #k-food-101-page #section2 section div {
+        margin: 3em 0;
     }
 
-    #k-food-101-page #section1 video {
-        margin-top: 3rem;
+    #k-food-101-page #section2 section div:last-of-type {
+        margin-bottom: 0;
     }
 
-    #k-food-101-page #section2 {
-        color: #fff;
-        background-color: #000;
+    @media only screen and (min-width: 768px) {
+        #k-food-101-page .article-text {
+            padding: 0 3em;
+        }
     }
 
-    #k-food-101-page #section2 h1,
-    #k-food-101-page #section2 h2 {
-        color: #fff;
-    }
-
-    #k-food-101-page .article-text {
-        text-align: left;
-        padding: 2% 0;
-    }
-
-    #k-food-101-page .half-div div {
-        display: inline-block;
-        width: 49%;
-        vertical-align: middle;
+    @media only screen and (max-width: 767px) {
+        #k-food-101-page .article-text br {
+            display: none;
+        }
     }
 
     #k-food-101-page .circle-div div {
-        display: inline-block;
-        margin: 0 2%;
+        margin: 2em;
     }
 
     #k-food-101-page .circle-div img {
@@ -73,58 +67,48 @@
     }
 
     #k-food-101-page #section4 div {
-        position: relative;
         background-color: #e6e6e6;
         padding: 5% 2%;
-        margin: 0 auto;
     }
 
     #k-food-101-page #section4 h1 {
         font-size: 3rem;
-        margin: 0;
     }
 </style>
 <div id="k-food-101-page">
     <div id="section1">
         <section class="title-container text-center">
             <h3>K-FOOD 101</h3>
-            <h1 class="subtitle korean">고추장</h1>
             <h1 class="subtitle">Gochujang</h1>
         </section>
         <section>
             <video controls loop muted preload="auto" width="100%">
-                <source src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/ofood.mp4?v=1634779180"
-                    type="video/mp4">
+                <source src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/ofood.mp4?v=1634779180" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
-        <section class="half-div">
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-            </div>
-            <div class="article2-text">
+        <section class="stack-div">
+            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
+            <div class="article-text">
                 <h2>Gochujang</h2>
-                <p>or red chili pepper paste, is a thick,<br>crimson-red paste widely used in<br>
-                    Korean cuisine. O'Food Gochujang is<br>freshly made from all-natural brown<br>
-                    rice, red chili peppers, sea salt and more<br>for a smooth texture & rich flavor.</p>
+                <p>or red chili pepper paste, is a thick, <br>crimson-red paste widely used in <br>
+                    Korean cuisine. O'Food Gochujang is <br>freshly made from all-natural brown <br>
+                    rice, red chili peppers, sea salt and more <br>for a smooth texture & rich flavor.</p>
             </div>
         </section>
         <section class="text-center last-section">
             <h1>Health Benefits</h1>
-            <div class="circle-div">
+            <div class="stack-div circle-div">
                 <div>
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
+                    <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
                     <p>LOWERS<br>CHOLESTEROL</p>
                 </div>
                 <div>
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
+                    <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
                     <p>PROVIDES<br>ANTIOXIDANTS</p>
                 </div>
                 <div>
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
+                    <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
                     <p>HELPS MANAGE<br>DIABETES</p>
                 </div>
             </div>
@@ -133,52 +117,40 @@
     <div id="section2">
         <h1 class="text-center">Explore the taste</h1>
         <section>
-            <div class="half-div">
-                <div>
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-                </div>
+            <div class="stack-div">
+                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
                 <div class="article-text">
                     <h2>Gochujang</h2>
-                    <p>or red chili pepper paste, is a thick,<br>crimson-red paste widely used in<br>
-                        Korean cuisine. O'Food Gochujang is<br>freshly made from all-natural brown<br>
-                        rice, red chili peppers, sea salt and more<br>for a smooth texture & rich flavor.</p>
+                    <p>or red chili pepper paste, is a thick, <br>crimson-red paste widely used in <br>
+                        Korean cuisine. O'Food Gochujang is <br>freshly made from all-natural brown <br>
+                        rice, red chili peppers, sea salt and more <br>for a smooth texture & rich flavor.</p>
                 </div>
             </div>
-            <div class="half-div">
+            <div class="stack-div">
                 <div class="article-text">
                     <h2>Gochujang</h2>
-                    <p>or red chili pepper paste, is a thick,<br>crimson-red paste widely used in<br>
-                        Korean cuisine. O'Food Gochujang is<br>freshly made from all-natural brown<br>
-                        rice, red chili peppers, sea salt and more<br>for a smooth texture & rich flavor.</p>
+                    <p>or red chili pepper paste, is a thick, <br>crimson-red paste widely used in <br>
+                        Korean cuisine. O'Food Gochujang is <br>freshly made from all-natural brown <br>
+                        rice, red chili peppers, sea salt and more <br>for a smooth texture & rich flavor.</p>
                 </div>
-                <div>
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-                </div>
+                <img class="order-1"
+                    src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
             </div>
-            <div class="half-div">
-                <div>
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-                </div>
+            <div class="stack-div">
+                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
                 <div class="article-text">
                     <h2>Gochujang</h2>
-                    <p>or red chili pepper paste, is a thick,<br>crimson-red paste widely used in<br>
-                        Korean cuisine. O'Food Gochujang is<br>freshly made from all-natural brown<br>
-                        rice, red chili peppers, sea salt and more<br>for a smooth texture & rich flavor.</p>
+                    <p>or red chili pepper paste, is a thick, <br>crimson-red paste widely used in <br>Korean cuisine. O'Food Gochujang is <br>freshly made from all-natural brown <br>rice, red chili peppers, sea salt and more <br>for a smooth texture & rich flavor.</p>
                 </div>
             </div>
         </section>
     </div>
     <section></section>
-    <section id="section3" class="half-div">
-        <div>
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-        </div>
+    <section class="stack-div">
+        <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
         <div class="article-text text-left">
-            <h1>DID YOU<br>KNOW?</h1>
-            <p>O'Food's gochujang is<br>mixed through loud music<br>to allow for a better blend<br>on a molecular level.
+            <h1>DID YOU <br>KNOW?</h1>
+            <p>O'Food's gochujang is <br>mixed through loud music <br>to allow for a better blend <br>on a molecular level.
             </p>
         </div>
     </section>
