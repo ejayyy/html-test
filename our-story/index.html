@@ -44,49 +44,24 @@
         margin: 3.5% auto;
         border: 2px solid #bababa;
         border-radius: 1em;
+        justify-content: space-between;
     }
 
     #our-story-page .history-div {
         display: flex;
         justify-content: space-between;
+        margin-top: 3em;
     }
 
-    #our-story-page .guide-line {
-        padding: 3em 5%;
+    #our-story-page .section2-heading,
+    #our-story-page .history-div h5 {
+        font-weight: 600;
+        margin: 0;
     }
 
-    #our-story-page .line {
-        background: #000;
-        height: 1px;
-        position: relative;
-    }
-
-    #our-story-page .circle {
-        position: absolute;
-        left: 49%;
-        transform: translate(-50%, -50%);
-        height: 0.5em;
-        width: 0.5em;
-        border-radius: 50%;
-        background: #000;
-    }
-
-    #our-story-page .line::before,
-    #our-story-page .line::after {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        content: '';
-        height: 0.5em;
-        width: 0.5em;
-        border-radius: 50%;
-        background: #000;
-    }
-
-    #our-story-page .line::after {
-        left: auto;
-        right: 0;
+    #our-story-page .history-div img,
+    #our-story-page .history-div svg {
+        height: 150px;
     }
 
     #our-story-page #section6 div {
@@ -94,22 +69,21 @@
     }
 
     #our-story-page #section6 img {
-        height: 60px;
+        width: 15%;
         margin-bottom: 1em;
     }
 </style>
 <div id="our-story-page">
     <section id="section1">
         <div class="banner-center-text text-center">
-            <h1>The Better Tasting Life</h1>
-            <p>The Better Tasting Life. The Better Tasting Life.</p>
+            <h2 class="section__heading">The Better Tasting Life</h2>
         </div>
     </section>
     <section>
-        <h3 class="text-center">We are the industry leaders in sharing<br>the dynamic flavors of Korea food,<br>through offering products that are<br>Vegan, Gluten-Free, and Non-GMO.</h3>
+        <h3 class="section2-heading text-center">We are the industry leaders in sharing<br>the dynamic flavors of Korea food,<br>through offering products that are<br>Vegan, Gluten-Free, and Non-GMO.</h3>
     </section>
     <section class="text-center" id="section3">
-        <h2>Our Values</h2>
+        <h2 class="section__heading">Our Values</h2>
         <div class="values-div">
             <div>
                 <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
@@ -139,64 +113,45 @@
     </section>
     <section class="stack-div">
         <div>
-            <h2>Food Technology</h2>
-            <p>We are the industry leaders in sharing the dynamic flavors of Korea food, through offering products that are Vegan, Gluten-Free, and Non-GMO.</p>
+            <div class="article-text-container">
+                <h2>Food Technology</h2>
+                <p>We are the industry leaders in sharing the dynamic flavors of Korea food, through offering products that are Vegan, Gluten-Free, and Non-GMO.</p>
+            </div>
         </div>
         <img class="order-1" src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
     </section>
     <section class="text-center">
-        <h2>History</h2>
-        <p>The Better Tasting LifeThe Better Tasting LifeThe Better Tasting Life</p>
+        <h2 class="section__heading">History</h2>
         <div id="section5-div" class="border-div">
             <div class="history-div">
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/daesang_logo_new.png?v=1635211121">
-            </div>
-            <div class="guide-line">
-                <div class="circle"></div>
-                <div class="line"></div>
+                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/logo_ofood_old1.png?v=1657257283">
+                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/logo_ofood_old2.png?v=1657257283">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 114.47 169.6"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:#00b6d6;}.cls-3{fill:#231f20;}</style><linearGradient id="linear-gradient" x1="96.31" y1="11.01" x2="83.49" y2="83.71" gradientTransform="translate(.17 -.11) rotate(.11)" gradientUnits="userSpaceOnUse"><stop offset=".15" stop-color="#fff200"/><stop offset="1" stop-color="#00b6d6"/></linearGradient></defs><path class="cls-3" d="M14.06,149.54c1.78-2.88,3.31-5.95,4.65-9.12,1.32,3.18,2.85,6.25,4.62,9.14h4.03c-2.19-3.47-4.09-7.15-5.68-10.99h5.63v-3.3h-6.79v-4.07h-3.65v4.05h-6.81v3.3h5.7c-1.61,3.84-3.53,7.51-5.73,10.98h4.03Zm19.22,2.43h3.51l.04-19.68h-3.51l-.02,8.07h-5.41v3.3h5.4l-.02,8.32Zm53.16-5.77c4.48,0,7.57-2.8,7.58-7.19s-3.07-7.22-7.55-7.23-7.57,2.81-7.58,7.2,3.08,7.21,7.55,7.22Zm.02-11.23c2.45,0,4.12,1.59,4.12,4.03s-1.68,4.01-4.14,4.01-4.11-1.58-4.1-4.02,1.68-4.02,4.12-4.02Zm-19.58,17.06h3.53l.04-19.68h-3.53l-.02,8.07h-5.4v3.3h5.39l-.02,8.32Zm-19.59-2.42c2.03-3.3,3.75-6.84,5.21-10.51,1.45,3.68,3.15,7.23,5.17,10.53h4.09c-2.48-3.92-4.56-8.09-6.26-12.45h5.36v-3.26l-17.26-.03v3.27h5.91c-1.72,4.37-3.83,8.53-6.31,12.44h4.09Zm5.34,11.86c0,4.95,3.44,8.14,8.5,8.15s8.54-3.17,8.55-8.12c0-4.94-3.46-8.16-8.52-8.17s-8.52,3.19-8.53,8.13Zm13.48,.03c0,2.93-2.03,4.83-4.97,4.82s-4.94-1.91-4.94-4.84,2.03-4.81,4.96-4.81,4.96,1.9,4.95,4.83Zm27.27-9.64h6.88v6.7h3.51l.05-26.14h-3.53l-.03,16.15h-6.88v3.29Zm-65.89,1.42c-5.06,0-8.53,3.19-8.54,8.13s3.45,8.14,8.51,8.15,8.53-3.17,8.54-8.12-3.44-8.16-8.5-8.17Zm-.03,12.98c-2.93,0-4.95-1.91-4.94-4.84s2.03-4.81,4.96-4.81,4.94,1.9,4.93,4.83-2.02,4.83-4.95,4.82Zm56.62-2.94c2.75-4.63,5.02-9.57,6.78-14.75l-14.29-.03v3.29l9.23,.02c-1.1,3.02-3.11,7.01-5.87,11.46h4.16Zm8.7,1.87v-6.79h-3.53l-.02,10.1,14.8,.03v-3.32l-11.25-.02Z"/><g><path class="cls-2" d="M58.37,111.98l.06-32.24-1.29-.64c-9.09,1.51-18.53,.32-21.96-.73-5.12-9.7-9.01-27.34,3.09-37.23,12.6-10.3,30.89-9.11,43.26-8.98l16.95-16.9C88.43,5.24,74.47,.03,57.34,0,23.44-.07,.07,21.94,0,56.23c-.07,34.26,23.19,56.18,57.1,56.25,.16,0-.24,0,0,0l1.27-.5Z"/><path class="cls-1" d="M114.47,56.45c.03-16.98-6.11-31.41-15.98-41.21l-16.99,16.9h.04c1.91,10.69,4.03,23.66-1.94,33.17-3.79,6.03-9.82,11.55-22.46,13.78l-.05,33.37c33.61-.17,57.3-21.93,57.37-56.02Z"/></g></svg>
             </div>
             <div class="history-div">
                 <div>
                     <h5>1996</h5>
-                    <p>청정원 탄생</p>
+                    <p>Chung Jung One<br>launched in Korea</p>
                 </div>
                 <div>
                     <h5>2008</h5>
-                    <p>청정원 BI 리뉴얼</p>
+                    <p>Chung Jung One<br>Brand Renewal</p>
                 </div>
                 <div>
                     <h5>2014</h5>
-                    <p>새로워진 청정원</p>
+                    <p>Brand New O'Food</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="text-center">
-        <h2>Our Sub-Brands</h2>
+        <h2 class="section__heading">Our Sub-Brands</h2>
         <p>O'Food has several sister and sub-brands with niche objectives in different categories, all of which are suitable to accommodate your needs.</p>
         <div class="border-div stack-div" id="section6">
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/logo_jongga.png?v=1634930567">
-                <h4>JONGGA</h4>
-                <p>The uncontested No. 1 Kimchi brand in Korea. Now available worldwide, including the U.S. in Costco, Walmart, and more!</p>
-            </div>
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/hongcho.png?v=1652726639">
-                <h4>HONGCHO</h4>
-                <p>Tangy, sweet, refreshing! Hongcho is the leading brand widely renowned for its tasty & healthy drinking vinegar products.</p>
-            </div>
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/sounchang.png?v=1652726639">
-                <h4>SUNCHANG</h4>
-                <p>The city where it all began. Sunchang is a premium brand known for its traditional fermentation methods and quality taste.</p>
-            </div>
-            <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/anjuya.png?v=1652726639">
-                <h4>ANJUYA</h4>
-                <p>The kind of food that makes you crave a beer! Anjuya is a frozen meal brand with a wide range of ready-to-eat dishes.</p>
-            </div>
+            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/logo_jongga.png?v=1634930567">
+            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/hongcho.png?v=1652726639">
+            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/sounchang.png?v=1652726639">
+            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/anjuya.png?v=1652726639">
         </div>
     </section>
 </div>
