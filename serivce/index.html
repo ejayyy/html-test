@@ -10,17 +10,10 @@
 
     #service-industrial-page .banner-container {
         position: relative;
-        width: 100%;
-        height: 600px;
-        background-color: #eafefc;
     }
 
     #service-industrial-page #section1 p {
         margin: 5% 0;
-    }
-
-    #service-industrial-page #section1 a:hover {
-        color: #191245;
     }
 
     #service-industrial-page .banner-center-text {
@@ -76,10 +69,14 @@
 <div id="service-industrial-page">
     <section id="section1" class="text-center">
         <div class="banner-container">
-            <div class="banner-center-text">
+            <video loop muted preload="auto" autoplay width="100%">
+                <source src="https://cdn.shopify.com/videos/c/o/v/47520d570df54a979fbe06de6ae5e67b.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="banner-center-text text-light">
                 <h1 class="slide__heading main-heading">Welcome to Food Service<br>that can spice things up.</h1>
                 <p class="slide__text main-text">For authentic Korean food ingredients that are both delicious & affordable,<br>look no futher than our catalog that can perfectly suit your needs.</p>
-                <a role="button" href="https://ofood-usa.myshopify.com/pages/contact" target="_blank" class="btn btn--text btn--text-color">LET'S PARTNER!</a>
+                <a role="button" href="https://ofood-usa.myshopify.com/pages/contact" target="_blank" class="btn btn--text">LET'S PARTNER!</a>
             </div>
         </div>
     </section>
@@ -95,10 +92,10 @@
     <section>
         <h2 class="section__heading">Our Products</h2>
         <div class="stack-div section5-container">
-            <div>
+            <div class="popup-quick-view mfp-fade" data-button-quick-view>
                 <h3 class="banner-center-text">FOOD SERVICE</h3>
             </div>
-            <div>
+            <div class="popup-quick-view mfp-fade" data-button-quick-view>
                 <h3 class="banner-center-text">INDUSTRIAL</h3>
             </div>
         </div>
