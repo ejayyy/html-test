@@ -11,6 +11,10 @@
         position: relative;
     }
 
+    #service-industrial-page .banner-container video {
+        height: calc(100vh - var(--header-height) - var(--announcement-height));
+    }
+
     #service-industrial-page #section1 p {
         margin: 5% 0;
     }
@@ -20,6 +24,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    #service-industrial-page .banner-center-text h1 {
+        margin-top: 0;
     }
 
     #service-industrial-page .circle-div {
@@ -68,9 +76,9 @@
 <div id="service-industrial-page">
     <section id="section1" class="text-center">
         <div class="banner-container">
-            <video loop muted preload="auto" autoplay width="100%">
+            <video loop muted preload="auto" autoplay>
                 <source src="https://cdn.shopify.com/videos/c/o/v/47520d570df54a979fbe06de6ae5e67b.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <p class="alternative">Your browser does not support the video tag.</p>
             </video>
             <div class="banner-center-text text-light">
                 <h1 class="slide__heading main-heading">Welcome to Food Service<br>that can spice things up.</h1>
