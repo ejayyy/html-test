@@ -3,8 +3,23 @@
         padding-bottom: var(--margin);
     }
 
+    #k-food-101-page .gold-txt {
+        color: #cbb080;
+    }
+
+    #k-food-101-page .bg-img {
+        background-position: center center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        padding-bottom: 32%;
+    }
+
     #k-food-101-page .tab-banners-heading {
         margin-bottom: .5em;
+    }
+
+    #k-food-101-page .margin_twice {
+        margin: calc(var(--margin) * 1.5) 0;
     }
 
     #k-food-101-page .circle-div {
@@ -26,13 +41,31 @@
         margin: 0;
     }
 
+    #k-food-101-page .taste-text-container {
+        flex-basis: 46%;
+        flex-shrink: 0;
+    }
+
     #k-food-101-page .bg-gochujang {
         background-color: #3f1610;
+    }
+
+    #k-food-101-page .bg-gochujang-img {
+        background-image: url(https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_kfood_image_01.jpg?v=1658016966);
     }
     
     #k-food-101-page .bg-taste {
         background-color: #181818;
-        padding-top: var(--margin);
+    }
+
+    #k-food-101-page .taste-padding {
+        margin-top: 0;
+        margin-bottom: calc(var(--margin) * 1.5);
+        padding-top: calc(var(--margin) * 1.5);
+    }
+
+    #k-food-101-page .taste-padding h2 {
+        font-size: calc(2.7rem*var(--adjust-heading));
     }
 
     #k-food-101-page .bg-taste h2 {
@@ -42,42 +75,31 @@
     #k-food-101-page .bg-question {
         background-color: #c6584a;
     }
-
-    #shopify-section-template--16310260007126__1657053667493c7180 {
-        padding: 0 var(--width-gutter);
-        background-color: #000;
-    }
-
-    #FeaturedCollection--template--16310260007126__1657053667493c7180 {
-        background-color: #fff;
-    }
 </style>
 <div id="k-food-101-page" class="text-light">
     <section class="title-container text-center">
         <h2 class="k101__subheading">K-FOOD 101</h2>
-        <h1 class="k101__heading">Gochujang</h1>
+        <h1 class="k101__heading gold-txt">Gochujang</h1>
         <video loop muted preload="auto" autoplay width="100%">
             <source src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/ofood.mp4?v=1634779180" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
-    <section>
-        <h2 class="text__heading h2 text-center">Savory, Sweet & Spicy-this <br>Korean paste brings it all.</h2>
+    <section class="margin_twice">
+        <h2 class="text__heading h2 text-center gold-txt">Savory, Sweet & Spicy-this <br>Korean paste brings it all.</h2>
     </section>
     <section>
         <div class="stack-div bg-gochujang">
+            <div class="bg-img bg-gochujang-img"></div>
             <div>
-                <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_kfood_image_4.jpg?v=1657404579"/>
-            </div>
-            <div>
-                <div class="article-text-container">
-                    <h2>Gochujang</h2>
+                <div class="article-text-container gold-txt">
+                    <h2 class="gold-txt">Gochujang</h2>
                     <p>or red chili pepper paste, is a thick, <br>crimson-red paste widely used in <br>Korean cuisine. O'Food Gochujang is <br>freshly made from all-natural brown <br>rice, red chili peppers, sea salt and more <br>for a smooth texture & rich flavor.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="text-center">
+    <section class="text-center margin_twice">
         <h2 class="section__heading">Health Benefits</h2>
         <div class="stack-div circle-div">
             <div>
@@ -89,32 +111,32 @@
                 <p>PROVIDES<br>ANTIOXIDANTS</p>
             </div>
             <div>
-                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><style>.cls-1{fill:none;}.cls-2{fill:#cbb080;}</style></defs><g id="Layer_1-2"><rect id="_각형_2222-28" class="cls-1" width="60" height="60"/><rect class="cls-1" x="4" y="4" width="52" height="52"/><path class="cls-2" d="M30.02,55.74c-6.65,0-13.3-2.55-18.32-7.65l-.35-.35L51.51,7.58l.71,.71L12.76,47.74c9.61,9.36,25.04,9.35,34.63-.11,8.96-8.84,9.86-22.97,2.09-32.88l.79-.62c8.08,10.3,7.14,25.01-2.18,34.21-5.01,4.94-11.54,7.4-18.08,7.4Zm-20.52-10.15c-.3-.4-.59-.81-.87-1.22-6.12-9.12-5.78-21.13,.86-29.89,4.15-5.48,10.19-9.02,17-9.96,6.82-.94,13.59,.83,19.07,4.98l-.6,.8c-5.27-3.99-11.78-5.69-18.33-4.79-6.55,.9-12.35,4.31-16.34,9.58-6.38,8.42-6.71,19.97-.82,28.73,.27,.41,.55,.8,.84,1.18l-.8,.6Z"/><path class="cls-2" d="M29.49,42.47c-.07,0-.15-.01-.22-.03-.25-.08-.45-.28-.52-.53l-3.38-12.64c-.07-.28,.02-.57,.23-.77l9.56-8.46c.2-.17,.47-.23,.72-.16,.25,.08,.45,.28,.52,.53l2.13,7.93-1.47,.39-1.81-6.75-8.29,7.33,2.94,11,2.54-2.25,1.01,1.14-3.46,3.06c-.14,.12-.32,.19-.5,.19Z"/><path class="cls-2" d="M29.49,42.47c-.05,0-.1,0-.15-.02l-12.49-2.54c-.28-.06-.51-.27-.58-.55l-3.41-12.64c-.07-.25,0-.53,.18-.72,.18-.19,.45-.28,.71-.22l12.52,2.54c.28,.06,.51,.27,.58,.55l3.38,12.64c.07,.25,0,.53-.18,.72-.15,.15-.35,.24-.55,.24Zm-11.88-3.95l10.83,2.2-2.94-11-10.85-2.2,2.97,11Z"/><path class="cls-2" d="M26.1,29.83c-.05,0-.1,0-.15-.02l-12.51-2.54c-.28-.06-.51-.27-.58-.55-.07-.28,.02-.58,.23-.77l9.57-8.45c.18-.16,.42-.22,.65-.18l12.51,2.53c.28,.06,.51,.27,.58,.55,.07,.28-.01,.58-.23,.77l-9.57,8.46c-.14,.12-.32,.19-.5,.19Zm-10.86-3.74l10.64,2.16,8.14-7.2-10.64-2.15-8.14,7.19Z"/><path class="cls-2" d="M37.04,42.79c-.18,0-.36-.07-.51-.19l-5.62-5c-.21-.19-.3-.49-.23-.77l2.01-7.44c.07-.25,.26-.46,.52-.53,.25-.07,.53-.02,.72,.16l5.61,5c.21,.19,.3,.49,.23,.76l-2,7.44c-.07,.25-.26,.46-.52,.53-.07,.02-.15,.03-.22,.03Zm-4.76-6.02l4.35,3.87,1.56-5.8-4.34-3.87-1.57,5.8Z"/><path class="cls-2" d="M37,42.77c-.21,0-.41-.09-.55-.24-.18-.19-.25-.46-.18-.72l2-7.44c.07-.28,.3-.49,.58-.55l7.39-1.5c.26-.05,.53,.03,.71,.23,.18,.19,.25,.47,.18,.72l-2.04,7.45c-.08,.28-.3,.49-.58,.54l-7.35,1.49c-.05,.01-.1,.02-.15,.02Zm2.61-7.55l-1.56,5.8,5.69-1.15,1.59-5.81-5.72,1.16Z"/><path class="cls-2" d="M39.04,35.35c-.18,0-.37-.07-.51-.19l-5.61-5c-.21-.19-.3-.49-.23-.77s.3-.49,.58-.55l7.35-1.5c.23-.05,.48,.02,.66,.18l5.61,5c.21,.19,.3,.49,.23,.77s-.3,.49-.58,.55l-7.35,1.5c-.05,.01-.1,.02-.15,.02Zm-3.97-5.32l4.19,3.74,5.49-1.12-4.19-3.74-5.49,1.12Z"/><circle id="Oval-66" class="cls-2" cx="26.69" cy="21.84" r=".72"/><circle id="Oval-67" class="cls-2" cx="17.7" cy="29.85" r=".72"/><circle id="Oval-68" class="cls-2" cx="35.88" cy="37.93" r=".72"/><circle id="Oval-69" class="cls-2" cx="24.27" cy="21.39" r=".72"/></g></svg>
+                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><style>.cls-1{fill:none;}.cls-2{fill:#cbb080;}</style></defs><g id="Layer_2-2"><rect id="_각형_2222-28" class="cls-1" width="60" height="60"/><rect class="cls-1" x="4" y="4" width="52" height="52"/><path class="cls-2" d="M30.02,56h-.12c-6.94-.03-13.46-2.76-18.34-7.69l-.52-.53L51.28,7.35l1.06,1.06L13.15,47.77c4.54,4.32,10.46,6.7,16.75,6.73,6.51,0,12.7-2.49,17.35-7.09,8.84-8.77,9.71-22.76,2.01-32.55l1.18-.93c8.17,10.39,7.26,25.24-2.13,34.54-4.9,4.86-11.39,7.53-18.29,7.53Zm-20.69-10.22c-.3-.4-.6-.81-.88-1.23-6.2-9.19-5.88-21.32,.8-30.18,4.18-5.55,10.27-9.13,17.15-10.1,6.88-.97,13.72,.81,19.26,4.99l-.9,1.2C33.98,2.32,18.59,4.49,10.46,15.28c-6.29,8.34-6.6,19.77-.75,28.44,.27,.4,.55,.79,.83,1.17l-1.2,.9Z"/><path class="cls-2" d="M29.49,42.47c-.07,0-.15-.01-.22-.03-.25-.08-.45-.28-.52-.53l-3.38-12.64c-.07-.28,.02-.57,.23-.77l9.56-8.46c.2-.17,.47-.23,.72-.16,.25,.08,.45,.28,.52,.53l2.13,7.93-1.47,.39-1.81-6.74-8.29,7.33,2.94,11,2.54-2.25,1.01,1.14-3.46,3.06c-.14,.12-.32,.19-.5,.19Z"/><path class="cls-2" d="M29.49,42.47c-.05,0-.1,0-.15-.01l-12.49-2.54c-.28-.06-.51-.27-.58-.55l-3.41-12.64c-.07-.25,0-.53,.18-.72,.18-.19,.45-.28,.71-.22l12.52,2.54c.28,.06,.51,.27,.58,.55l3.38,12.64c.07,.25,0,.53-.18,.72-.15,.15-.35,.24-.55,.24Zm-11.88-3.95l10.83,2.2-2.94-11-10.85-2.2,2.97,11Z"/><path class="cls-2" d="M26.1,29.83c-.05,0-.1,0-.15-.02l-12.51-2.54c-.28-.06-.51-.27-.58-.55-.07-.28,.02-.58,.23-.77l9.57-8.45c.18-.16,.42-.22,.65-.18l12.51,2.53c.28,.06,.51,.27,.58,.55,.07,.28-.01,.58-.23,.77l-9.57,8.46c-.14,.12-.32,.19-.5,.19Zm-10.86-3.74l10.64,2.16,8.14-7.2-10.64-2.15-8.14,7.19Z"/><path class="cls-2" d="M37.04,42.79c-.18,0-.36-.07-.51-.19l-5.62-5c-.21-.19-.3-.49-.23-.77l2.01-7.44c.07-.25,.26-.46,.52-.53,.25-.08,.52-.02,.72,.16l5.61,5c.21,.19,.3,.49,.23,.76l-2,7.44c-.07,.25-.26,.46-.52,.53-.07,.02-.15,.03-.22,.03Zm-4.76-6.02l4.35,3.87,1.56-5.8-4.34-3.87-1.57,5.8Z"/><path class="cls-2" d="M37,42.77c-.21,0-.41-.08-.55-.24-.18-.19-.25-.46-.18-.72l2-7.44c.07-.28,.3-.49,.58-.55l7.39-1.5c.26-.05,.53,.03,.71,.23,.18,.19,.25,.47,.18,.72l-2.04,7.45c-.08,.28-.3,.49-.58,.54l-7.35,1.49c-.05,0-.1,.01-.15,.01Zm2.61-7.55l-1.56,5.8,5.69-1.15,1.59-5.81-5.72,1.16Z"/><path class="cls-2" d="M39.04,35.35c-.18,0-.37-.07-.51-.19l-5.61-5c-.21-.19-.3-.49-.23-.77s.3-.49,.58-.55l7.35-1.5c.23-.05,.48,.02,.66,.18l5.61,5c.21,.19,.3,.49,.23,.77-.07,.28-.3,.49-.58,.55l-7.35,1.5c-.05,0-.1,.01-.15,.01Zm-3.97-5.32l4.19,3.74,5.49-1.12-4.19-3.74-5.49,1.12Z"/><circle id="Oval-66" class="cls-2" cx="26.69" cy="21.84" r=".72"/><circle id="Oval-67" class="cls-2" cx="17.7" cy="29.85" r=".72"/><circle id="Oval-68" class="cls-2" cx="35.88" cy="37.93" r=".72"/><circle id="Oval-69" class="cls-2" cx="24.27" cy="21.39" r=".72"/></g></svg>
                 <p>HELPS MANAGE<br>DIABETES</p>
             </div>
         </div>
     </section>
-    <section>
+    <section class="last-padding">
         <div class="bg-taste">
-            <section>
-                <h2 class="section__heading">Explore the taste</h2>
+            <section class="taste-padding">
+                <h2 class="section__heading gold-txt">Explore the taste</h2>
             </section>
             <section class="stack-div">
                 <div>
                     <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_kfood_image22_02.jpg?v=1657585232">
                 </div>
-                <div>
+                <div class="taste-text-container">
                     <div class="article-text-container">
-                        <h2>Sunchang.</h2>
-                        <p>O'Food's Gochujang originates from Sunchang, a city widely renowned for its quality peppers, ideal climate, and traditional fermentation practices.</p>
+                        <h2>Sunchang</h2>
+                        <p>O’Food’s gochujang originates from Sunchang, a city in South Korea widely renowned for its quality peppers, ideal climate, and traditional fermentation practices. As the first brand to ever produce brown rice-based gochujang, we made it possible to achieve both premium taste and health through clean, quality ingredients.</p>
                     </div>
                 </div>
             </section>
             <section class="stack-div">
-                <div>
+                <div class="taste-text-container">
                     <div class="article-text-container">
-                        <h2>Earthenware Clay Pots.</h2>
-                        <p>Our R&D department has scientifically analyzed the traditional clay pot fermentation methods. We then extrapolated the process in a factory environment to maintain the integrity of the product.</p>
+                        <h2>Modern Tradition</h2>
+                        <p>Our R&D Department scientifically analyzed the traditional clay pot fermentation process and extrapolated the method to a factory environment, allowing us to maintain the integrity and consistency of the chili paste.</p>
                     </div>
                 </div>
                 <div class="order-1">
@@ -125,29 +147,13 @@
                 <div>
                     <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_kfood_image12_02.jpg?v=1657585232">
                 </div>
-                <div>
+                <div class="taste-text-container">
                     <div class="article-text-container">
-                        <h2>Double Fermentation.</h2>
-                        <p>We not only ferment our gochujang twice to ensure we bring out the deep, complex flavors, but also safely sterilize the paste through sunlight.</p>
+                        <h2>Meticulous Production</h2>
+                        <p>Fermented once using the traditional method, which allows for perpetual airflow during fermentation. Fermented twice with added ingredients such as red chili pepper powder for the appetizing color and taste. Finally, the paste is safely sterilized through sunlight and stored for your convenience.</p>
                     </div>
                 </div>
             </section>
-        </div>
-    </section>
-    <section class="last-padding">
-        <div class="bg-question stack-div">
-            <div>
-                <video loop muted preload="auto" autoplay width="100%">
-                    <source src="https://cdn.shopify.com/videos/c/o/v/4b71fb5f264e488e8fb0e3a0dead7db7.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div>
-                <div class="article-text-container">
-                    <h2 class="text__heading">Did you <br>know?</h2>
-                    <p>O'Food's gochujang is mixed through loud music <br>to allow for a better blend on a molecular level.</p>
-                </div>
-            </div>
         </div>
     </section>
 </div>
