@@ -12,7 +12,9 @@
     }
 
     #service-industrial-page .banner-container video {
-        height: calc(100vh - var(--header-height) - var(--announcement-height));
+        width: 100%;
+        height: calc(100vh - 70px - var(--announcement-height));
+        object-fit: cover;
     }
 
     #service-industrial-page #section1 p {
@@ -30,47 +32,24 @@
         margin-top: 0;
     }
 
-    #service-industrial-page .circle-div {
-        justify-content: center;
+    #service-industrial-page .text__button {
+        gap: 50px;
     }
 
-    #service-industrial-page .circle-div img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin: 0 1%;
+    #service-industrial-page .brand-div {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
     }
 
-    #service-industrial-page .section5-container {
-        position: relative;
-        height: 400px;
-        gap: 3em;
+    #service-industrial-page .brand-div object {
+        width: 200px;
+        min-height: 160px;
+        margin: auto;
     }
 
-    #service-industrial-page .section5-container div {
-        background-color: #b9b9b9;
-    }
-
-    #service-industrial-page .section5-container h3 {
-        margin: 0;
-    }
-
-    #service-industrial-page #section7 {
-        text-align: center;
-    }
-
-    #service-industrial-page #section7 div {
-        position: relative;
-    }
-
-    #service-industrial-page #section7 h3 {
-        position: absolute;
-        top: 30%;
-        width: 100%;
-    }
-
-    #service-industrial-page #section7 img {
-        width: 50%;
+    #service-industrial-page .brand-div .cubic-brand {
+        width: 100px;
     }
 </style>
 <div id="service-industrial-page">
@@ -89,33 +68,33 @@
     </section>
     <section class="stack-div">
         <div>
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
+            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_kfood_images_12_06.jpg?v=1658024906">
         </div>
         <div>
             <div class="article-text-container">
-                <h2>Our unique fermented flavors <br>will help elevate your dishes.</h2>
-                <p>When you partner with O'Food, your're helping to <br>further our mission to make authentic Korean <br>food more readily accessible on a global scale.</p>
+                <h2>Our unique fermented flavors will help elevate your dishes.</h2>
+                <p>When you partner with O'Food, you're helping to further our mission to make authentic Korean food more readily accessible on a global scale.</p>
             </div>
         </div>
     </section>
-    <section>
-        <h2 class="section__heading">Our Products</h2>
-        <div class="stack-div section5-container">
-            <div class="popup-quick-view mfp-fade" data-button-quick-view>
-                <h3 class="banner-center-text">FOOD SERVICE</h3>
-            </div>
-            <div class="popup-quick-view mfp-fade" data-button-quick-view>
-                <h3 class="banner-center-text">INDUSTRIAL</h3>
-            </div>
+    <section class="text-center">
+        <h2 class="section__heading">Our Services</h2>
+        <p>Our O’Food and Chung Jung One products are available for Foodservice applications and Industrial/Manufacturing. We provide a wide range of traditional and authentic, as well as innovative items to deliver bold Korean flavors.</p>
+        <div class="text__button">
+            <a href="#" role="button" class="btn btn--text">FOOD SERVICE</a>
+            <a href="#" role="button" class="btn btn--text">INDUSTRIAL</a>
         </div>
     </section>
     <section>
         <h2 class="section__heading">Our Partners:</h2>
-        <div class="circle-div stack-div">
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
-            <img src="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/web_ofood_draft_11.jpg?v=1634930057">
+        <div class="brand-div stack-div">
+            <object class="cubic-brand" type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/US_FOODS_2.svg?v=1658035348"></object>
+            <object class="cubic-brand" type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/Asset_2.svg?v=1658035348"></object>
+            <object type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/Asset_8.svg?v=1658035348"></object>
+            <object type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/Asset_7.svg?v=1658035349"></object>
+            <object type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/Asset_6.svg?v=1658035348"></object>
+            <object type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/Asset_5.svg?v=1658035348"></object>
+            <object type="image/svg+xml" data="https://cdn.shopify.com/s/files/1/0602/9928/0598/files/Asset_4.svg?v=1658035348"></object>
         </div>
     </section>
 </div>
