@@ -41,7 +41,7 @@
     }
 
     #k-food-101-page .bg-taste section {
-        margin: calc(var(--margin) * 0.5) 0;
+        margin: calc(var(--margin-mobile) * 0.5) 0;
     }
 
     #k-food-101-page .taste-padding {
@@ -60,6 +60,19 @@
     
     #k-food-101-page .bg-question {
         background-color: #c6584a;
+    }
+    @media only screen and (min-width: 1024px) {
+        #k-food-101-page .bg-taste section {
+            margin: calc(var(--margin) * 0.5) 0;
+        }
+    }
+    @media only screen and (max-width: 767px){
+        #k-food-101-page .bg-gochujang {
+            background-color: inherit;
+        }
+        #k-food-101-page .bg-gochujang-img {
+            padding-bottom: 63%;
+        }
     }
 </style>
 <div id="k-food-101-page" class="text-light">
