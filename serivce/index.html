@@ -51,6 +51,16 @@
     #service-industrial-page .brand-div .cubic-brand {
         width: 100px;
     }
+    @media only screen and (max-width: 1024px) {
+        #service-industrial-page .brand-div {
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        #service-industrial-page .brand-div {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
 </style>
 <div id="service-industrial-page">
     <section id="section1" class="text-center">
